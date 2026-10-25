@@ -1,6 +1,6 @@
 # AT_Connect Help Files
 ## Based on the AT_Connect III ATASCII terminal project kept up by BF2K+
-![Screenshot of new version of AT_Connect Help](https://github.com/mhansel7399/AT_Connect_Help/blob/main/screenshot.png)
+![Screenshot of new version of AT_Connect Help](https://github.com/mhansel7399/AT_Connect_Help/blob/main/screenshot.png?raw=true "AT_Connect Help File" width=300 height=200)
 ----
 What I have done here is separate the AT3_Help.htm file into smaller, manageable HTML files. 
 - They all follow a template (`at_connect_template.html`)
