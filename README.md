@@ -6,8 +6,8 @@
 <hr/>
 <p>What I have done here is separate the AT3_Help.htm file into smaller, manageable HTML files. 
 <ul>
-  <li>They all follow a template (`at_connect_template.html`)</li>
-  <li>They all use the `styles.css` in the css folder.</li>
+  <li>They all follow a template (<code>at_connect_template.html</code>)</li>
+  <li>They all use the <code>styles.css</code> in the css folder.</li>
   <li>Removed all references from the original version that used Microsoft FrontPage</li>
 </ul>
 </p>
