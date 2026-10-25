@@ -6,4 +6,4 @@ What I have done here is separate the AT3_Help.htm file into smaller, manageable
 - They all use the `styles.css` in the css folder.
 - Removed all references from the original version that used Microsoft FrontPage
 
-![Screenshot of new version of AT_Connect Help](http://github.com/mhansel7399/AT_Connect_Help/screenshot.png)
+![Screenshot of new version of AT_Connect Help](https://github.com/mhansel7399/AT_Connect_Help/blob/main/screenshot.png)
