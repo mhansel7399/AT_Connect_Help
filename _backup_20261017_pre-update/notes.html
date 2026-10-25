@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AT Connect III - Notes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+    <body>
+
+        <div class="header">
+            <img src="images/Main1.jpg" alt="Header Image" class="header-image">
+            <div class="header-text">
+                AT_Connect III<br>
+                The ATASCII Terminal Client
+            </div>
+        </div>
+
+        <div class="nav">
+            <ul>
+                <li><a href="AT3_Help.htm" class="nav-item">What is AT Connect III</a></li>
+                <li><a href="features.html" class="nav-item">Features and Disclaimer</a></li>
+                <li><a href="started.html" class="nav-item">Getting Started</a></li>
+                <li><a href="configuration.html" class="nav-item">Configuration</a></li>
+                <li><a href="operation.html" class="nav-item">Operation</a></li>
+                <li><a href="status-window.html" class="nav-item">The Status Window</a></li>
+                <li><a href="bbseditor.html" class="nav-item">BBS Editor</a></li>
+                <li><a href="thebox.html" class="nav-item">The Box (Text Editor)</a></li>
+                <li><a href="scrollback.html" class="nav-item">Scrollback Controls</a></li>
+                <li><a href="quotingsys.html" class="nav-item">Message Quoting Systems</a></li>
+                <li><a href="autopause.html" class="nav-item">AutoPause System</a></li>
+                <li><a href="systemlog.html" class="nav-item">System Log</a></li>
+                <li><a href="timeonline.html" class="nav-item">Time Online Report</a></li>
+                <li><a href="detecturl.html" class="nav-item">Detect URLs</a></li>
+                <li><a href="ateditor.html" class="nav-item">The ATEditor</a></li>
+                <li><a href="notes.html" class="nav-item">Notes</a></li>
+                <li><a href="aboutchange.html" class="nav-item">About and Change Log</a></li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="text-with-image">
+                <h3>Notes</h3>
+                <ul>
+                    <li>AT_Connect uses Winsock to connect to Atari 8-bit internet-based BBSes. <strong>It will NOT use a modem connected to your PC for anything.</strong> You cannot use it for connecting to conventional 
+                    dialup BBSes. (If your internet connection is a dialup one, that is fine. Your PC dials into your ISP and then AT_Connect will work normally).</li>
+                    <li>AT_Connect does not  support ASCII terminal connections. If you use it to connect to an ASCII BBS system, the screen will look terrible and your {Enter} key will not function correctly. <strong>HINT:</strong> Use {Ctrl}-M as ASCII {Enter} if you need to.</li>
+                    <li>AT_Connect does not use an ATASCII font. It's terminal screen 'font' is internally generated within the program using bitmap images of the ATASCII character set. Therefore, I cannot make the font 
+                    bigger or smaller or change the terminal screen foreground or background color. If this seems like it would be slow, remember that <a href="operation.html#BaudSim">BaudSim</a> actually slows down the display to the screen.</li>
+                    <li>The BBS Editor uses a text file (<strong>AT3_BBS.INI</strong>) to store the information for each BBS. This text file MAY be edited manually but that is not recommended.</li>
+                    <li>AT_Connect stores it's configuration settings in a text file (<strong>AT3_CFG.INI</strong>). This text file MAY also be edited manually but that is not recommended.</li>
+                    <li>AT_Connect does not write any information to the Windows registry.</li>
+                    <li>The 'Screen to BMP dump' and 'PrintScreen' functions do not work in 80-column mode due to constraints within the workings of the program.</li>
+                    <li>When the 'About' form (below) is displayed in AT_Connect, the 'Monitor ON/OFF' button in the lower right corner of the form will unload it.</li>
+                    <li>AT_Connect does not support file transfers or file transfer protocols (XModem, YModem etc).</li>
+                    <li><strong class="red-change">**EDITED**</strong> The program runs properly under Windows 7, 10, and 11 with no compatibility mode requirements. Some additional tweaking of permissions may be required.</li>
+                    <li><strong class="red-change">**EDITED**</strong> AT_Connect has been tested in Windows 7, 8, 10 and 11. Please see above.</li>
+                </ul>
+                <h4>Things that are not right yet!</h4>
+                <ul>
+                    <li>There are still a couple of chars not processing correctly. They need to be identified and fixed.</li>
+                    <li>There is an anomaly where apparently there are some cases where a char appears to have 15 pixels instead of 16. This is left over from version 1 from Tom where the chars were originally 15 pixels wide. In v 1.10, I changed the char size to 16x16 px. I need to ID this anomaly and fix it.</li>
+                    <li>The <strong>'Import'</strong> button on the BBS Editor is not enabled yet...</li>
+                </ul>
+                    
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Copyright &copy; 2009-2023 - Cabell Clarke - All Rights Reserved &reg;</p>
+            <p>Revised: 12/14/2023</p>
+        </div>
+        <script src="scripts/script.js" type="text/javascript"></script>
+
+    </body>
+</html>

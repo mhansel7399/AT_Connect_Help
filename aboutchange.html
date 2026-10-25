@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AT Connect III - About and Change Log</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+    <body>
+
+        <div class="header">
+            <img src="images/Main1.jpg" alt="Header Image" class="header-image">
+            <div class="header-text">
+                AT_Connect III<br>
+                The ATASCII Terminal Client
+            </div>
+        </div>
+
+        <div class="nav">
+            <ul>
+                <li><a href="AT3_Help.htm" class="nav-item">What is AT Connect III</a></li>
+                <li><a href="features.html" class="nav-item">Features and Disclaimer</a></li>
+                <li><a href="started.html" class="nav-item">Getting Started</a></li>
+                <li><a href="configuration.html" class="nav-item">Configuration</a></li>
+                <li><a href="operation.html" class="nav-item">Operation</a></li>
+                <li><a href="status-window.html" class="nav-item">The Status Window</a></li>
+                <li><a href="bbseditor.html" class="nav-item">BBS Editor</a></li>
+                <li><a href="thebox.html" class="nav-item">The Box (Text Editor)</a></li>
+                <li><a href="scrollback.html" class="nav-item">Scrollback Controls</a></li>
+                <li><a href="quotingsys.html" class="nav-item">Message Quoting Systems</a></li>
+                <li><a href="autopause.html" class="nav-item">AutoPause System</a></li>
+                <li><a href="systemlog.html" class="nav-item">System Log</a></li>
+                <li><a href="timeonline.html" class="nav-item">Time Online Report</a></li>
+                <li><a href="detecturl.html" class="nav-item">Detect URLs</a></li>
+                <li><a href="ateditor.html" class="nav-item">The ATEditor</a></li>
+                <li><a href="notes.html" class="nav-item">Notes</a></li>
+                <li><a href="aboutchange.html" class="nav-item">About and Change Log</a></li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="text-with-image">
+                <h3>About</h3>
+                <figure class="content-image">
+                    <img src="images/about.jpg" alt="About AT Connect III">
+                    <figcaption class="pic-text">About AT_Connect III</figcaption>
+                </figure>
+                <h4>AT_Connect III Help File</h4>
+                <p>Copyright &copy; 2009-2026 - Cabell Clarke - All Rights Reserved &reg;</p>
+                <p>Revised: 10/18/2026</p>
+                <p>AT_Telnet is Copyright &copy; Tom Hunt - Closer to Home Enterprises</p>
+                <p>AT_Connect is Copyright &copy; Tom Hunt - Closer to Home Enterprises, and Cabell Clarke - Boot Factory BBS</p>
+                <p>BBS Editor, ATEditor, URL Detection, The Box, Scrollback System, Quoting System, AutoPause, Help System and additional code are Copyright &copy; Cabell Clarke</p>
+                <p>Screens and References to Bob Term are Copyright &copy; Robert Puff</p>
+                <p><strong>Help Contact:</strong> Cabell Clarke &lpar;BF2K&plus;&rpar;</p>
+                <p><strong>My BBS</strong> - The Boot Factory 2K&plus;: <a href="telnet://bfbbs.no-ip.com:8888">bfbbs.no-ip.com</a> Port: 8888</p>
+                <p><a href="http://www.atariage.com/" rel="noopener" target="_blank">AtariAge</a>: bf2k&plus;</p>
+                <p><strong>Beta Testers:</strong> Tillek, Amis, John Polka, &lbrack;Giarc&rbrack;, Bob_C, Slacker, mhansel739</p>
+                <p><strong>Help on Help:</strong> mhansel739</p>
+                <h3>Change Log</h3>
+                <h4>v3.24 - Build: 958 - 10.4.26 (Katara) (BugFix release)</h4>
+                <ul>
+                    <li>Added session timer to display elapsed time in log, titlebar and status form. Session defined as time between ATC start and ATC stop.</li>
+                    <li>Added user-defined titlebar message. It can be displayed by itself or as part of the revolving marquee.</li>
+                    <li>Added the ConvertMacro processing to the ConnectMsg and DisconnectMsg display to allow the carriage return &lt;cr&gt; as a valid entry.<br> Example: "CONNECT...&lt;cr&gt;" becomes CONNECT... with a CR (155) on the end which gets executed by ATC.</li>
+                    <li>Changed Session Number from LONG int to string (format: YYMMDDHHMMSS)</li>
+                    <li>Minor internal changes.</li>
+                </ul>
+                <h4>Bugs</h4>
+                <ul>
+                    <li>Fixed missing cursor after screenscroll that I somehow introduced.</li>
+                    <li>Fixed annoying bell when a Box changed event forced a beep even when pasting to the BOX.</li>
+                    <li>Disabled the Combo box in the BBS form when online to prevent data corruption possibility.</li>
+                    <li><strong class="red-change">Nasty</strong> bug in the ATEditor 'Clear' button would crash AT_Connect. (This is the reason for the bugfix release.)</li>
+                </ul>
+                <h4>v3.23 - Build: 922 - 4.12.26 (Katara) (maintenance release)</h4>
+                <ul>
+                    <li>Set the max number of BBSes supported to 500. Having a max number of 65535 caused other problems that I did not anticipate.</li>
+                    <li>Added a 'View / Hide Gateway' button to the BBS Editor form for sizing purposes. It does not affect the use of the gateway.</li>
+                    <li>On the initial installation of ATC, where files, folders, and configs are created, I tweaked the window placement to make a cleaner initial installation.</li>
+                    <li>Minor internal changes to some variable structures and placements.</li>
+                </ul>
+                <h4>v3.22 - Build: 912 - 3.19.26 (Katara)</h4>
+                <ul>
+                    <li>Added support for the new Atari BBS gateway created by AMIS. This allows you to connect to your favorite BBS thru the gateway and still have access to your assigned macros for that BBS.</li>
+                    <li>Added combo box to BBS form to allow selection of BBS via drop-down list rather than having to use the Next / Prev buttons.</li>
+                    <li>Added a BBSList automatic backup function which can be enabled or disabled. BBS form indicates when the BBS needs a backup and it can be done manually or automatically at startup depending on how it is configured.</li>
+                    <li>Added a Backup folder for backed up BBS Lists and CFG files.</li>
+                    <li>Added 'Abort' switch to splash screen. This will shut down AT_Connect before it starts.</li>
+                    <li>Added a 'Backup CFG File' button at the bottom of the Config form and a backup folder option under the 'Paths' tab.</li>
+                    <li>Major Clean-up to 'AddBBS', 'CopyBBS' and 'DeleteBBS' functions on the BBS form. Fixed 'DeleteBBS' function so it will not attempt to delete an already deleted record.</li>
+                    <li>Added ability to add a BBS by editing an empty BBS record.</li>
+                    <li>Removed the old BBSMap from the AT3_BBS.ini file. This also allows the max number of supported BBSes to go from 255 to 65535... not that we really needed more but removing the map cleaned up the BBSList file. I HATED the map.</li>
+                    <li>Removed the 'Fix BBSList' function as it is no longer needed.</li>
+                    <li>Added a new Log Header to 'Rename Log' and 'Clear Log' functions. The header contains additional info at the top of the newly created log file.</li>
+                    <li>Added ability to type inverse chars into a BBS using the 'inverse chars' checkbox in the ATEditor. The BBS must also support the inverse chars. The 'inverse char' checkbox is now highlighted <strong>RED</strong> when inverse chars are enabled.</li>
+                    <li>Added a "Connecting to &lt;bbsname&gt;..." message at the beginning of each connection attempt. This also reflects using the gateway for the connection.</li>
+                    <li>Added a field in the BBS form for the date that the Max BPS was achieved.</li>
+                    <li>Lots of minor changes:
+                        <ul>
+                            <li>BBS form 'Save' buttons now have a yellow background when a 'save' is needed.</li>
+                            <li>Backspace key now works in Inverse Char mode.</li>
+                            <li>Added space to generic quote string.</li>
+                            <li>Added minor color changes to some forms and buttons.</li>
+                            <li>ATEditor Text window flattened.</li>
+                            <li>Edited a few ToolTips.</li>
+                            <li>The background 'Atari' image made the help file hard to read so I removed it.</li>
+                            <li>Quite a few minor internal changes that are not noticeable.</li>
+                        </ul>
+                    </li>
+                    <li>New Dragon Name: Katara</li>
+                </ul>
+                <h4>Bugs</h4>
+                <ul>
+                    <li>While not actually a bug, the BBS form has always loaded the first record in the BBS list when ATC starts up. Now it loads the first record enabled in the dial list instead of record #1.</li>
+                    <li>'AddBBS', 'CopyBBS' and 'DeleteBBS' functions all had bugs in them. They should be cleaned up now.</li>
+                    <li>The MaxBaud bug has finally been squashed (hopefully). This would cause bogus data to be written into the BBS record and was most noticeable when the MaxBaud value was different. It could also have been affecting other data in the BBS record but this was not ever noticed.</li>
+                </ul>
+                <h4>v3.20 - Build:829 - 4.18.25 (Apophys)</h4>
+                <ul>
+                    <li>Added seven new background screen colors which can be chosen in the configuration screen. ATC restart required after choice. Colors: Atari Classic white on blue, Green Screen, Amber Waves, Purple Haze, Midnight Blue; pSycH0dElikA; Paperwhite<img alt="decorative only" height="41" src="images/major.jpg" width="75"> <img src="images/major.jpg" alt="image of the word major" class="content-image-status"></li>
+                    <li>Changed the width of the main screen to make it a little smaller. This was actually a somewhat major change to the system.</li>
+                    <li>Removed most of the old 3d look which came from the VB 6 environment... like checkboxes, data-entry fields, etc.</li>
+                    <li>Added four new buttons <strong>'&gt;&gt;&gt;'</strong> and <strong>'&lt;&lt;&lt;'</strong> to the BBS form to allow moving quickly to the beginning and end of BBS records.</li>
+                    <li>Re-programmed much of the BBS form and added functionality. Some of the buttons have changed. The BBS data structure is now record-based rather than number-based. Removed the old 'Save + Close + Connect' button. Also removed the 'Import BBS' button which had never been programmed and was not high on the list..</li>
+                    <li>The 'Fix BBS List function' is reprogrammed.</li>
+                    <li>Added the animated startup 'Moji named 'ATC Ready' which can be programmed to display anything you like. This replaced one of the old Bobterm pictures which did not display correctly with some of the new background colors.</li>
+                    <li>Added the 'Pick any file to view' option to the capture menu.</li>
+                    <li>Added the 'Slow display' checkbox to the capture configuration screen for displaying files at fast or slow speeds.</li>
+                    <li>Added the 'MaxBPS achieved' green indicator on the BBS form which lights up when the current MaxBPS record for this BBS has been broken.</li>
+                    <li>Translated the &lt;<strong>TAB</strong>&gt; key which had never been done in 25 years.</li>
+                    <li>Re-enabled connections from the BBS form via a new 'Connect' button located on the form so that BBSes that are 'hidden' from the dial list can still be connected to.</li>
+                    <li>New Dragon Name: Apophys</li>
+                </ul>
+                <h4>Bugs</h4>
+                <ul>
+                    <li>Fixed an old bug which would crash ATC when a specific type of screen was displayed in 80 column mode. This had to be fixed in four different functions. Thanks to Matt H. for finding this one.</li>
+                    <li>Clicking on a blank URL no longer processes the blank URL.</li>
+                    <li>Fixed a bug in the 'View capture file' function which caused it to print too many chars.</li>
+                    <li>Bug in 'CopyBBS' function could crash ATC in certain situations.</li>
+                    <li>Fixed a disconnect issue when Winsock throws an error 10053 - thanks to Slacker for help with this one.</li>
+                    <li>Fixed a bug that was loading frmLastURL before the form positions had been read from config file.</li>
+                    <li>Fixed a bug where the different form positions needed to be written upon first installation and first running of ATC.</li>
+                </ul>
+                <h4>v3.14 -Build:717 - 2.1.25 (Xeraxes)</h4>
+                <ul>
+                    <li>Added bits per second calculations and chars per second measurement to create the new Speed Check mode. It can be enabled in the Status Form as well as the Config form.</li>
+                    <li>Also added the Speed Test which disables the screen and keyboard for better accuracy in speed tests. Average and current speeds displayed in the Status form.</li>
+                    <li>Added 'Maxbps' speed calc value to BBS record and log entry.</li>
+                    <li>Added the 'AutoNext' feature which detects when a BBS logs you off, and allows you to hit &lt;Enter&gt; and immediately connect to the next BBS in the combo box. It is very FAST.</li>
+                    <li>Added manual quote prefix ( <strong>Q&gt;</strong>) to quoting system for adding the quotee's initials or whatever. This overrides the default prefix set in the Config form until disconnection from the BBS.</li>
+                    <li>Added {Ctrl}-Z keystroke in the Box to place an ATASCII CR (155) in the current cursor position for better formatting of quotes and things like separation of quotes within quotes.</li>
+                    <li>Pre-loaded the session number with a 1 if it was equal to 0.</li>
+                    <li>Character Totalizer manual calculation is now a log entry when executed. It is still executed automatically when logging off.</li>
+                    <li>Added the "one char at a time" Macro send for cases where it is needed. Can be selected in the BBS record for each individual BBS.</li>
+                    <li>'AutoPause' function expanded to work with FoReM XE.</li>
+                    <li>Changed the Autopause command buttons to the following:
+                        <ul>
+                            <li>'<strong>Again</strong>' - redisplays the previous message and after a delay, sends {Ctrl}-S to pause it.</li>
+                            <li>'<strong>. . .</strong>' - restarts the paused message and pauses it again after the delay.</li>
+                            <li>'<strong>! ! !</strong>' - restarts the paused message and displays until the end of message.</li>
+                            <li>All three of these work this way for BBS:Express v1 and FoReM XE.</li>
+                        </ul>
+                    </li>
+                    <li>Added speed (maxbps) to Time Online report.</li>
+                    <li>Better quoting in 80 cols.</li>
+                    <li>Added the Graphics Mode enable (/g) reminder to the ATE top of form (red label) before sending ATEditor data to screen.</li>
+                    <li>Increased size of BBS Name in Status Form.</li>
+                    <li>Added a 'Status' button on the control panel to open the status form when it is closed.</li>
+                    <li>Added a 'Beep on Connection' notification option setting in Config form.</li>
+                    <li>Added an 'ALL ON / All OFF' button in the Config form for toggling between 'Classic AT_Telnet' view and 'AT_Connect 3' view. One button toggles all options on and off.</li>
+                    <li>Added a Yes/No query to the Delete Log file question.</li>
+                    <li>Modifications to BaudSim mode to allow a wider range of speed (0-9 instead of 0-5). The new wider range allows more flexibility in the baud control for different PCs. I found that even at the slowest baud rate, my Core i9 PC still ran full speed with no apparent slowdown. The wider range along with an additional 2ms multiplier increased the control therefore the appearance of a baud rate where none exists. (A value of 9 appears to be approx 300Baud.)</li>
+                    <li>Beginning to use Git for version control. Github for Windows on the local PC. There is no remote repository (yet).</li>
+                    <li>General Cleanup.</li>
+                </ul>
+                <h4>Bugs</h4>
+                <ul>
+                    <li>Fixed a bug in combo box select bbs code.</li>
+                    <li>Fixed a bug in "Choose Port" section of code.</li>
+                    <li>Fixed a bug in the character Speed Check averaging system where the chars would only be averaged in BaudSim mode.</li>
+                    <li>Fixed a bug that would crash ATC when the incoming char monitor in the status form was enabled.</li>
+                    <li>Fixed a bug in the 'Autonext' code which caused a ATC crash when the combo1.listindex tried to increment past the combo1.listcount.</li>
+                    <li>Fixed an OLD bug that prevented the BaudSim Value from being saved to the config file.</li>
+                    <li>Fixed a REAL OLD bug in the 'Print Screen' button on the menu bar that would crash ATC if the print dialog 'cancel' button was pushed. Thanks to <strong>Slacker</strong> for finding this one. I had not pushed that button in at least 20 years.</li>
+                </ul>
+                <h4>v3.12 - Build:602 - 12.14.23 &lpar;Xeraxes&rpar;</h4>
+                <ul>
+                    <li>Added the AutoPause feature for slowing down the message displays on BBSes with no page length setting.</li>
+                    <li>Added the Status Window for status information during connections. It displays the BBS name, URL and Port as well as the incoming character counts. It also has a provision for entering some text into the system log as a log entry.</li>
+                    <li>Added a flag in the config page to enable / disable clearing the box when the 'Scrollback to Box' 
+                    button is pressed.</li>
+                    <li>Added session numbers for knowing how many ATC sessions you have experienced.</li>
+                    <li>Added additional logging for some errors.
+                        <ul>
+                            <li>Added the ==== separator for the log session entries making the log a little easier to read. </li>
+                            <li>Modified the 'View System Log' button to move the cursor to the end of the log when opening it.</li>
+                            <li>General cleanup of logging...</li>
+                        </ul>
+                    </li>
+                    <li>Modified 'Look &amp; Feel' of the Quoting and ChXbox systems as well as general cleanup of these systems.</li>
+                    <li>Added the status bar value to the status field 'tooltiptext' property so if a status is longer than the status window can display, hovering the cursor over the status field will display the entire contents of the field in the tooltip.</li>
+                    <li>Renamed the CHX1,2,3 files to _CHX1,2,3. Filename prefixed with an underscore to make them rise to the top of the files display.</li>
+                    <li>Added the 'No Word Wrap' quoting modification for making the quotes look better on a Carina BBS system. Carina tends to modify the format of the messages even after they are entered and saved. This option helps with making the quotes a little better to view if you choose to use it. This feature also swatted the chr(13) - chr(10) display bug in the Carina quotes.</li>
+                    <li>Changed the colors of the quote step indicator bar from <strong class="red-change">Red</strong> to
+                    <strong class="green-change">Green</strong>.</li>
+                    <li>Added a 'Yes / No' query to the 'Clear System Log' function.</li>
+                    <li>General Cleanup.</li>
+                </ul>
+                <h4>Bugs</h4>
+                <ul>
+                    <li>Bug fixed - Send to BBS function would crash ATC if not online.</li>
+                    <li>Bug fixed - bug in Help file display code</li>
+                    <li>Bug fixed - not really a bug but using the Prev (&lt;&lt;) and Next (&gt;&gt;) buttons in the BBS editor now forces a re-selection of the BBS in the combo box in order to better keep it all in sync.</li>
+                    <li>Bug fixed - Swatted the Ctrl-M bug that has been in the program since 2000. </li>
+                    <li>Fixed a problem with the Help file installation during setup.</li>
+                </ul>
+                <h4>v3.11 -Build:548 - 9.15.23 (Xeraxes)</h4>
+                <ul>
+                    <li>Added the 'ChXbox Creation System' which uses a combination of 'The Box' and the 'ATEditor' to create cute little ATASCII chXboxes for graphics-enabled message bases. The chXboxes are also correctly visible in ASCII and ANSI connections.</li>
+                    <li>Added an optional Incoming Character Count display for each ATC session as well as a totalizer. Both of these counts are displayed at the end of the system log.</li>
+                    <li>Made 'classic mode' more classic by adding the 'Enable Online Timer' function to classic check boxes group in Configuration file.</li>
+                    <li>Added &quot;Last Time Online&quot; data to BBS record to display the length of the last connection to that BBS.<img class="content-image" src="images/frmstatus.jpg" alt="image of form status"></li>
+                    <li>Added the &quot;2) Edit Box&quot; button to the quoting system to place the cursor into the box quickly at position 0 in the box rather than the old manual method.</li>
+                    <li>Added quote step indicators (<span class="red-change">which look like this: ______</span>) below each button to remind you of the next step while creating quotes.</li>
+                    <li>Updated ATEditor to optionally create a file when using the 'Send to Main' function.</li>
+                    <li>Cleanup of the Total Online Report</li>
+                    <li>Added the  Signature function for each BBS record so each BBS can have its own signature.</li>
+                    <li>Added the 'Scrollback Abort' button for stopping the scrollback function.</li>
+                    <li>Added the 'Box to ATE' button for copying the contents of the box to the ATEditor. Why do we need this? I don't know but I added it anyway because I could. (And now it is used for the chXbox system.)</li>
+                    <li>Moved Quoting buttons into different positions around the Box to make quoting more intuitive.</li>
+                    <li>Enlarged the Log Form to prevent word wrapping of log entries.</li>
+                    <li>Minor Cleanup of program and help file.</li>
+                </ul>
+                <h4>Bugs</h4>
+                <ul>
+                    <li>BUG Fixed - 'Scrollback to Box' function would crash AT_Connect if there were less than 2048 chars in the scrollback buffer. Fixed by requiring 2048 chars in the buffer before 'SB to Box' will do anything.</li>
+                    <li>BUG Fixed - bug in 'View Capture' function which prevented some files from being viewed.</li>
+                    <li>BUG Fixed - bug in Time Online function would erase the time if the BBS record got changed to a different BBS and then a logoff occurred. Disabled the problem buttons that caused this so the BBS record could not be changed while online. ('&gt;&gt;', '&lt;&lt;', and 'BBS Select' combo box)</li>
+                    <li>BUG Fixed - BBS Select combo box was not properly updated when  a BBS was changed from 'Show in List' to 'Don't show in list' (and vice versa). Now the combo box is reset to zero (default) if this function is toggled.</li>
+                </ul>
+                <h4>v3.10 -Build:516 - 3.10.23 (Xeraxes)</strong></h4>
+                <ul>
+                    <li>Added the 'Scrollback' feature which when enabled, saves the last 2048 chars in a circular buffer which can be re-displayed in user-defined-sized chunks on demand. The playback is slightly delayed for ease of viewing and 'Pause' and 'Resume' buttons are available.<img src="images/major.jpg" alt="image of the word major" class="content-image-status"></li>
+                    <li>Added the Automated Message Quoting System for quoting parts of messages when entering a new message. This feature uses the Scrollback Buffer for capturing the contents of previous messages.</li>
+                    <li>Added the Online timer which displays below the Macro Keys in the Control Panel. This display is updated every second.<img src="images/major.jpg" alt="image of the word major" class="content-image-status">
+                    </li>
+                    <li>Added the Online Timer totalizer for the total time spent on each BBS. This is viewed in the BBS Editor form.</li>
+                    <li>Added the 'Time Online Report' which displays &amp; Saves the total number of connects and time online for each BBS.</li>
+                    <li>Added the 'System Log file' which can be enabled or disabled in the config form. This log file is named 'AT3_Log.txt' and is located in the System Folder. Right-Clicking the screen displays the Capture file menu which also holds a menu entry for viewing this log in a separate form. In this form, the log can be saved (archived), cleared or deleted.</li>
+                    <li>Added an 'Export URL' button to the URL form for exporting the URLs to a text file.</li>
+                    <li>Increased the number of URLs displayed in the form from 5 to 10.</li>
+                    <li>Added some initialization variable values for the first run setup of ATC.</li>
+                    <li>Fixed some mislabeled tool-tip-texts in the control panel.</li>
+                    <li>New Dragon Name: Xeraxes</li>
+                </ul>
+                <h4>v3.01 -Build:466 - 2.15.23 (Vhagar)</h4>
+                <ul>
+                    <li>Added names of beta testers to the 'About' dialog.</li>
+                </ul>
+                <h4>v3.00 -Build:465 - 2.14.23 (Vhagar)</h4>
+                <ul>
+                    <li>Migrated AT_Telnet II to new name: AT_Connect III</li>
+                    <li>Created code for a new System Folder (AT_Connect) which resides in the users 'Documents' folder. This will overcome the UAC issues outlined in v2.12 below. This folder is automagically created on the initial running of AT_Connect. Enlarged the config form to display the new system folder (read-only). Modified code for the config file, the bbs file, the screen dump system and the capture file to reside in this new folder tree.<img src="images/major.jpg" alt="image of the word major" class="content-image-status"></li>
+                    <li>Added 'The Box' (or TextWindow) for easy editing of messages before sending them to the BBS. Lots of features in this function...supports 40 and 80 columns; is configured for use in the BBS record for each BBS; can be made completely invisible to the user if desired; monitors the current number of chars in the editor window; has a right column alarm for BBSes that don't have word wrap in their message editors; the {Alt} - T keystroke is used to toggle between the main screen and the box editor. Focus Indicator for Main screen as well as Text Window makes it easy to tell who has the focus; Can send formatted text to a BBS. Can optionally be hidden from viewing.<img src="images/major.jpg" alt="image of the word major" class="content-image-status"></li>
+                    <li>Added a new system to automagically detect URLs in the incoming data stream and convert them into one-click links that can be accessed from within AT_Connect. The last ten links are saved for the current session and can optionally be cleared for the current session. This detection can be enabled or disabled in configuration and can optionally be hidden from view.<img src="images/major.jpg" alt="image of the word major" class="content-image-status"></li>
+                    <li>Added the ATEditor for capturing, editing and sending almost anything ATASCII. Great for making those little 'Mojis and any other combination of text, graphics characters and inverse characters in a macro-like format for sending to the BBS. Can optionally be hidden from view.<img src="images/major.jpg" alt="image of the word major" class="content-image-status"></li>
+                    <li>Added a 'Capture' folder for saving all captured data files.</li>
+                    <li>Added the ability to save the window positions for the Main screen, BBS Editor, ATEditor, Last5URL and WebSite windows. These positions are saved in the config file so the windows always return to where you want them positioned.</li>
+                    <li>Added a 'Capture in process' indicator (flashing green bar at the top of the main screen) to help remind you that you are in 'capture' mode.</li>
+                    <li>Simplified the BaudSim function to entering an integer only; 0 for fastest; 5 for slowest. (5 is VERY slow - not recommended. Typically 0 and 1 are all that is needed.)</li>
+                    <li>Added a reminder to the 'Hidden' button on the BBS Editor form to prompt to create a new AT_Connect password in the configuration form when none exists.</li>
+                    <li>Added encryption to hidden macros for storage in the BBS file.</li>
+                    <li>Gave new versions dragon names - this one is Vhagar.</li>
+                    <li>Various cosmetic changes throughout...including this help file!</li>
+                </ul>
+                <h4>Bugs</h4>
+                <ul>
+                    <li>Fixed a bug where a Clear Screen (ATASCII 125) would not be executed if it followed a Ctrl-Insert (ATASCII 255). This bug would actually prevent anything that followed a Ctrl-Ins from executing. This fixed a LOT of things in the display functions.</li>
+                    <li>Fixed a BUG in the Portlist creation function.</li>
+                    <li>Fixed a BUG in the BBS Editor that allowed editing of hidden macros while they were locked and protected from sight.</li>
+                    <li>Fixed the old Control-Delete processing issue (somewhat), which has existed in ATx for more than 20 years, however there are still others to be identified and fixed.</li>
+                    <li>Found that the keyclick sound (sp0000.wav) was not being installed with the new AT_Connect setup package and fixed it.</li>
+                </ul>
+                <h4>v2.12 - 6.21.20</h4>
+                <ul>
+                    <li>Tested under Windows 10 (Note: UAC issues cause some files to reside in strange places. To be documented and fixed in v3.)</li>
+                    <li>Installing Visual Basic 6 into my Windows 10 box allowed me to work in a host environment rather than on a virtual machine. The Win10 compiled version of the program displays to the screen at a much higher rate of speed...like going from 2400 baud to 9600 baud.</li>
+                    <li>Masked an error in the Ctrl-Del key screen processing. This prevents the program from crashing even though the key is not correctly processed and displayed. I will try to fix this in v3.</li>
+                    <li>Added a function to clear the incoming buffer when the connection is broken. This can be enabled or disabled in the Config screen.</li>
+                    <li>Added UseBBSEditor function for displaying the BBS Editor form next to the AT_Telnet screen during your BBS sessions allowing you to view info about the BBS as you connect to it.</li>
+                    <li>Various minor changes and fixes.</li>
+                    <li>Not released to the public.</li>
+                </ul>
+                <h4>v2.10 - 1.18.13</h4>
+                <ul>
+                    <li>Removed the BBS Database and went back to the old text file for bbses. The DB increased the size of the setup ZIP file from 1.5 mb to 7mb. I didn't like that.</li>
+                    <li>Tested and working in Windows 7 x64 (in compatibility mode).</li>
+                    <li>Added 'Browse' buttons for filling in browser and screen dump path fields in Config form.</li>
+                    <li>Added 'Abort' connect function to the 'Connect' button.</li>
+                    <li>Added multiple Ports for each BBS in BBS Editor.</li>
+                    <li>Added 'Edit RAW BBS List' feature with config disable/enable feature.</li>
+                    <li>Added 'Fix BBS List' feature with config disable/enable feature.</li>
+                    <li>Added ability to mark a BBS as down so it doesn't show up in dial list box without having to delete it from the BBS List.</li>
+                    <li>Added Password Tab to configuration form.</li>
+                    <li>Added visual masking and password protection to Macros to hide passwords and logins from sight, etc.</li>
+                    <li>Various minor changes and fixes.</li>
+                </ul>
+                <h4>v2.00 - 11.5.09 - Version 2 Release</h4>
+                <ul>
+                    <li>Added the ATDB BBS database in place of the old text bbs list. ATDB adds a whole slew of new functions including keyboard macros, individual BBS configuration, session information and others.</li>
+                    <li>Added 'Ctrl-C' processing for aborting long text files. This works as well as can be expected in light of the speed at which the data comes across the winsock pipe.</li>
+                    <li>Cleaned up a few minor bugs.</li>
+                    <li>Minor cosmetic changes throughout the program.</li>
+                </ul>
+                <h4>v1.20</h4>
+                <ul>
+                    <li>Changed the prompts in the marquee to reflect the CTH new website and bbs URLs.</li>
+                    <li>Minor mods to the status bar.</li>
+                    <li>Added the 'PrintScreen' function to print the contents of the current screen. Click the printer icon to access this function.</li>
+                    <li>Added code to update the BBS list combo box after the list was edited using notepad.</li>
+                    <li>Added 'CAPTURE' mode for capturing text from the BBS. Right-clicking the screen opens the 'CAPTURE MENU' for access to all capture functions. While viewing the capture file, an 'Abort Capture' button is visible at the bottom of the window for aborting the viewing.</li>
+                    <li>Added the About Dialog Box and a FUJI icon to the toolbar for 'About' access.</li>
+                    <li>Enhanced the Winsock Error code to better describe the error in a dialog box.</li>
+                    <li>Re-enabled the BaudSim function.</li>
+                    <li>Fixed a bug which left data in the WinsockBuffer at odd times.</li>
+                </ul>
+                <h4>v1.10</h4>
+                <ul>
+                    <li>Cursor Controls - added support for the four arrows, Control-Insert, Control-Delete, Shift-Insert, Shift-Delete, and Tab.</li>
+                    <li>Changed the CursorOn( ) and CursorOff( ) subroutines to support non-destructive printing to the screen. This is necessary when the cursor passes over an existing char on the screen to keep it from wiping out that char during calls to either of these subs.</li>
+                    <li>Changed all char sizes from 15 to 16 to keep the cursor from wiping out 1 pixel from any char it passes next to. Had to change the Charset image( atari4.gif ) by adding one pixel of white at the end of each row which ended in an inverse char because the above change made the chars at the end of that row have a one pixel dark line at the end of the char. For example, if AT1 printed another inverse char next to one of these chars, the two chars would appear to be separated by a 1 pixel dark line. (Changing the char size from 15 to 16 introduced this 'feature').</li>
+                    <li>Added the BaudRate simulator for smoother viewing of ATASCII cartoons. This feature is still under construction. Even though it appears to work fine, I am not totally happy with it.</li>
+                    <li>Fixed a bug which would stop the program if the remote computer closed the connection and you typed a char. Sending a char to Winsock generated a fatal error. The fix was to set the 'Connected' variable False when the remote BBS disconnected.</li>
+                    <li>Added code to properly process ATASCII 255 (Control-Insert) which the Telnet protocol uses for an escape sequence.</li>
+                    <li>Made use of the VB internal Project properties for Application Version control to help keep me straight.</li>
+                    <li>Centered the Splash Form and MDI form in the middle of the screen.</li>
+                    <li>Added the 'StayAlive' button and code to send a single configurable char (default = '/') to the remote BBS to stay connected while viewing a long text file in Baud Simulator mode.</li>
+                    <li>Added a StatusBar at the bottom of the form to replace the 'Connection Status' Textbox.</li>
+                    <li>Added the Appinfo to this statusbar.</li>
+                    <li>Added a toolbar for quick access to all commands.</li>
+                    <li>Fixed ShiftInsert() and ShiftDelete() to move the cursor back to X = 0.</li>
+                    <li>Rewrote the Tab routines to fix a bug in them.</li>
+                    <li>Added the AUTOSTAYALIVE Boolean. When this var is True, 'StayAlive' is enabled upon connection to a BBS.</li>
+                    <li>Added the AUTOBAUDSIM Boolean. When this var is True, 'BaudSim' is enabled upon connection to a BBS.</li>
+                    <li>Added the Configuration Dialog and Config file which retains the values of 'AutoBaudSim', 'AutoStayAlive' and the 'StayAliveChar' ('/' or 'whatever').</li>
+                    <li>Added two more marquee items to describe BaudSIM and StayAlive.</li>
+                </ul>
+                <h4>v1.00 - Initial Release</h4>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Copyright &copy; 2009-2026 - Cabell Clarke - All Rights Reserved &reg;</p>
+            <p>Revised: 10/18/2026</p>
+            
+        </div>
+        <script src="scripts/script.js" type="text/javascript"></script>
+
+    </body>
+</html>

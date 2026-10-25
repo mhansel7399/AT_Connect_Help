@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AT Connect III - Message Quoting System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+    <body>
+
+        <div class="header">
+            <img src="images/Main1.jpg" alt="Header Image" class="header-image">
+            <div class="header-text">
+                AT_Connect III<br>
+                The ATASCII Terminal Client
+            </div>
+        </div>
+
+        <div class="nav">
+            <ul>
+                <li><a href="AT3_Help.htm" class="nav-item">What is AT Connect III</a></li>
+                <li><a href="features.html" class="nav-item">Features and Disclaimer</a></li>
+                <li><a href="started.html" class="nav-item">Getting Started</a></li>
+                <li><a href="configuration.html" class="nav-item">Configuration</a></li>
+                <li><a href="operation.html" class="nav-item">Operation</a></li>
+                <li><a href="status-window.html" class="nav-item">The Status Window</a></li>
+                <li><a href="bbseditor.html" class="nav-item">BBS Editor</a></li>
+                <li><a href="thebox.html" class="nav-item">The Box (Text Editor)</a></li>
+                <li><a href="scrollback.html" class="nav-item">Scrollback Controls</a></li>
+                <li><a href="quotingsys.html" class="nav-item">Message Quoting Systems</a></li>
+                <li><a href="autopause.html" class="nav-item">AutoPause System</a></li>
+                <li><a href="systemlog.html" class="nav-item">System Log</a></li>
+                <li><a href="timeonline.html" class="nav-item">Time Online Report</a></li>
+                <li><a href="detecturl.html" class="nav-item">Detect URLs</a></li>
+                <li><a href="ateditor.html" class="nav-item">The ATEditor</a></li>
+                <li><a href="notes.html" class="nav-item">Notes</a></li>
+                <li><a href="aboutchange.html" class="nav-item">About and Change Log</a></li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="text-with-image">
+                <h3>Message Quoting System</h3>
+                <figure class="content-image">
+                    <img src="images/scrollback.jpg" alt="screen clip of scrollback screen">
+                    <figcaption class="pic-text">Quoting System</figcaption><br>
+                    <img src="images/quotedmsg.jpg" alt="screen clip of quoted message">
+                    <figcaption class="pic-text">Scrollback Controls</figcaption>
+                </figure>
+                <p>This system is used to create quoted messages on a BBS. This allows you to quote desired content from a previous message and incorporate it in your current message. It is a somewhat primitive system. Usually the BBS handles quoting of previous messages, but the old Atari 8-bit BBSes did not do this. Hence this system...</p>
+                <p>When you see a message that you want to quote in your next message, do the following five steps in this order:</p>
+                <ol>
+                    <li><strong>Send Buffer to Box</strong> - Hit the 'Scrollback to Box' button - this sends the contents of the scrollback buffer to the Box. In the picture to the right, the last 600 characters will be sent to the box. Increase or decrease this number if you need more or less &lpar;<u>always making sure to clear the Box before sending the buffer to the box again</u>...unless you want to do this.&rpar;<br>
+                    <strong>Prep the BBS</strong> - In the BBS, set up your reply to the message until you are in the message line editor. Doing this step after step #1 ensures that you are sending the most relevant buffer contents to the Box because none of your message prep data will take up extra space in the Box.</li>
+                    <li><strong>Edit the Box</strong> - The 'Edit Box' button will place your cursor in the box at position 0 to begin the edit process. Manually edit the quoted message in the box until it only contains the text you are interested in quoting.</li>
+                    <li><strong>Make the Quote</strong> - Hit the 'Format Edited Box' button to automatically modify the text in the box to add your quote prefix and special ATASCII Carriage Returns &lpar;155&rpar;. The text might look a little strange to the eye but it should format correctly in the BBS after you send it. Pressing the 'Format Edited Box' button also disables the 'Auto C/R' function and enables the 'Send Formatted Box' button.</li>
+                    <li><strong>Send it to the BBS</strong> - Hit the 'Send Formatted Box' button to send box text 
+                    to the BBS.</li>
+                </ol>
+                <p>You may then continue to enter your message into the 
+                    BBS.</p>
+                    <p> <strong>NOTES:</strong> 
+                    <ul>
+                        <li>During the quoting process, the next step in the process will be underlined with a <strong class="green-change">GREEN line</strong> indicator seen in the picture to the right.</li>
+                        <li>Format Edited Box' command uses the Alarm Column value to determine the length of the line. You might have to experiment with this value. During testing, I used a value of  32 here to help eliminate those long words that happen to cross this threshold from causing an inadvertent word wrap after the 'Format Edited Box' function modifies the Box Text and during the 'Send Formatted Box' function. Not the end of the world, but it can happen. Modifications to the process have almost eliminated this anomaly...almost.</li>
+                        <li>If the 'Scrollback to Box' function cuts off the top part of the message, you can clear the box, increase the buffer size in the field &lpar;shown here at 400&rpar; next to the 'Scrollback' button, and hit the 'Scrollback to Box' button again. This will reload the box with more characters this time. Repeat until you get what you want in the box. Remember, the scrollback buffer is the last 2048 bytes.</li>
+                        <li>Hitting the 'Scrollback to Box' or 'Quote Box' buttons will automatically and temporarily disable the 'Auto C/R' to allow better and cleaner editing in the Box.</li>
+                        <li>The Quote Prefix defaults to this: '=&gt;'. It can be changed in the configuration window.</li>
+                        <li>The Quote Box function needs to be smarter - it is not smart enough to quote a previously quoted message properly - it still works but not as cleanly as I would like.</li>
+                    </ul>
+                        <p>With a little practice, I can do the quote in about 20 seconds now.</p>
+        
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Copyright &copy; 2009-2023 - Cabell Clarke - All Rights Reserved &reg;</p>
+            <p>Revised: 12/14/2023</p>
+        </div>
+        <script src="scripts/script.js" type="text/javascript"></script>
+
+    </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AT Connect III - AutoPause System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+    <body>
+
+        <div class="header">
+            <img src="images/Main1.jpg" alt="Header Image" class="header-image">
+            <div class="header-text">
+                AT_Connect III<br>
+                The ATASCII Terminal Client
+            </div>
+        </div>
+
+        <div class="nav">
+            <ul>
+                <li><a href="AT3_Help.htm" class="nav-item">What is AT Connect III</a></li>
+                <li><a href="features.html" class="nav-item">Features and Disclaimer</a></li>
+                <li><a href="started.html" class="nav-item">Getting Started</a></li>
+                <li><a href="configuration.html" class="nav-item">Configuration</a></li>
+                <li><a href="operation.html" class="nav-item">Operation</a></li>
+                <li><a href="status-window.html" class="nav-item">The Status Window</a></li>
+                <li><a href="bbseditor.html" class="nav-item">BBS Editor</a></li>
+                <li><a href="thebox.html" class="nav-item">The Box (Text Editor)</a></li>
+                <li><a href="scrollback.html" class="nav-item">Scrollback Controls</a></li>
+                <li><a href="quotingsys.html" class="nav-item">Message Quoting Systems</a></li>
+                <li><a href="autopause.html" class="nav-item">AutoPause System</a></li>
+                <li><a href="systemlog.html" class="nav-item">System Log</a></li>
+                <li><a href="timeonline.html" class="nav-item">Time Online Report</a></li>
+                <li><a href="detecturl.html" class="nav-item">Detect URLs</a></li>
+                <li><a href="ateditor.html" class="nav-item">The ATEditor</a></li>
+                <li><a href="notes.html" class="nav-item">Notes</a></li>
+                <li><a href="aboutchange.html" class="nav-item">About and Change Log</a></li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="text-with-image">
+                <h3>AutoPause System</h3>
+                <figure class="content-image">
+                    <img src="images/AP_BBS.jpg" alt="screen clip of auto pause">
+                    <figcaption class="pic-text">Set AutoPause in the BBS Record</figcaption><br><br>
+                    <img src="images/autopause.jpg" alt="screen clip of autopause">
+                    <figcaption class="pic-text">AutoPause Controls &lpar;in lower right corner of control panel&rpar;</figcaption>
+                </figure>
+                <p>AutoPause is a small system that can interrupt a message display on a BBS that does not have a page length setting for users. Some BBSes (like BBS:Express v1.0), don't have a way to pause the message especially when they are running ultra-fast on the internet. After hitting the [A]gain command to reread the current message, you cannot hit the Ctrl-S fast enough to pause the display before the data has completely been sent to you. This makes it difficult to read the beginning of the longer messages.</p>
+                <p>In your BBS record, you can set AutoPause <strong>on</strong> using the AutoPause Checkbox for each BBS that you need it on as seen here on the right. You should also set the AutoPause delay to a value between 300 and 600ms. You may have to experiment with this value on different BBSes.</p>
+                <p>There are three invisible buttons in the lower right corner of the control panel which will appear when you connect to a BBS that you have enabled AutoPause. These buttons are:</p>
+                <ul>
+                    <li><strong>[A] + ^S</strong> - using this combination, AT_Connect sends the [A] command first to redisplay the current message and then after a slight delay (300-600 ms), sends the Ctrl-S to pause the message before it displays too much to read. Then Ctrl-S (or the ^S button) can be used to restart and stop the message as necessary.</li>
+                    <li><strong>[N] + ^S</strong> - will send the [N]ext command (or Chr[155] in BBS:Express) followed by the delay and then the Ctrl-S. This will add the pause to the next message instead of the current one.</li>
+                    <li><strong>^S</strong> - this button will send the Ctrl-S by itself...useful for starting and stopping the message display using your mouse instead of the keyboard.</li>
+                </ul>
+                <p><strong>NOTE:</strong> Ctrl-S can be used to <strong>stop and restart</strong> the message display.</p>
+                <p><strong>NOTE2:</strong> Currently, this system is programmed for use with BBS:Express v1.0. If we decide that it needs to be programmed for other ATASCII BBSes, I will consider this for future releases.</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Copyright &copy; 2009-2023 - Cabell Clarke - All Rights Reserved &reg;</p>
+            <p>Revised: 12/14/2023</p>
+        </div>
+        <script src="scripts/script.js" type="text/javascript"></script>
+
+    </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AT Connect III - The ATEditor</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+    <body>
+
+        <div class="header">
+            <img src="images/Main1.jpg" alt="Header Image" class="header-image">
+            <div class="header-text">
+                AT_Connect III<br>
+                The ATASCII Terminal Client
+            </div>
+        </div>
+
+        <div class="nav">
+            <ul>
+                <li><a href="AT3_Help.htm" class="nav-item">What is AT Connect III</a></li>
+                <li><a href="features.html" class="nav-item">Features and Disclaimer</a></li>
+                <li><a href="started.html" class="nav-item">Getting Started</a></li>
+                <li><a href="configuration.html" class="nav-item">Configuration</a></li>
+                <li><a href="operation.html" class="nav-item">Operation</a></li>
+                <li><a href="status-window.html" class="nav-item">The Status Window</a></li>
+                <li><a href="bbseditor.html" class="nav-item">BBS Editor</a></li>
+                <li><a href="thebox.html" class="nav-item">The Box (Text Editor)</a></li>
+                <li><a href="scrollback.html" class="nav-item">Scrollback Controls</a></li>
+                <li><a href="quotingsys.html" class="nav-item">Message Quoting Systems</a></li>
+                <li><a href="autopause.html" class="nav-item">AutoPause System</a></li>
+                <li><a href="systemlog.html" class="nav-item">System Log</a></li>
+                <li><a href="timeonline.html" class="nav-item">Time Online Report</a></li>
+                <li><a href="detecturl.html" class="nav-item">Detect URLs</a></li>
+                <li><a href="ateditor.html" class="nav-item">The ATEditor</a></li>
+                <li><a href="notes.html" class="nav-item">Notes</a></li>
+                <li><a href="aboutchange.html" class="nav-item">About and Change Log</a></li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="text-with-image">
+                <h3>The ATEditor</h3>
+                <figure class="content-image">
+                    <img src="images/ATE1.jpg" alt="screen clip of auto pause">
+                    <figcaption class="pic-text">AT Editor Screen</figcaption><br><br>
+                    <img src="images/ATE2.jpg" alt="screen clip of autopause">
+                    <figcaption class="pic-text">Used in conjunction with the Main Screen for editing ATASCII chars and 'Mojis'</figcaption>
+                </figure>
+                <p>The ATEditor is a brand new feature for AT_Connect III which can be used to edit sequences of ATASCII characters into macros or 'Mojis* as we like to call them. While offline and not connected to a BBS, you can draw ATASCII images on the main screen and each typed ATASCII keycode will be copied into the ATEditor window, where it can be edited, sent to the main screen for testing, and saved to the 'Mojis folder which is a sub-folder of the 'documents\AT_Connect' system folder. The codes can be sent to the main screen while connected to a BBS with certain constraints.</p>
+                <p>It is also possible to turn on your capture buffer, capture something from a BBS, and send this captured data to the ATEditor. In other words, Steal a 'Moji...</p>
+                <p>This editor was born during the troubleshooting phase (which never ends) of AT_Connect III when I was trying to figure out which characters were not being processed correctly by the screen handler. I kept adding things to try to help me do the job better and I realized at some point that this might be a cool feature to have as part of the program...so I further developed it into the ATEditor.</p>
+
+                <ul>
+                    <li><strong>Enable Editing Checkbox - </strong>This box must be checked before any typing can be done in the ATEditor window. Nothing but ATASCII char codes should be typed into this window. All character codes must be separated by a semi-colon.</li>
+                    <li><strong>Clear Main Screen before send checkbox - </strong>sends a clear screen code (125) to the main screen when the 'Send to Screen' button is pressed before the data in the window is sent.</li>
+                    <li><strong>Inverse Characters checkbox - </strong>turns on inverse characters in the main screen until you uncheck the box. The <strong>&lt;End&gt;</strong> key does the same thing.</li>
+                    <li><strong>CLS button</strong> - Clears both the text window in the ATEditor and the main screen.</li>
+                    <li><strong class="red-change">*** Edited ***</strong> - Indicates that the contents of the window were edited and changed manually and a save or test might be necessary. (Flashes Green and Red).</li>
+                    <li><strong>Send to Main button</strong> - sends the contents of the window to the main screen in both offline and online modes. The <strong class="red-change">RED</strong> warning label seen at the top of the form is displayed on the first push as a reminder to turn on graphics mode in the message editor if sending a message. The second push sends the data.</li>
+                    <li><strong>'Clear After Send' checkbox</strong> - checking this will clear the ATE after sending the contents to the BBS or main screen.</li>
+                    <li><strong>'Create File' checkbox</strong> - This will translate the contents of the ATEditor and send it to a new file after prompting for a filename.</li>
+                    <li><strong>Delay (ms)  field</strong> - sets a delay between the sending of each character. This is necessary on some BBSes and recommended for most testing. This field can be modified permanently  in the Config form and saved as a parameter.</li>
+                    <li><strong>File Controls</strong> - The 'Load', 'Save' and 'Delete' buttons work on the files selected in the Filebox in the bottom left corner. The 'Load' and 'Delete' buttons are disabled until a file is selected in the box. Click on the filebox to select a file. Dbl-clicking the file in the filebox loads the file automatically.</li>
+                    <li><strong>Clear button</strong> - clears the contents of the window. There is no prompt to save the contents so be careful.</li>
+                    <li><strong>Close</strong><strong> button</strong> - closes the ATEditor window.</li>
+                    <li><strong>File: label - </strong>indicates the name of the last loaded file.</li>
+                </ul>
+                <h4>The ChXbox System</h4>
+                <ul>
+                    <li><strong>'1) Start -X-' button</strong> - creates a checked chXbox in the ATE.</li>
+                </ul>
+                <figure class="content-image">
+                    <img src="images/ATE_chkbox.jpg" alt="screen clip of checkbox buttons">
+                    <figcaption class="pic-text">ChX Box System</figcaption>
+                </figure>
+                <p><u><strong>OR</strong></u></p>
+                <ul>
+                    <li><strong>'1) Start -_-' button</strong> - creates an unchecked chXbox in the ATE.</li>
+                    <li><strong>'2) Insert Label' button</strong> - type your label into the label text box and insert it using the button.</li>
+                    <li><strong>'3) Finish' button</strong> - finishes the chXbox in the ATE after a caption has been added.</li>
+                </ul>
+                <ol>
+                    <li>To use the chXbox system, first decide will this be a 'X'ed box or an un'X'ed box...</li>
+                    <li>Click the 'Start -X-' or 'Start -_-' button depending on the decision in Step 1. This will load the 'Moji 'chX1' (or 'chX2') into the ATE.</li>
+                    <li>In the Label text box, type in the caption for the button. It can be anything you want (Like, Dislike, What, where or whatever or poop).</li>
+                    <li>Click the '2) Insert' button below the box to send your caption to the ATE.</li>
+                    <li>Click the 'Finish -X_-' button to load the 'chX3' 'Moji and finish the chXbox.</li>
+                    <li>Repeat steps 1-5 for each additional chXbox.</li>
+                    <li>When you have finished all chXboxes, click 'Send to Main' to send the chXboxes to the BBS. Or you can 'Send to Main' after each ChXbox is built. Both ways work. </li>
+                </ol>
+                <p><strong> Note:</strong> The label can also be entered into 'The Box' and the 'Box to ATE' button used to add it to the ATE ChXbox being constructed.</p>
+                <p><strong>The AutoStart 'Moji</strong></p>
+                <p>As of ATC v3.20, there is a 'moji that AT_Connect will run at the startup of the system. The filename of this 'moji is "ATC Ready". It is automatically generated at installation time or re-created along with the system 'mojis in the Configuration editor.</p>
+                <h4>Caveats &amp; Conundrums</h4>
+                <p>Certain things must be taken into consideration when sending these 'Mojis to a BBS.</p>
+                <ul>
+                    <li>If you are logged into a BBS that doesn't allow ATASCII graphics characters in the message bases, you might see nothing but garbage on your screen when you hit 'Send to Main'...</li>
+                    <li>All of the ATASCII BBSes I know of use line editors for their message bases. Some of these line editors only allow 40 characters on a line so if these 'Mojis are too large for the single line (more than 40 characters), they may not fully execute. Sometimes integrating C/Rs (155) into your 'Mojis will solve this to a certain degree or setting your line length to 80 cols.</li>
+                    <li>If your Moji contains a C/R (155) and the next character is a front slash (/), your 'Moji might kick a BBS:Express BBS system into the message editing menu. Something to think about...</li>
+                    <li>Some BBSes use a CR on a blank line to launch the message editing mode. Beware of this if your 'Moji has 2 chr(155)s in a row.</li>
+                    <li>What else?</li>
+                </ul>
+                <p class="pic-text">* 'Mojis - after all... years ago, they were called 'emoticons' which I thought was a perfectly good name for them since it was probably the first name for them but you know how it is... a new generation comes along and decides to rename them to Emojis so they can take credit for inventing them and pat themselves on the back and maybe take home a paycheck. So I decided for the purpose of At_Connect, I will call them 'Mojis and to hell with everything else... where's MY paycheck?</p>
+                <p class="pic-text">Thanks to Rob S. for getting us started with the 'Mojis.</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Copyright &copy; 2009-2026 - Cabell Clarke - All Rights Reserved &reg;</p>
+            <p>Revised: 10/18/2026</p>
+        </div>
+        <script src="scripts/script.js" type="text/javascript"></script>
+
+    </body>
+</html>

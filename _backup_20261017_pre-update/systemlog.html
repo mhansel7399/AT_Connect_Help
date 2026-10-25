@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AT Connect III - System Log</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+    <body>
+
+        <div class="header">
+            <img src="images/Main1.jpg" alt="Header Image" class="header-image">
+            <div class="header-text">
+                AT_Connect III<br>
+                The ATASCII Terminal Client
+            </div>
+        </div>
+
+        <div class="nav">
+            <ul>
+                <li><a href="AT3_Help.htm" class="nav-item">What is AT Connect III</a></li>
+                <li><a href="features.html" class="nav-item">Features and Disclaimer</a></li>
+                <li><a href="started.html" class="nav-item">Getting Started</a></li>
+                <li><a href="configuration.html" class="nav-item">Configuration</a></li>
+                <li><a href="operation.html" class="nav-item">Operation</a></li>
+                <li><a href="status-window.html" class="nav-item">The Status Window</a></li>
+                <li><a href="bbseditor.html" class="nav-item">BBS Editor</a></li>
+                <li><a href="thebox.html" class="nav-item">The Box (Text Editor)</a></li>
+                <li><a href="scrollback.html" class="nav-item">Scrollback Controls</a></li>
+                <li><a href="quotingsys.html" class="nav-item">Message Quoting Systems</a></li>
+                <li><a href="autopause.html" class="nav-item">AutoPause System</a></li>
+                <li><a href="systemlog.html" class="nav-item">System Log</a></li>
+                <li><a href="timeonline.html" class="nav-item">Time Online Report</a></li>
+                <li><a href="detecturl.html" class="nav-item">Detect URLs</a></li>
+                <li><a href="ateditor.html" class="nav-item">The ATEditor</a></li>
+                <li><a href="notes.html" class="nav-item">Notes</a></li>
+                <li><a href="aboutchange.html" class="nav-item">About and Change Log</a></li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="text-with-image">
+                <h3>System Log</h3>
+                <figure class="content-image">
+                    <img src="images/systemlog.jpg" alt="screen clip of system log">
+                    <figcaption class="pic-text">System Log Form</figcaption>
+                </figure>
+                <p>The System Log can optionally be used to keep track of your BBS activity. The number of characters in the current log is displayed at the bottom of the form. While the log cannot be edited anywhere in AT_Connect, several things can be done to it here in this form:</p>
+                <ul>
+                    <li>It can be cleared and restarted here.</li>
+                    <li>It can be deleted and optionally turned off for this session.</li>
+                    <li>It can be renamed and saved (like an archive function). It automagically assigns a &quot;unique&quot; filename based on the time and date rounded to the nearest second and stores it in the LOGS folder which is created the first time you use it.</li>
+                </ul>
+                <p>It can be permanently disabled in the configuration menu.</p>
+                <p>The log file is located in the System folder and is called 'AT3_Log.txt'.</p>
+                <p>The time value is stored as a long integer in the BBS List for each BBS. This means it will roll over at some point...when you reach 69 years of time online.</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Copyright &copy; 2009-2023 - Cabell Clarke - All Rights Reserved &reg;</p>
+            <p>Revised: 12/14/2023</p>
+        </div>
+        <script src="scripts/script.js" type="text/javascript"></script>
+
+    </body>
+</html>

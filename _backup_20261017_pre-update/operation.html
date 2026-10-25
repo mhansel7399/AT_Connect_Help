@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AT Connect III - Operation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+    <body>
+        <div class="header">
+            <img src="images/Main1.jpg" alt="Header Image" class="header-image">
+            <div class="header-text">
+                AT_Connect III<br>
+                The ATASCII Terminal Client
+            </div>
+        </div>
+        
+        <div class="nav">
+            <ul>
+                <li><a href="AT3_Help.htm" class="nav-item">What is AT Connect III</a></li>
+                <li><a href="features.html" class="nav-item">Features and Disclaimer</a></li>
+                <li><a href="started.html" class="nav-item">Getting Started</a></li>
+                <li><a href="configuration.html" class="nav-item">Configuration</a></li>
+                <li><a href="operation.html" class="nav-item">Operation</a></li>
+                <li><a href="status-window.html" class="nav-item">The Status Window</a></li>
+                <li><a href="bbseditor.html" class="nav-item">BBS Editor</a></li>
+                <li><a href="thebox.html" class="nav-item">The Box (Text Editor)</a></li>
+                <li><a href="scrollback.html" class="nav-item">Scrollback Controls</a></li>
+                <li><a href="quotingsys.html" class="nav-item">Message Quoting Systems</a></li>
+                <li><a href="autopause.html" class="nav-item">AutoPause System</a></li>
+                <li><a href="systemlog.html" class="nav-item">System Log</a></li>
+                <li><a href="timeonline.html" class="nav-item">Time Online Report</a></li>
+                <li><a href="detecturl.html" class="nav-item">Detect URLs</a></li>
+                <li><a href="ateditor.html" class="nav-item">The ATEditor</a></li>
+                <li><a href="notes.html" class="nav-item">Notes</a></li>
+                <li><a href="aboutchange.html" class="nav-item">About and Change Log</a></li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="text-with-image">
+                <h3>Operation - The Control Panels, Status, and Toolbar</h3>
+                <p>
+                    Here is where you will learn how to operate AT_Connect. All functions of the toolbar and control panel are explained below.
+                </p>
+                <article>
+                    <figure class="content-image">
+                        <img src="images/control-1.jpg" alt="image of the control panel" title="The Control Panel">
+                        <figcaption class="pic-text">The Control Panel</figcaption><br>
+                        <img src="images/ctrlpanel3.jpg" alt="image of the control panel" title="The Control Panel">
+                        <figcaption class="pic-text">The Control Panel</figcaption>
+                    </figure>                    
+                    <h4>The Control Panel</h4>
+                    <p>
+                        The control panel is located at the bottom of the terminal screen. It contains the BBS drop-down list box, the status bar and several buttons to control the operation of the program. Basic operation of the program is:
+                    </p>
+                    <ul>
+                        <li>Select a BBS in the drop-down list.</li>
+                        <li>Hit the 'Connect' button.</li>
+                        <li>Wait...</li>
+                        <li>The status bar will notify you when you are connected and the LED in the upper left corner shown here will turn 
+                        from Red to Green. If you enabled a 'Connect Message' in <a href="#config">configuration</a>, you will see it displayed in the terminal screen window.</li>
+                        <li>At this point, the BBS should start prompting you...this could take as long as 5-10 seconds. If not, try hitting your &lt;ENTER&gt; key a few times slowly to wake up the BBS.</li>
+                        <li>You may Right-click on the terminal screen at any time (even before connecting) to open the Capture sub-Menu if you want to capture the data sent from the BBS  during your online session.</li>
+                        <li>The 'View System Log' button will open a form that displays the System Log file. Here it can be deleted, cleared and 
+                        restarted and optionally disabled for the current session.</li>
+                        <li>The Online Timer (blue box) will keep track of your time online.</li>        
+                    </ul>
+                </article>
+                <article>
+                    <figure class="content-image">
+                        <img src="images/selectbbs.jpg" alt="screenshot of BBS drop down" title="Select BBS drop-down">
+                        <figcaption class="pic-text">Select BBS Drop-down</figcaption>
+                    </figure>
+                    <h4>The Drop-down BBS Dial List Box</h4>
+                    <ul>
+                        <li>The drop-down list box is located in the center of the control panel. Use it to select the BBS you want to call. After selecting from the list, click the 'Connect' button to the left of the list. The list box is populated with all of the BBS names in your list.</li>
+                        <li>When you have selected your BBS, you may also hit the 'Edit BBS' button to open the BBS Editor and edit the selected BBS.</li>
+                        <li>You may <a href="bbseditor.html#Hide From Dial List">hide BBSes</a> from this list in the <a href="bbseditor.html#bbs">BBS Editor</a>.</li>
+                    </ul>
+                </article>
+                <article>
+                    <figure class="content-image">
+                        <img src="images/toolbar1.jpg" alt="image of toolbar" title="Toolbar">
+                        <figcaption class="pic-text">The Toolbar</figcaption>
+                    </figure>
+                    <h4><a name="toolbar">The Toolbar</a></h4>
+                    <p>
+                        The toolbar provides 1-click access to most functions. Currently, there are 15 buttons on the bar described below (left to right):
+                    </p>
+                    <ol>
+                        <li><strong>Connect</strong> - Connects you to the selected BBS. A BBS must be selected in the drop-down list box in the center of the control panel</li>
+                        <li><strong>Disconnect</strong> - disconnects you from the BBS (grayed-out here when not connected)</li>
+                        <li><strong>Clear Screen</strong> - clears the local screen (like ? CHR$(125))</li>
+                        <li><strong><a name="BaudSim">BaudSim</a></strong> - toggles the baud rate simulator. Internet communications can be much faster than traditional modem connections, therefore data can get blasted to the screen so fast that the original effects of ATASCII graphics (like cursor controls) can get lost or unnoticed. BaudSim is a way of slowing down and smoothing the data coming onto the screen so it more closely simulates the modem connections of yesterday. There are four different baud rate speeds (Slowest,300,1200,Fastest) which can be configured on the Settings' tab of the <a href="configuration.html">configuration</a> form.</li>
+                        <li><strong>Stay-Alive</strong> - The Stay-Alive function is designed to send characters to the BBS to fool the BBS inactivity timer when viewing a long text file or break movie in <a href="#BaudSim">BaudSim</a> mode. Typing a character at the local keyboard resets the timer.</li>
+                        <li><strong>40 / 80 column toggle</strong> - toggles the screen width between 40 and 80 columns.
+                            <ul>
+                                <li><strong>NOTE:</strong> some functions Screen Dump and Screen Print do not work in 80 column mode.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Print Screen</strong> - sends the terminal screen to your printer.
+                            <ul>
+                                <li><strong>NOTE:</strong> to save ink the white chars on black background are inverted.</li>
+                                <li><strong>NOTE2:</strong> Not supported in 80 column mode.</li>
+                            </ul>
+                        </li>
+                        <li><strong>View Screen Dump Panel</strong> - loads the screen dump panel over the control panel for viewing screen dump files.</li>
+                        <li><strong>Configuration</strong> - Loads the <a href="configuration.html">configuration</a> form.</li>
+                        <li><strong>BBS Editor</strong> - Loads the <a href="bbseditor.html#bbs">BBS Editor</a> form.</li>
+                        <li><strong>About</strong> - Tom Hunt's &quot;Closer To Home&quot; icon loads the About dialog box.
+                            <figure class="content-image">
+                                <img src="images/WinPos.jpg" alt="image of windows position box" title="Windows Position Box">
+                                <figcaption class="pic-text">Windows Position Box</figcaption>
+                            </figure>
+                        </li>
+                        <li><strong>Exit</strong> - the big red 'X' shuts down the Winsock control and exits the program.</li>
+                        <li><strong>Help</strong> - loads this help file.</li>
+                        <li><strong>WWW</strong> - loads the web access form if the currently selected BBS has a website attached to it.</li>
+                        <li><strong>Save Window Positions</strong> - Pushing this button loads a form with a button on it which when pushed, will save all of the positions of your windows to the config file so they will always come back to the correct positions.</li>
+                    </ol>
+                </article>
+                <article>
+                    <h4>Macro Display</h4>
+                    <figure class="content-image">
+                        <img src="images/macros.jpg" alt="image of macros" title="Macros">
+                        <figcaption class="pic-text">Macros</figcaption>
+                    </figure>
+                    <p>
+                        Each BBS record may contain up to 10 unique Macros. When a BBS is selected, the macros for that BBS are displayed in the control panel as shown to the right here. In the example to the right, there are five macros (1-5) enabled for the current BBS. The keystroke {Shift}-{Control}-x (where x = 1,2,3,4 or 5) would send the associated macro. Clicking the button will also send the macro. Any buttons here that do not have a macro attached to them will be disabled and have no number in the button. Macros are initially setup in the <a href="bbseditor.html#bbs">BBS Editor</a>.
+                    </p>
+                </article>
+                <article>
+                    <figure class="content-image-toolbar">
+                        <img src="images/status.jpg" alt="image of status bar" title="Status Bar">
+                        <figcaption class="pic-text">Status Bar</figcaption>
+                    </figure>
+                    <h4>The Status Bar</h4>
+                    <p>
+                        The status bar does three (3) things:
+                    </p>
+                    <ol>
+                        <li>Shows you the status of the current connection as well as sometimes displays your last command.</li>
+                        <li>Shows you the status of the operational Status Indicators (below).</li>
+                        <li>Displays the current version and build number of AT_Connect.</li>
+                    </ol>
+                </article>
+                <article>
+                    <h4>Status Indicators</h4>
+                    <p>The three (3) Status Indactors indicate the following:</p>
+                    <figure class="content-image">
+                        <img src="images/status-2.jpg" alt="image of status indicators" title="Status Indicators">
+                        <figcaption class="pic-text">Status Indicators</figcaption>
+                    </figure>
+                    <ol>
+                        <li><strong>Baud</strong> - BaudSim Enabled</li>
+                        <li><strong>Stay</strong> - Stay-alive Enabled</li>
+                        <li><strong>Cap</strong> - Capture Buffer turned ON</li>
+                    </ol>
+                </article>
+                <article>
+                    <h4>The View BMP Panel</h4>
+                    <figure class="content-image">
+                        <img src="images/viewbmp.jpg" alt="image of view bitmap panel" title="View BMP Panel">
+                        <figcaption class="pic-text">View BMP panel</figcaption>
+                    </figure>
+                    <p>
+                        The View BMP panel allows you to view BMP 
+                        images in AT_Connect:
+                    </p>
+                    <ul>
+                        <li>Select a BMP image file in the list box on the far right and double-click it to load it into AT_Connect for viewing ('screen.bmp' here).</li>
+                        <li>Hit the 'Delete' button to delete the selected BMP file.</li>
+                        <li>Hit the 'Exit' button to exit the panel.</li>
+                    </ul>
+                </article>
+                <article>
+                    <figure class="content-image">
+                        <img src="images/viewcapture.jpg" alt="image of view capture buttons" title="View Capture Buttons">
+                        <figcaption class="pic-text">View Capture Buttons</figcaption>
+                    </figure>
+                    <h4>The View Capture Buttons</h4>
+                    <p>
+                        Capture Files can only be viewed in full ATASCII mode from within AT_Connect since they are not true ATASCII but rather ASCII. When viewing a capture file two additional buttons will be displayed in the control panel:
+                    </p>
+                    <ul>
+                        <li><strong>Viewing Capture File...Click to Abort</strong> - doubles as a status indicator as well as an 'abort' button. {Alt}-A does the same thing.</li>
+                        <li><strong>Pause / Continue</strong> - Pauses the viewing so your brain can catch up and Continues the viewing when it is caught up. {Alt}-P also works here.</li>
+                    </ul>
+                </article>
+                <article>
+                    <figure class="content-image">
+                        <img src="images/CaptureIndication.jpg" alt="image of capture mode indicator" title="Capture Mode Indicator">
+                        <figcaption class="pic-text">Capture Mode enabled indicator &lpar;Green Bar&rpar;</figcaption><br><br>
+                        <img src="images/capture.jpg" alt="image of capture menu" title="Capture Menu">
+                        <figcaption class="pic-text">Capture Menu</figcaption>
+                    </figure>
+                    <h4>Capture Menu</h4>
+                    <p>There is also a new <strong>'Capture' indicator</strong> flashing green bar across the top of the screen to remind you that you are in capture mode.</p>
+                    <p>Right-clicking your mouse on the terminal screen opens the Capture Menu. From here you can do several things:</p>
+                    <ul>
+                        <li>Toggle Capture mode on/off</li>
+                        <li>Change the capture filename (for this capture ONLY). Use the <a href="configuration.html#config">Configuration</a> form to change it permanently.</li>
+                        <li>View the capture file in AT_Connect. <strong>NOTE:</strong> The capture file is saved in ASCII mode, so if you try to view it in Notepad or some other Windows program, it may look strange depending on how many strange ATASCII characters are in there. Viewing it in AT_Connect translates the ASCII to ATASCII to give the desired effect.</li>
+                        <li>Delete the capture file.</li>
+                        <li>Change the capture mode from Append to Replace. 'Append' mode means that every time the Capture buffer is turned ON and OFF, the existing capture file will be appended with newly captured data. Checking 'Replace' means that every time the 'Capture' buffer is turned ON a new capture file will replace the old one.</li>
+                        <li>The 'Save Screen as .BMP' item dumps the contents of the current terminal screen to a bitmap file.
+                            <ul>
+                                <li><strong>NOTE:</strong> This function is not supported in 80 column mode.</li>
+                            </ul>
+                        </li>
+                        <li>The 'View System Log' item opens the log display form just like the button on the control panel.</li>
+                        <li>Paste Clipboard to Main screen does exactly what it says.</li>
+                        <li>Send Capture file to ATEditor for editing purposes. This can send a full or partial capture file to the editor.</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Copyright &copy; 2009-2023 - Cabell Clarke - All Rights Reserved &reg;</p>
+            <p>Revised: 12/14/2023</p>
+        </div>
+
+    </body>
+    <script src="scripts/script.js" type="text/javascript"></script>
+
+</html>

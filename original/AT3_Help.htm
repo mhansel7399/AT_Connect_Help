@@ -1,0 +1,2791 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<title>AT_Connect III</title>
+</head>
+
+<body>
+<b><font face="Tahoma" size="7">AT_Connect III - <a name="top">The ATASCII 
+Terminal Client</a></font></b><table border="0" cellpadding="5" cellspacing="7" style="border-collapse: collapse" bordercolor="#111111" width="100%">
+  <tr>
+    <td width="45%" valign="top">
+
+&nbsp;</td>
+    <td width="55%">
+    &nbsp;</td>
+  </tr>
+  <tr>
+    <td width="45%" valign="top">
+
+<h2><font face="Tahoma" size="6">Help System Table of Contents</font></h2>
+<ul>
+  <li><font face="Tahoma"><a href="#what"><strong>What is AT_Connect III...</strong></a></font></li>
+  <li><font face="Tahoma"><strong><a href="#feature">Features and Disclaimer</a></strong></font></li>
+  <li><font face="Tahoma"><a href="#start"><strong>Getting Started</strong></a></font></li>
+  <li><font face="Tahoma"><a href="#config"><strong>Configuration</strong></a></font></li>
+  <li><font face="Tahoma"><a href="#ops"><strong>Operation</strong></a></font></li>
+  <li><strong><font face="Tahoma"><a href="#The Status Window">The Status Form</a></font></strong></li>
+  <li><font face="Tahoma"><a href="#bbs"><strong>BBS Editor</strong></a></font></li>
+  <li><strong><font face="Tahoma"><a href="#The Box">The Box (Text Window)</a></font></strong></li>
+  <li><b><font face="Tahoma"><a href="#Scrollback Controls">Scrollback Controls</a></font></b></li>
+  <li><b><font face="Tahoma"><a href="#Message Quoting System">Message Quoting 
+  System</a></font></b></li>
+  <li><b><font face="Tahoma"><a href="#AutoPause">AutoPause System</a></font></b></li>
+  <li><b><font face="Tahoma"><a href="#System Log">System Log</a></font></b></li>
+  <li><b><font face="Tahoma"><a href="#Time Online Reports">Time Online Report</a></font></b></li>
+  <li><strong><font face="Tahoma"><a href="#Detect URLs">Detect URLs</a></font></strong></li>
+  <li><strong><font face="Tahoma"><a href="#The ATEditor">The ATEditor</a></font></strong></li>
+  <li><font face="Tahoma"><a href="#notes"><strong>Notes</strong></a></font></li>
+  <li><font face="Tahoma"><strong><a href="#about">About and ChangeLog</a></strong></font></li>
+</ul>
+    <p>&nbsp;</td>
+    <td width="55%">
+    <p align="center">
+    <font face="Tahoma">
+    <img border="0" src="images\Main1.jpg" width="690" height="539"><br>
+    </font>
+    <b>
+    <font face="Tahoma" size="1">The AT_Connect III Main screen</font></b></td>
+  </tr>
+</table>
+<hr>
+<table border="0" cellpadding="5" cellspacing="7" style="border-collapse: collapse" bordercolor="#111111" width="100%">
+  <tr>
+    <td width="58%">
+<h3><font face="Tahoma" size="5"><a name="what">What is AT_Connect III...</a></font></h3>
+<p align="justify"><font face="Tahoma">AT_Connect III is the ATASCII 
+Terminal Client... a 
+Windows program that allows you to connect to Atari 8-bit  BBSes in ATASCII 
+mode using the internet.&nbsp; All Atari 8-bit enthusiasts that remember the BBS days of the 1980's 
+know that the only true way to call an Atari 8-bit BBS is in ATASCII mode.&nbsp; 
+It's the only way to experience ATASCII text graphics and cursor controls.&nbsp; 
+Back in the day, many Atari BBSes did not allow callers in ASCII mode... only 
+ATASCII.&nbsp; My own BBS, The Boot Factory, was an ATASCII-only BBS for many 
+years until I switched it over to the IBM PC world... but that is another story.&nbsp; 
+My current internet BBS, Boot Factory 2k+, supports  ATASCII, ASCII and ANSI connections, but the 
+BBS is 
+still best viewed in ATASCII mode.</font></p>
+<p align="justify"><font face="Tahoma">In early 2000, Tom Hunt (Closer 
+to Home Enterprises) had just 
+finished helping me get The Boot Factory 2k+ BBS online via the internet and he asked me if I 
+would like to finish a program he had started... AT_Telnet.&nbsp; At the time, 
+he was busy with other projects and did not have the time to work on this one.&nbsp;&nbsp; 
+I, of course, said &quot;yes&quot; and so I began working on AT_Telnet.&nbsp; I added the 
+missing cursor controls to the ATASCII processing, a necessary feature for true 
+ATASCII compatibility.&nbsp; I also added other stuff such as a toolbar, a 
+status line, a baud rate simulator (<a title="The Baud Rate Simulator" href="#BaudSim">BaudSim</a>) and performed some general code cleanup.&nbsp; Tom released 
+AT_Telnet I on his BBS and website probably around 2002.&nbsp; Over the next few 
+years, I continued to play with the code and eventually added a BBS database, 
+Macro support, a configuration form, capture functions, 80-column support and 
+more to the program.</font></p>
+<p align="justify"><font face="Tahoma">I have been using this program 
+to access Atari 8-bit internet BBSes since I started working on it.&nbsp; Over 
+the last few years, I have worked very sporadically making changes and updating 
+it to suit my needs.&nbsp; In December of 2008, I decided that I would finally 
+release another version.&nbsp; When I built the setup package, it was 7 
+megabytes in size due to extra files needed to support the BBS database.&nbsp; So, 
+because of the sheer size of the distribution package, I removed the BBS 
+database and some unnecessary active X controls and built the new streamlined 
+BBS Editor which maintains the BBS entries in a Text file (.INI).&nbsp; This cut 
+the size of the distribution package by 4 megabytes and gave me an easier method 
+of adding features to the BBS List and Editor.</font></p>
+<p align="justify"><font face="Tahoma">Tom's original version was 
+called AT_Telnet.&nbsp;  Now in 2022, I have decided to rename the program to AT_Connect and release it as version 3.</font></p>
+<p align="justify"><font face="Tahoma">In Tom's original version, he 
+included the screens and references to <a href="#about">BobTerm</a>. In the 
+interest of maintaining the original spirit of AT_Telnet, I have kept one of the BobTerm screens in the program and 
+tried to maintain the 
+basic look and feel of Tom's original brainchild.&nbsp; Except for the addition of the
+<a href="#toolbar">toolbar</a> and the changes to the <a href="#ops">control 
+panel</a>, the addition of the Box, the URL detection and the ATEditor, the program looks exactly like Tom's original work.&nbsp; 
+And now with one click of the mouse and a program restart, AT_Connect can look 
+exactly like the original AT_Telnet as seen in the image above.</font></p>
+<p align="justify"><font face="Tahoma">As of this writing, there are only a handful of 
+Atari 8-bit BBSes left on the internet.&nbsp; Many of the callers to my BBS call 
+in ASCII mode.&nbsp; This program will now give more of them the ability to connect 
+in ATASCII mode.</font></p>
+    <p>&nbsp;</td>
+    <td width="43%">
+    <p align="center">
+    <img border="0" src="images/about.jpg" width="403" height="322"></td>
+  </tr>
+</table>
+<h5><font face="Tahoma"><a href="#top">Back to Top</a></font></h5>
+<hr>
+<h3><font face="Tahoma" size="5"><a name="feature">Features</a></font></h3>
+<table border="0" cellpadding="5" cellspacing="7" style="border-collapse: collapse" bordercolor="#111111" width="100%">
+  <tr>
+    <td width="69%">
+<ul>
+  <li><font face="Tahoma">Connect to Atari internet BBSes in ATASCII 
+  mode.</font></li>
+  <li><font face="Tahoma">Use the BBS Editor to maintain your BBS list 
+  with all setup options in an INI compatible text file.</font></li>
+  <li><font face="Tahoma">Capture your BBS sessions to text files that 
+  can be played back in AT_Connect.</font></li>
+  <li><font face="Tahoma">Dump the screen contents to a bitmap file or 
+  printer (40 column mode only).</font></li>
+  <li><font face="Tahoma">10 unique Macros for each BBS.&nbsp; The 
+  content of these macros can optionally be hidden from sight and encrypted in 
+  the BBS file.</font></li>
+  <li><font face="Tahoma">Connect on any port.</font></li>
+  <li><font face="Tahoma">Each BBS can have multiple port designations.</font></li>
+  <li><font face="Tahoma">ATASCII graphics in 40 or 80 columns.</font></li>
+  <li><font face="Tahoma">Allows you to save a website for each BBS in 
+  the list and shell to your browser to connect to that website.</font></li>
+  <li><font face="Tahoma">Can filter out unwanted characters (ATASCII code 
+  0) generated by the LANtronix devices that many current BBS sysops use to 
+  connect their Atari machines to the internet these days.</font></li>
+  <li><font face="Tahoma">Simulate the baud rates of yesterday using 
+  the <a href="#BaudSim">BaudSim</a> mode.</font></li>
+  <li><font face="Tahoma">A 'stay alive' mode keeps you connected to 
+  the BBS while operating in BaudSim mode.</font></li>
+  <li><font face="Tahoma">Use a PC-based Text Window Editor (The Box) with full 
+  PC editing 
+  options for entering messages or pasting text into a BBS.</font></li>
+  <li><font face="Tahoma">Detect URLs in the data stream and make them 
+  available to your favorite browser via 1-click.</font></li>
+  <li><font face="Tahoma">Use the ATEditor to capture, edit and send 
+  macro-like strings of ATASCII characters... graphics, inverse, control and 
+  text.</font></li>
+  <li><font face="Tahoma">Contains an optional 2 kilobyte Scrollback Buffer.</font></li>
+  <li><font face="Tahoma">Contains a Message Quoting function for entering 
+  quoted messages on a BBS.</font></li>
+  <li><font face="Tahoma">Contains a Checkbox system for creating graphic 
+  checkboxes for use in your messages.</font></li>
+  <li><font face="Tahoma">Can create an optional 'System Log'.</font></li>
+  <li><font face="Tahoma">Keeps track of your time logged into the current BBS 
+  and totalizes these values for each BBS.</font></li>
+  <li><font face="Tahoma">Tested in Windows 7, 10 and 11.</font></li>
+  <li><font face="Tahoma">This HTML Help Subsystem explaining the 
+  workings of AT_Connect.</font></li>
+</ul>
+    <p>&nbsp;<p><font face="Tahoma"><u><b>DISCLAIMER:</b></u> This documentation assumes 
+    a working knowledge of terminal programs and BBS usage.&nbsp; It is not 
+    intended to teach any of that.</font><p><font face="Tahoma">AT_Connect III 
+has been tested under  Windows 7, Windows 10 and Windows 11 as well as virtual machines 
+running these operating systems.&nbsp; It is not guaranteed to work under 
+earlier or later versions of the Windows operating system.</font><p><font face="Tahoma">
+In fact it is not guaranteed to do anything at all...</font></td>
+    <td width="31%">
+    <p align="center">
+    <img border="0" src="images/New%20ATC.jpg" width="674" height="746"></td>
+  </tr>
+</table>
+<h5><font face="Tahoma"><a href="#top">Back to Top</a></font></h5>
+<hr>
+<h3><font face="Tahoma" size="5"><a name="start">Getting Started</a></font></h3>
+<table border="0" cellpadding="5" cellspacing="7" style="border-collapse: collapse" bordercolor="#111111" width="100%">
+  <tr>
+    <td width="69%" valign="top"><font face="Tahoma">The AT_Connect</font><font face="Tahoma" size="2"> </font>
+    <font face="Tahoma">distribution package may have come 
+as a ZIP file, a self-extracting ZIP file, a 7ZIP file or an RAR archive.&nbsp; After decompressing the 
+archive or running the self-extracting ZIP archive, run the Setup.exe program to install 
+    AT_Connect on your Windows PC.&nbsp; 
+    <b>AT_Connect installation will NOT create an icon on your desktop</b>.&nbsp; You 
+    will have to run it from the '<b>Start-&gt; All Programs</b>' list in 
+    Windows XP or manually create the desktop icon if you want one.&nbsp; 
+    AT_Connect, by default, sets itself up in your 'C:\Program Files x86' 
+    folder and keeps its data in your 'Documents' folder.</font><p>
+    <font face="Tahoma">After installation, if you decide to move 
+    AT_Connect to different folders on your drive, the uninstall program may no 
+    longer function properly so it is recommended that you decide on where you 
+    want your program folder to be and choose it at installation time during the 
+    setup program.</font></p>
+    <p><font face="Tahoma">AT_Connect will automatically create its 
+    system folder in your &quot;Documents&quot; folder.&nbsp; Everything important like 
+    your configuration file and your BBS List file will be installed there.&nbsp; 
+    Since this folder is not created by the setup program, it will not be deleted when the program is uninstalled so you won't 
+    lose your configuration or BBS List if you upgrade AT_Connect to a newer 
+    version.&nbsp; <b>You should always uninstall AT_Connect before installing a 
+    new version.</b></font></p>
+    <p>
+    <font face="Tahoma">When you run AT_Connect for the very first time, 
+    it will create its configuration file, some sub-directories, and the BBS 
+    list containing one BBS entry... MINE!&nbsp; You may immediately choose this 
+    BBS and hit the 'Connect' button to start the AT_Connect experience.&nbsp; 
+    For best results, using BaudSim mode is recommended to experience what 
+    BBS'ing and serial communication was really like.&nbsp; BaudSim will be ON 
+    by default when you connect to my BBS unless you change this in the BBS 
+    Editor.</font><p>
+    <font face="Tahoma">On the initial run after installation, 
+    AT_Connect will ask you if you want to load this Help File before taking you to the program.&nbsp; Hit 
+    'Exit' at the top left of this form to continue with AT_Connect.</font><p>
+    <font face="Tahoma">When AT_Connect initially loads, 
+    it displays the splash screen you see to the right here.&nbsp; Clicking on 
+    the 'BobTerm' image will continuing loading the program and bring you to the 
+    'main screen' shown above.&nbsp; At this point, you may use the
+    <a href="#toolbar">toolbar</a> and <a href="#ops">control panel</a> to operate 
+    the program.&nbsp; Select a BBS from the drop-down list box and click the 
+    'Connect' button to connect to the BBS.&nbsp; Sit back and interface...</font></p>
+    <p>
+    <font face="Tahoma">When you are ready to add more BBSes to your 
+    list, hit the <a href="#bbs">
+    <img border="1" src="images/EDITBBS.bmp" width="32" height="32"></a> toolbar 
+    button to load the <a href="#bbs">BBS Editor</a>.</font></p>
+    <p>
+    <font face="Tahoma">If you want to capture your online sessions, 
+    turn on the Capture Buffer by Right-Clicking on the terminal screen and 
+    selecting the 'Capture On' option in the sub-menu.</font></td>
+    <td width="34%">
+    <p align="center">
+    <font face="Tahoma">
+    <img border="0" src="images/splash.jpg" width="429" height="360"><br>
+    </font>
+    <b><font size="1" face="Tahoma">The Splash Screen</font></b></td>
+  </tr>
+</table>
+<h5><font face="Tahoma"><a href="#top">Back to Top</a></font></h5>
+<hr>
+<h3><font face="Tahoma" size="5"><a name="config">Configuration</a></font></h3>
+<p><font face="Tahoma">The configuration section is where you setup the 
+program defaults.</font></p>
+<table border="0" cellpadding="5" cellspacing="7" style="border-collapse: collapse" bordercolor="#111111" width="100%">
+  <tr>
+    <td width="68%" valign="top"><u><b><font face="Tahoma">Color Schemes</font></b></u><p>
+    <font face="Tahoma">There are now eight different color schemes available in 
+    AT_Connect as of v3.20.&nbsp; The colors and names are self-explanatory as 
+    seen to the right here.&nbsp; Some of these may change in the future as I am 
+    still working on some new ones.</font></p>
+    <p>&nbsp;</p>
+    <p><b><font face="Tahoma">A program restart is required (and forced) after a 
+    color scheme change.</font></b></p>
+    <p>&nbsp;</p>
+    <p><font face="Tahoma"><b><u>NOTE:</u></b>&nbsp; As of this version 3.20, 
+    there are still some very minor anomalies with the cursor colors as you will 
+    see when you use them.&nbsp; I am still working on fixing these.</font></p>
+    <p><font face="Tahoma"><u><b>NOTE2:</b></u>&nbsp; These colors are static 
+    and created during compilation of the program.&nbsp; There is no way to edit 
+    them or change them in any way at runtime.</font></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <blockquote>
+      <p><font face="Tahoma"><b>Re-create System Mojis</b> button - This button 
+      will re-create the system Mojis (like 'chX1' ..2 ..3 ) in case they get 
+      deleted or messed up during editing.</font></p>
+      <p><font face="Tahoma"><b>Backup CFG File</b> button - backs up the 
+      Configuration file</font></p>
+    </blockquote>
+    <p>&nbsp;</td>
+    <td width="34%">
+    <p align="center">
+    <img border="0" src="images/cfg-color.jpg" width="478" height="535"><br>
+    <b><font face="Tahoma" size="1">Color Schemes Tab</font></b></td>
+  </tr>
+  <tr>
+    <td width="68%" valign="top"><u><b><font face="Tahoma">Settings</font></b></u><p>
+    <font face="Tahoma">Settings are as follows:</font></p>
+    <ul>
+      <li><font face="Tahoma"><b>BaudSim Value</b> - Set the BaudSim 
+      baud rate here.&nbsp; A value between 0-9 can be used here... 0 is the 
+      fastest.&nbsp; A value of 9 looks to be approximately 300 Baud.&nbsp; BaudSim is enabled / disabled in each BBS 
+      record in the <a href="#bbs">BBS Editor</a>.</font></li>
+      <li><font face="Tahoma"><b>Stay-Alive string</b> - a string value 
+      that is sent to the BBS every 60 seconds to keep it from logging you off 
+      due to inactivity.&nbsp; Used when viewing large text files, messages or 
+      cartoons in BaudSim mode.&nbsp; Characters that the BBS might understand 
+      and react to (such as front slash (/) in the Express BBS message editors) are not recommended for this.</font></li>
+      <li><font face="Tahoma"><b>Keypress Delay</b> - delays your 
+      keystrokes so as not to send too many characters too quickly to the BBS 
+      you are connected to.&nbsp; Default value = 65ms.</font></li>
+      <li><font face="Tahoma"><b>Atari Keyclick sound</b> - causes your 
+      keystrokes to send the famous Atari 'keyclick' sound.&nbsp; Sound must be 
+      enabled on your PC.</font></li>
+      <li><font face="Tahoma"><b>Clear screen after CONNECT</b> - 
+      causes the terminal screen to clear (as in ? CHR$(125)) when you connect 
+      to a BBS.</font></li>
+      <li><font face="Tahoma"><b>Clear Buffer after Remote disconnect</b> 
+      - causes AT_Connect to stop printing characters to the screen and clear the 
+      incoming buffer when the BBS 
+      disconnects you even if there are still characters left in the buffer.</font></li>
+      <li><font face="Tahoma"><b>ATASCII Buzzer character</b> - causes 
+      AT_Connect to beep when the buzzer character (253) is sent from the BBS.&nbsp; 
+      Un-checking this flag will force AT_Connect to print the character to the 
+      screen instead of beeping.</font></li>
+      <li><font face="Tahoma"><b>Enable Title Bar Messages</b> - enables 
+      the random display of the Title bar messages on the main screen - an 
+      original feature of AT_Telnet.</font></li>
+      <li><font face="Tahoma"><b>Enable RAW BBS List edits</b> - This 
+      flag enables the 'Edit RAW' and 'Fix List' buttons in the <a href="#bbs">
+      BBS Editor</a>.&nbsp; Otherwise, both of these buttons are invisible.</font></li>
+      <li><font face="Tahoma"><b>Pop-up Message on Disconnect</b> - When the BBS 
+      disconnects you or you disconnect yourself, an optional message + beep can 
+      pop-up to potentially wake you up if your BBS session was a little too 
+      boring...</font></li>
+      <li><font face="Tahoma"><b>Show BBS Editor</b> - display the BBS 
+      editor to the right of the main AT_Connect screen to place all info about 
+      this BBS at your fingertips.</font></li>
+      <li><font face="Tahoma"><b>Use  The Box (Text Editor)</b> - Enables or 
+      disables the <a href="#Text Window">Text Editor</a> Window.&nbsp; If this 
+      checkbox is unchecked, you will never know the Box exists...</font></li>
+      <li><font face="Tahoma"><b>Detect URLs</b> - At_Connect can now 
+      detect URLs coming across the data stream and put them in a 'Last 5' 
+      window for easy clicking and loading with your favorite browser.</font></li>
+      <li><font face="Tahoma"><b>Auto Open ATEditor</b> - Checking this 
+      box will automatically open the ATEditor at runtime.</font></li>
+      <li><font face="Tahoma"><b>Enable Scrollback buffer</b> - enable / disable 
+      the 2K scrollback buffer for viewing what went by too fast.&nbsp; The 
+      buffer size can also be set here.</font></li>
+      <li><font face="Tahoma"><b>Enable System Log File</b> - When enabled 
+      AT_Connect can keep a log of your activity in a file located in the System 
+      Folder called 'AT3_Log.txt'.</font></li>
+      <li><font face="Tahoma"><b>Enable Online Timer</b> - enables a timer which 
+      starts incrementing as soon as you connect.&nbsp; This timer is totalized 
+      and saved in the BBS Editor for  each BBS.</font></li>
+      <li><font face="Tahoma"><b>Auto-Open Session Status</b> - opens the 
+      session Status form at startup.</font></li>
+      <li><font face="Tahoma"><b>'Scroll 2 Box' clears the Box</b> - clears the 
+      box when this command is executed and this value is checked.</font></li>
+      <li><font face="Tahoma"><b>Enable Speed Check</b> - enables monitoring the 
+      incoming character speeds in cps and calculated bps and can be viewed and 
+      toggled in 'Status' form.</font></li>
+      <li><font face="Tahoma"><b>Enable 'AutoNext' dialing</b> - toggles the 
+      AutoNext function which allows immediate connection to the next BBS in the 
+      drop-down list by hitting the &lt;Enter&gt; key.&nbsp; It is a very fast way to 
+      surf the BBSes.</font></li>
+      <li><font face="Tahoma"><b>Beep on Connection</b> - Beeps when connection 
+      to a BBS is established.</font></li>
+    </ul>
+    <p><b><font face="Tahoma">Connect, Disconnect and TitleBar Messages</font></b></p>
+    <blockquote>
+      <p><font face="Tahoma">Make them anything you like!</font></p>
+    </blockquote>
+    <ul>
+      <li><font face="Tahoma"><b>Connect</b> - this message is 
+      displayed on the terminal screen when a connection to a BBS is 
+      established... like the old modem result codes and messages.&nbsp; The '&lt;cr&gt;' 
+      modifier can be used here to process a carriage return.</font></li>
+      <li><font face="Tahoma"><b>Disconnect</b> - this message is 
+      displayed on the terminal screen when a local or remote disconnect takes 
+      place. Again '&lt;cr&gt;' can be used here.&nbsp; <b>&nbsp;<br>
+      NOTE:</b> Originally, the &quot;NO CARRIER&quot; message 
+      was used here 
+      for nostalgic purposes even though in 
+      reality there is no modem and there is no carrier - All communication is 
+      done through Winsock.&nbsp; Again, make them anything you like.&nbsp; 
+      Sometimes, I use ON and OFF.<br>
+&nbsp;</font></li>
+      <li><font face="Tahoma"><b>Titlebar</b> - Place a user-defined titlebar 
+      message which can be the default message or part of the revolving marquee 
+      of messages.&nbsp; '&lt;cr&gt;' not used here for obvious reasons.</font></li>
+    </ul>
+    <p><b><i><font face="Tahoma">* CLASSIC MODE *</font></i></b></p>
+    <ul>
+      <li><font face="Tahoma">Un-checking all seven of the boxes in this 
+      section will make AT_Connect look and operate like it did in the good old 
+      days... for the most part, none of the new major features in version 3 
+      will be noticeably visible.</font></li>
+      <li><font face="Tahoma"><b>All ON / OFF button</b> - this button will 
+      toggle all of the classic checkboxes for a quick way to change the mode 
+      between ATConnect and Classic At_Telnet.</font></li>
+    </ul>
+    </td>
+    <td width="34%">
+    <p align="center">
+    <font face="Tahoma">
+    <img border="0" src="images/cfg-settings.jpg" width="484" height="539"><br>
+    </font>
+    <b>
+    <font face="Tahoma" size="1">Settings Tab</font></b></td>
+  </tr>
+  <tr>
+    <td width="68%" valign="top"><u><b><font face="Tahoma">Paths</font></b></u><p>
+    <font face="Tahoma">The following Paths&nbsp;(and 2 flags) are 
+    used by the system:</font></p>
+    <ul>
+      <li><font face="Tahoma"><b>Capture File</b> - this is the File 
+      that captured data from sessions will be saved to.&nbsp; It is an ASCII 
+      text file that gets translated by AT_Connect in the 'View Capture' function.</font></li>
+      <li><font face="Tahoma"><b>Screen Dump BMP filename</b> - default 
+      filename for all bitmap screen dumps.&nbsp; AT_Connect prompts you to 
+      change the filename before any screen dump to BMP operation.</font></li>
+      <li><font face="Tahoma"><b>AT_Connect System Folder</b> - Located 
+      in your documents folder, this is where ATC looks for its BBS List, 
+      Configuration file and other stuff.&nbsp; If you change this location, 
+      remember to move your system files from the old location to the new one.</font></li>
+      <li><font face="Tahoma"><b>Screen Dump sub-directory pathname</b> 
+      - folder where BMP screen dump files will be placed.</font></li>
+      <li><font face="Tahoma"><b>Capture sub-directory pathname</b> - 
+      folder where all captures will be placed.</font></li>
+      <li><font face="Tahoma"><b>'Moji Storage folder</b> - folder 
+      where all 'mojis will be stored.</font></li>
+      <li><font face="Tahoma"><b>Web Browser Path</b> - You may specify 
+      a path to your preferred web browser.&nbsp; If no path is specified, AT_Connect will 
+      use the system configured browser anytime a  web link is accessed.</font></li>
+      <li><font face="Tahoma"><b>Backup Folder</b> - This folder is where your 
+      BBS and CFG backups are stored.</font></li>
+    </ul>
+    <p><u><b><font face="Tahoma">Flags</font></b></u></p>
+    <ul>
+      <li><font face="Tahoma"><b>Clear screen before viewing capture 
+      file</b> - Check this box to clear the main screen before viewing a capture file.</font></li>
+      <li><font face="Tahoma"><b>Use Date / Time for screen dump 
+      filename</b> - checking this box will force AT_Connect to create a new 
+      filename based on the date / time for each BMP screen dump in the format:
+      <b>yyyymmdd-hhmmss.bmp</b>.</font></li>
+      <li><font face="Tahoma"><b>Slow Display</b> - When checked, a delay is 
+      added to the display speed for files displayed in the Capture menu.</font></li>
+    </ul>
+    &nbsp;<p>&nbsp;</td>
+    <td width="34%">
+    <p align="center">
+    <font face="Tahoma">
+    <img border="0" src="images/cfg-paths.jpg" width="484" height="539"><br>
+    </font>
+    <b>
+    <font face="Tahoma" size="1">Paths Tab</font></b></td>
+  </tr>
+  <tr>
+    <td width="68%" valign="top">
+    <p><u><b><font face="Tahoma">AT Connect Password</font></b></u></p>
+    <ul>
+      <li><font face="Tahoma">The AT_Connect system password is used to keep AT_Connect 
+      Macros hidden in the BBS Editor from nosy viewers - things like passwords, 
+      user names etc.&nbsp; This password should be set up when AT_Connect is 
+      executed for the first time.</font></li>
+    </ul>
+    <p>&nbsp;</td>
+    <td width="34%">
+    <p align="center">
+    <img border="0" src="images/cfg-pw.jpg" width="484" height="539"><br>
+    <b><font face="Tahoma" size="1">AT_Connect System Password Tab</font></b></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<h5><font face="Tahoma"><a href="#top">Back to Top</a></font></h5>
+<hr>
+<h3><font face="Tahoma" size="5"><a name="ops">Operation</a> - The Control Panels, 
+Status, and Toolbar</font></h3>
+<p><font face="Tahoma">Here is where you will learn how to operate 
+AT_Connect.&nbsp; All functions of the toolbar and control panel are explained below.</font></p>
+<table border="0" cellpadding="5" cellspacing="7" style="border-collapse: collapse" bordercolor="#111111" width="100%">
+  <tr>
+    <td width="69%" valign="top"><u><b><font face="Tahoma">The Control Panel</font></b></u><p>
+    <font face="Tahoma">The control panel is located at the bottom of 
+    the terminal screen.&nbsp; It contains the BBS drop-down list box, the 
+    status bar and several buttons to control the operation of the program.&nbsp; 
+    Basic operation of the program is:</font></p>
+    <ul>
+      <li><font face="Tahoma">Select a BBS in the drop-down list.</font></li>
+      <li><font face="Tahoma">Hit the 'Connect' button.</font></li>
+      <li><font face="Tahoma">Wait...</font></li>
+      <li><font face="Tahoma">The status bar will notify you when you 
+      are connected and the LED in the upper left corner shown here will turn 
+      from Red to Green.&nbsp; If you enabled a 'Connect Message' in 
+      <a href="#config">configuration</a>, 
+      you will see it displayed in the terminal screen window.</font></li>
+      <li><font face="Tahoma">At this point, the BBS should start 
+      prompting you... this could take as long as 5-10 seconds.&nbsp; If not, try hitting your &lt;ENTER&gt; key a few times 
+      slowly to wake up the BBS.</font></li>
+      <li><font face="Tahoma">You may Right-click on the terminal screen 
+      at any time (even before connecting) to 
+      open the Capture sub-Menu if you want to capture the data sent from the 
+      BBS  during your online session.</font></li>
+      <li><font face="Tahoma">The 'View System Log' button will open a form that 
+      displays the System Log file.&nbsp; Here it can be deleted, cleared and 
+      restarted and optionally disabled for the current session.</font></li>
+      <li><font face="Tahoma">The Online Timer (blue box) will keep track of 
+      your time online.</font></li>
+    </ul>
+&nbsp;</td>
+    <td width="31%" align="center">
+    <p align="center">
+    <font face="Tahoma">
+    <img border="1" src="images/control-1.jpg" width="682" height="95"><br>
+    </font>
+    <b><font face="Tahoma" size="1">The Control Panel</font></b><p align="center">
+    <b><font face="Tahoma" size="1">Shown here with the Box command 
+    button in AT_Connect III.&nbsp; This button disappears when the Box 
+    is disabled in configuration.</font></b></td>
+  </tr>
+  <tr>
+    <td width="69%"><u><b><font face="Tahoma">The Drop-down BBS Dial List box</font></b></u><ul>
+      <li><font face="Tahoma">The drop-down list box is located in the 
+      center of the control panel.&nbsp; Use it to select the BBS you want to 
+      call.&nbsp; After selecting from the list, click the 'Connect' button to 
+      the left of the list.&nbsp; The list box is populated with all of the BBS names in your list.</font></li>
+      <li><font face="Tahoma">When you have selected your BBS, you may 
+      also hit the 'Edit BBS' button to open the BBS Editor and edit the 
+      selected BBS.</font></li>
+      <li><font face="Tahoma">You may <a href="#Hide From Dial List">hide BBSes</a> from this list in the
+      <a href="#bbs">BBS Editor</a>.</font></li>
+    </ul>
+    </td>
+    <td width="31%" align="center">
+    <font face="Tahoma">
+    <img border="1" src="images/selectbbs.jpg" width="216" height="113"><br>
+    </font>
+    <b><font face="Tahoma" size="1">The  Control Panel 'Select BBS' drop-down 
+    list box</font></b></td>
+  </tr>
+  <tr>
+    <td width="69%"><u><b><font face="Tahoma" size="5"><a name="toolbar">The Toolbar</a></font></b></u><p>
+    <font face="Tahoma">The toolbar provides 1-click access to most 
+    functions.&nbsp; Currently, there are 15 buttons on the bar described below 
+    (left to right):</font></p>
+    <ol>
+      <li><font face="Tahoma"><b>Connect</b> - Connects you to the 
+      selected BBS. A BBS must be selected in the drop-down list box in the 
+      center of the control panel</font></li>
+      <li><font face="Tahoma"><b>Disconnect</b> - disconnects you from 
+      the BBS (grayed-out here when not connected)</font></li>
+      <li><font face="Tahoma"><b>Clear Screen</b> - clears the local 
+      screen (like ? CHR$(125))</font></li>
+      <li><font face="Tahoma"><b><a name="BaudSim">BaudSim</a></b> - toggles the baud rate 
+      simulator.&nbsp; Internet communications can be much faster than 
+      traditional modem connections, therefore data can get blasted to the 
+      screen so fast that the original effects of ATASCII graphics (like cursor 
+      controls) can get lost or unnoticed.&nbsp; BaudSim is a way of slowing 
+      down and smoothing the data coming onto the screen so it more closely simulates the 
+      modem connections of yesterday.&nbsp; There are four different baud rate 
+      speeds (Slowest,300,1200,Fastest) which can be configured on the 
+      'Settings' tab of the <a href="#config">configuration</a> form.</font></li>
+      <li><font face="Tahoma"><b>Stay-Alive</b> - The Stay-Alive 
+      function is designed to send characters to the BBS to fool the BBS inactivity 
+      timer when viewing a long text file or break movie in <a href="#BaudSim">BaudSim</a> mode.&nbsp; 
+      Typing a character at the local keyboard resets the timer.</font></li>
+      <li><font face="Tahoma"><b>40 / 80 column toggle</b> - toggles 
+      the screen width between 40 and 80 columns.&nbsp; <b>NOTE:</b> some functions 
+      (Screen Dump and Screen Print) do not work in 80 column mode.</font></li>
+      <li><font face="Tahoma"><b>Print Screen</b> - sends the terminal 
+      screen to your printer.&nbsp; <b>NOTE:</b> to save ink the white chars on 
+      black background are inverted.&nbsp; <b>NOTE2:</b>&nbsp; Not supported in 
+      80 column mode.</font></li>
+      <li><font face="Tahoma"><b>View Screen Dump Panel</b> - loads the 
+      screen dump panel over the control panel for viewing screen dump files.</font></li>
+      <li><font face="Tahoma"><b>Configuration</b> - Loads the
+      <a href="#config">configuration</a> form.</font></li>
+      <li><font face="Tahoma"><b>BBS Editor</b> - Loads the
+      <a href="#bbs">BBS Editor</a> form.</font></li>
+      <li><font face="Tahoma"><b>About</b> - Tom Hunt's &quot;Closer To Home&quot; icon loads the 
+      About dialog box.</font></li>
+      <li><font face="Tahoma"><b>Exit</b> - the big red 'X' shuts down 
+      the Winsock control and exits the program.</font></li>
+      <li><font face="Tahoma"><b>Help</b> - loads this help file.</font></li>
+      <li><font face="Tahoma"><b>WWW</b> - loads the web access form if 
+      the currently selected BBS has a website attached to it.</font></li>
+      <li>
+      <p align="left"><font face="Tahoma"><b>Save Window Positions</b> 
+      - Pushing this button loads a form with a button on it which when pushed, 
+      will save all of the positions of your windows to the config file so they 
+      will always come back to the correct positions.<br>
+      &nbsp;</font></li>
+    </ol>
+    <p>&nbsp;</td>
+    <td width="31%" align="center">
+    <font face="Tahoma">
+    <img border="0" src="images/toolbar1.jpg" width="376" height="53"><br>
+    </font>
+    <b><font face="Tahoma" size="1">The Toolbar</font></b><p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p><font face="Tahoma" size="2">
+      <img border="1" src="images/WinPos.jpg" width="293" height="105"></font></td>
+  </tr>
+  <tr>
+    <td width="69%"><u><b><font face="Tahoma">Macro Display</font></b></u><p>
+    <font face="Tahoma">Each BBS record may contain up to 10 unique Macros.&nbsp; 
+    When a BBS is selected, the macros for that BBS are displayed in the control 
+    panel as shown to the right here.&nbsp; In the example to the right, there 
+    are eight macros (0-5 and 8-9) enabled for the current BBS.&nbsp; The 
+    keystroke {Shift}-{Control}-x (where x = 0 - 9) would send the associated macro.&nbsp; Clicking the button 
+    will also send the macro.&nbsp; Any buttons here 
+    that do not have a macro attached to them will be disabled and have no 
+    number in the button.&nbsp; Macros are initially setup in 
+    the <a href="#bbs">BBS Editor</a>.</font></p>
+    <p>&nbsp;</td>
+    <td width="31%" align="center">
+    <font face="Tahoma">
+    <img border="1" src="images/macros.jpg" width="223" height="38"><br>
+    </font>
+    <b><font face="Tahoma" size="1">The Control Panel Macro Display</font></b></td>
+  </tr>
+  <tr>
+    <td width="69%"><u><b><font face="Tahoma">The Status Bar</font></b></u><p>
+    <font face="Tahoma">The status bar does three things:</font></p>
+    <ul>
+      <li><font face="Tahoma">Shows you the status of the current 
+      connection as well as sometimes displays your last command.</font></li>
+      <li><font face="Tahoma">Shows you the status of the operational 
+      Status Indicators (below).</font></li>
+      <li><font face="Tahoma">Displays the current version and build 
+      number of AT_Connect.</font></li>
+    </ul>
+&nbsp;</td>
+    <td width="31%" align="center">
+    <font face="Tahoma">
+    <img border="1" src="images/status.jpg" width="680" height="26"><br>
+    </font>
+    <b><font face="Tahoma" size="1">The Status Bar</font></b></td>
+  </tr>
+  <tr>
+    <td width="69%"><u><b><font face="Tahoma">Status Indicators</font></b></u><p>
+    <font face="Tahoma">The three Status Indicators indicate the 
+    following:</font></p>
+    <ul>
+      <li><font face="Tahoma"><b>Baud</b> - BaudSim enabled</font></li>
+      <li><font face="Tahoma"><b>Stay</b> - Stay-Alive enabled</font></li>
+      <li><font face="Tahoma"><b>Cap</b> - Capture buffer turned ON</font></li>
+    </ul>
+&nbsp;</td>
+    <td width="31%" align="center">
+    <font face="Tahoma">
+    <img border="1" src="images/status-2.jpg" width="166" height="25"><br>
+    <b><font size="1">Status Indicators</font></b></font></td>
+  </tr>
+  <tr>
+    <td width="69%"><b><u><font face="Tahoma">The View BMP Panel</font></u></b><p>
+    <font face="Tahoma">The View BMP panel allows you to view BMP 
+    images in AT_Connect:</font></p>
+    <ul>
+      <li><font face="Tahoma">Select a BMP image file in the list box 
+      on the far right and double-click it to load it into AT_Connect for viewing 
+      ('screen.bmp' here).</font></li>
+      <li><font face="Tahoma">Hit the 'Delete' button to delete the 
+      selected BMP file.</font></li>
+      <li><font face="Tahoma">Hit the 'Exit' button to exit the panel.</font></li>
+    </ul>
+&nbsp;</td>
+    <td width="31%" align="center">
+    <font face="Tahoma">
+    <img border="1" src="images/viewbmp.jpg" width="678" height="76"><br>
+    </font>
+    <b><font face="Tahoma" size="1">View Bitmap Image Panel</font></b></td>
+  </tr>
+  <tr>
+    <td width="69%"><u><b><font face="Tahoma">The View Capture Buttons</font></b></u><p>
+    <font face="Tahoma">Capture Files can only be viewed in full 
+    ATASCII mode from within AT_Connect since they are not true ATASCII but 
+    rather ASCII.&nbsp; When viewing a capture file two additional buttons will 
+    be displayed in the control panel:</font></p>
+    <ul>
+      <li><font face="Tahoma"><b>Viewing Capture File... Click to Abort</b> 
+      - doubles as a status indicator as well as an 'abort' button. {Alt}-A does 
+      the same thing.</font></li>
+      <li><font face="Tahoma"><b>Pause / Continue</b> - Pauses the 
+      viewing so your brain can catch up and Continues the viewing when it is 
+      caught up. {Alt}-P also works here.</font></li>
+    </ul>
+    <font face="Tahoma">There is also a new <b>'Capture' indicator</b> 
+    flashing green bar across the top of the screen to remind you that you are 
+    in capture mode.</font></td>
+    <td width="31%" align="center">
+    <font face="Tahoma">
+    <img border="1" src="images/viewcapture.jpg" width="676" height="96"><br>
+    </font>
+    <b><font face="Tahoma" size="1">Control Panel while viewing a 'Capture File'</font></b><p>
+    <img border="0" src="images/CaptureIndication.jpg" width="672" height="103"><br>
+    <b><font face="Tahoma" size="1">Capture Mode enabled Indicator (green bar)</font></b></td>
+  </tr>
+  <tr>
+    <td width="69%"><u><b><font face="Tahoma">Capture Menu</font></b></u><p>
+    <font face="Tahoma">Right-Clicking your mouse on the terminal screen opens the 
+    Capture Menu.&nbsp; From here you can do several things:</font></p>
+    <ul>
+      <li><font face="Tahoma">Toggle Capture mode on/off</font></li>
+      <li><font face="Tahoma">Change the capture filename (for this 
+      capture ONLY).&nbsp; Use the <a href="#config">Configuration</a> form to 
+      change it permanently.</font></li>
+      <li><font face="Tahoma">View the capture file in AT_Connect.&nbsp;
+      <b>NOTE:</b> The capture file is saved in ASCII mode, so if you try to 
+      view it in Notepad or some other Windows program, it may look strange 
+      depending on how many strange ATASCII characters are in there.&nbsp; 
+      Viewing it in AT_Connect translates the ASCII to ATASCII to give the 
+      desired effect.</font></li>
+      <li><font face="Tahoma">Delete the capture file.</font></li>
+      <li><font face="Tahoma">Change the capture mode from Append to 
+      Replace.&nbsp; 'Append' mode means that every time the Capture buffer is 
+      turned ON and OFF, the existing capture file will be appended with newly 
+      captured data.&nbsp; Checking 'Replace' means that every time the 
+      'Capture' buffer is turned ON a new capture file will replace the old one.</font></li>
+      <li><font face="Tahoma">'Pick a file to view' allows you to do just that - 
+      view any ATASCII file.</font></li>
+      <li><font face="Tahoma">The 'Save Screen as .BMP' item dumps the 
+      contents of the current terminal screen to a bitmap file.&nbsp; <b>NOTE:</b>&nbsp; 
+      This function is not supported in 80 column mode.</font></li>
+      <li><font face="Tahoma">The 'View System Log' item opens the log display 
+      form just like the button on the control panel.</font></li>
+      <li><font face="Tahoma">Paste Clipboard to Main screen does 
+      exactly what it says.</font></li>
+      <li><font face="Tahoma">Send Capture file to ATEditor for editing 
+      purposes.&nbsp; This can send a full or partial capture file to the 
+      editor.</font></li>
+    </ul>
+    &nbsp;</td>
+    <td width="31%" align="center">
+    <font face="Tahoma">
+    <img border="1" src="images/capture.jpg" width="384" height="312"><br>
+    </font>
+    <b><font face="Tahoma" size="1">The Capture Menu</font></b></td>
+  </tr>
+  <tr>
+    <td width="69%"><b><u><font face="Tahoma" size="5"><a name="The Status Window">The 
+    Status Form</a></font></u></b><p><font face="Tahoma">The Status Window is 
+    a new feature (as of 3.12 - Xeraxes) which displays some status information 
+    about the current session, connection, BBS and incoming character counts.&nbsp; 
+    There is also a button for viewing the System Log as well as one for 
+    manually entering some text as a log entry into the System Log.&nbsp; The 
+    'Total' button manually adds the current session character count to the 
+    total character count.&nbsp; This is done automatically when you logoff from 
+    the BBS.</font><p><b><font face="Tahoma">Incoming Chars</font></b><ul>
+      <li><font face="Tahoma"><b>Enable</b> - enables the monitoring of the 
+      incoming chars for current and average speeds.</font></li>
+      <li><font face="Tahoma"><b>Speed Test</b> - turns on the Speed Test which 
+      disables the screen and keyboard.&nbsp; You should already be viewing the 
+      speed document (whatever you decide to view) when you turn this on.&nbsp; 
+      Don't forget to uncheck it when you are finished.&nbsp; How do you know 
+      when you are finished?&nbsp; You'll see the bps / cps go to zero.</font></li>
+      </ul>
+      </td>
+    <td width="31%" align="center">
+    <img border="0" src="images/frmstatus.jpg" width="467" height="157"><br>
+    <b><font face="Tahoma" size="1">The Status Window</font></b></td>
+  </tr>
+</table>
+<h5><font face="Tahoma"><a href="#top">Back to Top</a></font></h5>
+<hr>
+<h3><font face="Tahoma" size="5"><a name="bbs">BBS Editor</a></font></h3>
+<p><font face="Tahoma">The BBS Editor is where all of the BBS 
+information for each BBS is stored, edited and manipulated.&nbsp; This data 
+resides in a file called 'AT2_BBS.ini'.&nbsp; AT_Connect currently supports 255 
+BBS records.&nbsp; The first record in this file is known as the 'Default' BBS 
+record.&nbsp; This can hold any 'global' data such as your name, flags etc. that 
+you want to be copied to any new bbs that is created with the 'Add BBS' 
+function.</font></p>
+<p><font face="Tahoma">There are two ways to get into the BBS Editor:</font></p>
+<ul>
+  <li><font face="Tahoma">Click the
+  <img border="1" src="images/EDITBBS.bmp" width="32" height="32"> icon on the
+  <a href="#toolbar">toolbar</a> - loads the BBS Editor and displays the first 
+  record in the list.</font></li>
+  <li><font face="Tahoma">Select a BBS on the drop-down list box in the
+  <a href="#ops">control panel</a> and click the 'Edit BBS' button (also in the 
+  control panel).</font></li>
+</ul>
+<p>&nbsp;</p>
+<table border="0" cellpadding="5" cellspacing="7" style="border-collapse: collapse" bordercolor="#111111" width="100%">
+  <tr>
+    <td width="68%"><u><b><font face="Tahoma">Labels, Text Boxes and Macros</font></b></u><p>
+    <font face="Tahoma">The pertinent data for each BBS is displayed in labels 
+    and text boxes.&nbsp; Most of these can be edited on this form.&nbsp; The 
+    multi-colored labels seen below a show up on the top label bar in various 
+    scenarios.</font></p>
+    <ul>
+      <li><b><font face="Tahoma"><span style="background-color: #FFFF66">ID</span></font></b><font face="Tahoma">&nbsp; 
+      - the unique record number of the current BBS. (Generated by ATC.)</font></li>
+      <li><font face="Tahoma"><b>BBS Name</b> - name of the BBS System.&nbsp; As 
+      of v3.22, a drop-down combo box has been added to allow easier selection 
+      of the BBS.</font></li>
+      <li><font face="Tahoma"><b>BBS Address</b> - the URL or IP 
+      address of the BBS (get this from BBS sysop).</font></li>
+      <li><font face="Tahoma"><b>Port</b> - the data port that the BBS 
+      uses for incoming connections (get this from BBS sysop).&nbsp; The currently selected port is stored in the left-most Port field and the list of 
+      available ports for this BBS can be stored in the right-most field 
+      separated by a space between each port as seen here.</font></li>
+      <li><font face="Tahoma"><b>Sysop Name</b> - put the BBS sysops 
+      name here (or whatever you like).</font></li>
+      <li><font face="Tahoma"><b># Connects</b> - # of times you have 
+      connected to this BBS (read-only).</font></li>
+      <li><font face="Tahoma"><b><span style="background-color: #FFFF00">Time Online</span></b> - the total elapsed time spent 
+      on this BBS.&nbsp; Online Timer must be enabled.&nbsp; This is also a 
+      button to load the <a href="#Time Online Reports">'Time Online' report</a>.</font></li>
+      <li><font face="Tahoma"><b><span style="background-color: #00FFFF">Last</span></b>&nbsp;- Time online of last connection.</font></li>
+      <li><font face="Tahoma"><b>Last Connected</b> - date / time of 
+      last connection to this BBS (read-only).&nbsp; The time connected for the 
+      last connection is displayed here also.</font></li>
+      <li><font face="Tahoma"><b>Maxbps</b> - the fastest bps rate measured and 
+      calculated for the current BBS.</font></li>
+      <li><font face="Tahoma"><b>Date Created</b> - date / time that 
+      this BBS record was created (read-only).</font></li>
+      <li><font face="Tahoma"><b>Last Edited</b> - date / time that 
+      this record was last edited (read-only).</font></li>
+      <li><font face="Tahoma"><b>Comments</b> - whatever you want to 
+      put here.</font></li>
+      <li><font face="Tahoma"><b>Macros</b> - this is where you set up 
+      your macros for each BBS.&nbsp; Enter the desired macro into each field 
+      (0-9).&nbsp; When connected to this BBS, hitting {shift}-{control} 
+      {0|1|...9}&nbsp; or clicking the macro # button will send the associated macro to the BBS.&nbsp; <b>NOTE:</b>&nbsp; 
+      adding a &lt;cr&gt; anywhere in the macro causes AT_Connect to send an ATASCII 
+      carriage return (155) to the BBS when it gets to that point in the macro 
+      string.</font></li>
+      <li><font face="Tahoma"><b>Web Site</b> - This field stores the 
+      URL of a website you might want to associate with this BBS.</font></li>
+      <li><font face="Tahoma"><b>Signature</b> - Allows you to configure a 
+      unique signature for each BBS.&nbsp; It may be created in the ATEditor and 
+      copied to the signature field.</font></li>
+      <li><font face="Tahoma"><font color="#0000FF"><b>[ BBSes: x ]</b></font> - 
+      label showing the total number of BBSes in the system.&nbsp; This label is always 
+      visible.&nbsp; Seen on the bar to the right at the top of the form.</font></li>
+      <li><font face="Tahoma"><font color="#FF0000"><b>[ Changed ]</b></font> - This 
+      label appears when the current BBS record is manually changed by the user.&nbsp; 
+      It is a reminder that the current record needs to be saved.&nbsp; When the 
+      'Save' button is clicked, this label will 
+      disappear.</font></li>
+      <li><font face="Tahoma"><font color="#FF00FF"><b>[ New ]</b></font> - label 
+      showing that this BBS record is new (just added or copied).&nbsp; This label disappears when the 
+      date rolls over.</font></li>
+      <li><font face="Tahoma"><font color="#008000"><b>[ Backup ]</b></font> - a 
+      label that only becomes visible when the BBS ini file has changed and 
+      indicates that it should be backed up.</font></li>
+      <li><font face="Tahoma"><b><span style="background-color: #FFFF00"># records</span></b> - This label shows the number of 
+      records in the system.&nbsp; There can be more records than BBSes in the 
+      system.&nbsp; When 'adding' or 'copying' a BBS, the system will attempt to 
+      use any deleted records for the new BBSes before it creates a new record.&nbsp; 
+      Therefore, if you want to keep old data on a BBS, do NOT delete the BBS.&nbsp; 
+      Just 'Hide it from the dial list' and all of the data for that BBS will be 
+      preserved.</font></li>
+    </ul>
+    <u><b><font face="Tahoma">Buttons</font></b></u><p>
+    <font face="Tahoma">There are <u>twenty-four</u> buttons on the BBS Editor 
+    form.&nbsp; They are:</font></p>
+    <ul>
+      <li><font face="Tahoma"><b>'&lt;' &amp; '&gt;'</b>&nbsp; - Two of 
+      each.&nbsp; These are the 
+      'previous record' and 'next record' buttons which allow you to scroll 
+      through the BBS List loading each subsequent or previous record.&nbsp; 
+      There is a pair at the top of the form and a pair at the bottom.&nbsp; 
+      Once you use these buttons to scroll thru the BBS list, you will have to 
+      reselect the BBS in the drop-down list box on the main form before a connection can be 
+      attempted.</font></li>
+      <li><font face="Tahoma"><b>'&lt;&lt;&lt;' &amp; '&gt;&gt;&gt;'</b>&nbsp; - 
+      Also two of each.&nbsp; Allows a quick movement between the beginning and 
+      end of the BBS List.</font></li>
+      <li><font face="Tahoma"><b>Edit Default</b> - this button loads the 
+      <a href="#The Default BBS Record">'default' BBS record</a> into the editor form.</font></li>
+      <li><font face="Tahoma"><b>Connect</b> - connects you to the currently 
+      selected BBS... even if it is hidden from the dial list.</font></li>
+      <li><font face="Tahoma"><b>Hidden</b> - Hides / Un-Hides selected 
+      macros via password protection setup in Configuration form.&nbsp; Requires 
+      you to enter the system password before hidden macros can be shown or 
+      edited.</font></li>
+      <li><font face="Tahoma"><b>Choose Port </b>- this button opens a 
+      dialog box allowing you to select the current port from the list of ports 
+      for this BBS.</font></li>
+      <li><font face="Tahoma"><b>Backup List</b> - backs up the BBS list.</font></li>
+      <li><font face="Tahoma"><b>Add BBS</b> - creates a new BBS record from the 
+      'default' BBS record and plugs it into the first available slot.</font></li>
+      <li><font face="Tahoma"><b>Edit RAW</b> - (Optional - enabled in 
+      the <a href="#config">Configuration</a> form)&nbsp; Allows 
+      raw editing of the BBS list text file.<b>&nbsp;Not recommended for 
+      amateurs.</b> This optional button can be 
+      hidden in the Configuration Form.</font></li>
+      <li><font face="Tahoma"><b>Copy BBS</b> - copies the currently 
+      loaded BBS record to a new BBS record.</font></li>
+      <li><font face="Tahoma"><b>Delete</b> - delete the current BBS 
+      record.&nbsp; Records marked with the 'Permanent' flag cannot be deleted 
+      this way.&nbsp; The permanent flag must be unchecked, the record saved, 
+      and then it can be deleted permanently.</font></li>
+      <li><font face="Tahoma"><b>Save</b> - saves the current BBS 
+      record.</font></li>
+      <li><font face="Tahoma"><b>Cancel</b> - cancels any changes to the current 
+      BBS record.</font></li>
+      <li><font face="Tahoma"><b>Time Online</b> - Loads the
+      <a href="#Time Online Reports">time online report</a>.</font></li>
+      <li><font face="Tahoma"><b>Sign</b> - Sends the signature for this BBS to 
+      the connected BBS.</font></li>
+      <li><font face="Tahoma"><b>Clear</b> - clears the signature in the field</font></li>
+      <li><font face="Tahoma"><b>Copy from ATE</b> - copies the signature 
+      generated in the ATEditor into the signature field.</font></li>
+    </ul>
+    <p>&nbsp;</p>
+    <p><u><b><font face="Tahoma">Flags (Check Boxes)</font></b></u></p>
+    <p><font face="Tahoma">There are some flags on the BBS Editor form.&nbsp; They are:</font></p>
+    <ul>
+      <li><font face="Tahoma"><b>Deleted</b> - a read-only checkbox 
+      that indicates that the current record is deleted.</font></li>
+      <li><font face="Tahoma"><b>Baud Simulator</b> - turns on the Baud 
+      Rate simulator for this BBS.</font></li>
+      <li><font face="Tahoma"><b>Stay Alive</b> - turns on Stay Alive 
+      mode.&nbsp; <b>NOTE:</b> this mode should be used with BaudSim mode on any 
+      BBS that you are viewing break movies or reading large text files in order 
+      to keep the BBS inactivity timer from logging you off.</font></li>
+      <li><font face="Tahoma"><b>Permanent</b> - use this flag to 
+      ensure that a BBS is not accidentally deleted with the 'Delete' button.&nbsp; 
+      You must turn off this flag and save the record before the 'Delete' button 
+      will delete the BBS.</font></li>
+      <li><font face="Tahoma"><b>LANtronix Filter</b> - this flag is 
+      used if the current BBS is a real Atari running on a LANtronix device for 
+      it's internet connection.&nbsp; The LANtronix devices will send an extra 
+      character&nbsp; (0) after a ctrl-M (13) which screws up the display.&nbsp; 
+      This flag will cause AT_Connect to filter out those extra characters.&nbsp; 
+      The very slight performance hit is not noticeable in BaudSim mode.</font></li>
+      <li><font face="Tahoma"><font color="#FF0000"><b><a name="Hide From Dial List">Hide From Dial List</a></b></font> - This flag 
+      allows you to mark a BBS as 'down' which removes it from the drop-down dialup list on the 
+      main form control panel without deleting the entry.</font></li>
+      <li><font face="Tahoma"><b>Kill Buffer on Disconnect</b> - Clears 
+      the incoming buffer when you or the BBS disconnects.</font></li>
+      <li><font face="Tahoma"><b>Alarm Column</b> - Enables the right 
+      column alarm in the Text Window for BBSes that do not have a word wrap 
+      feature in their message editors.&nbsp; Also the column number for the 
+      alarm is set here.&nbsp; This alarm only works while typing in the Box.</font></li>
+      <li><font face="Tahoma"><b>AutoPause</b> - enables the 
+      <a href="#AutoPause">AutoPause</a> system 
+      for BBSes that do not have a page length setting (like BBS:Express v1.0 
+      and FoReM XE)</font></li>
+      <li><font face="Tahoma"><b>AutoPause Delay (ms)</b> - Milli-seconds delay 
+      between sending the [A]gain char and the {Ctrl}-S char.&nbsp; Start around 
+      300 ms.&nbsp; Experimentation may be required on different BBSes.</font></li>
+      <li><font face="Tahoma"><b>Box Delay(ms)</b> - Milli-seconds 
+      delay for data being sent from the box to the currently logged on BBS screen.</font></li>
+      <li><font face="Tahoma"><b>No Wrap Quotes</b> - this is an option which is 
+      basically for using the built-in quote system on a Carina BBS.&nbsp; It should be 
+      checked for Carina Systems if you want to use it.&nbsp; Since Carina BBS 
+      likes to mess with the format of your messages after you enter them, this 
+      was the only way I found to keep the quotes looking OK after the Carina 
+      formatting took place.</font></li>
+      <li><font face="Tahoma">'<b>Send one char at a time'</b> - Check this box 
+      to make ATC send the macros 1 char at a time for some slower BBSes.</font></li>
+      <li>
+      <p style="margin-bottom: 15"><font face="Tahoma"><b>Screen Width</b> - allows you to setup the 
+      screen connection width in 40 or 80 columns for this BBS.&nbsp; When you connect to the 
+      BBS, the screen width will automatically be adjusted.</font></li>
+    </ul>
+      <p style="margin-bottom: 15"><font face="Tahoma"><font color="#0000FF"><b>[ Gateway ]</b></font> - 
+      Setting at the bottom of the BBS editor form to enable the use of the AtariBBS gateway (by AMIS).</font><ul>
+      <li>
+      <p style="margin-bottom: 0"><font face="Tahoma">Enter the URL (<b><u>ataribbs.ddns.net</u></b>) and 
+      port (<b><u>6502</u></b>)</font></li>
+      <li>
+      <p style="margin-bottom: 0"><font face="Tahoma">Check the 'Use Gateway' checkbox for enabling 
+      the gateway with the current BBS.&nbsp; Only enable the gateway for BBSes 
+      that are accessible thru the gateway.</font></li>
+      <li>
+      <p style="margin-bottom: 0"><font face="Tahoma">This allows you to use your macros for that BBS 
+      thru the gateway.</font></li>
+      <li>
+      <p style="margin-bottom: 0"><font face="Tahoma">Make sure you select the 
+      correct BBS once inside the gateway or the macros will be wrong.</font></li>
+    </ul>
+      <p style="margin-bottom: 0">&nbsp;<p style="margin-top: 6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <font face="Tahoma">Currently there is only one Atari BBS gateway.&nbsp; In the 
+    future, I may add support for multiple gateways if the need arises.</font></p>
+      <p>&nbsp;</td>
+    <td width="32%">
+    <p align="center">
+    <font face="Tahoma">
+    <img border="0" src="images/bbseditor.jpg" width="468" height="637"><br>
+    </font>
+    <b>
+    <font face="Tahoma" size="1">BBS Editor</font></b><p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    <font face="Tahoma">
+    <img border="1" src="images/bbseditor2.jpg" width="468" height="637"><br>
+    <b><font size="1">Newly created BBS record</font></b></font><p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    <img border="0" src="images/gateway2.jpg" width="455" height="50"><br>
+    <b><font face="Tahoma" size="1">Gateway Configuration</font></b></td>
+  </tr>
+  <tr>
+    <td width="68%">
+    <p><u><b><font face="Tahoma">Website</font></b></u></p>
+    <ul>
+      <li><img border="1" src="images/earth.JPG" width="44" height="40"><font face="Tahoma"> 
+      - This button loads the website access form for the current bbs.&nbsp; The website 
+      access form is  populated with the website of the current bbs either from the BBS 
+      Editor or the terminal screen.&nbsp; Clicking the blue underlined link 
+      will load your internet browser and connect you to the website.</font></li>
+    </ul>
+    <p>&nbsp;<p>&nbsp;<p>&nbsp;</td>
+    <td width="32%">
+    <p align="center">
+    <a title="www.bf.amfband.com" href="http://bf.amfband.com">
+    <img border="1" src="images/website.jpg" width="617" height="162"></a><br>
+    <b><font face="Tahoma" size="1">Website Access Form</font></b></td>
+  </tr>
+  <tr>
+    <td width="68%" valign="top">
+    <u><b><font face="Tahoma" size="4"><a name="The Default BBS Record">The Default BBS 
+    Record</a></font></b></u><p>
+    <font face="Tahoma">The Default BBS is used by AT_Connect to create 
+    new BBS records, when the 'Add BBS' button is pressed.&nbsp; Many of the 
+    values here can be used as global values and will be copied to the new BBS 
+    record when it is created.</font></p>
+    <p>
+    <b>
+    <font face="Tahoma" size="4">Do not attempt to delete this record through 
+    'raw' BBS List editing or the 'Add BBS' button will not function correctly.</font></b></p>
+    <p><b><font face="Tahoma" size="4">You have been warned...</font></b></td>
+    <td width="32%">
+    <p align="center">
+    <img border="1" src="images/def-bbs.jpg" width="470" height="591"><br>
+    <b><font face="Tahoma" size="1">Default BBS Record</font></b></td>
+  </tr>
+</table>
+<h5><font face="Tahoma"><a href="#top">Back to Top</a></font></h5>
+<hr>
+<h3><font face="Tahoma" size="5"><a name="The Box">The Box</a> (Text Editor)</font></h3>
+<table border="0" cellpadding="0" cellspacing="1" style="border-collapse: collapse" bordercolor="#111111" width="100%">
+  <tr>
+    <td width="50%"><font face="Tahoma">The Box is a new feature in AT_Connect III.&nbsp; This allows you to edit 
+    your messages using the power of the PCs editing features (instead of 
+    constantly hitting your backspace key to fix the current line in the BBS 
+    message or being at the mercy of these old 80's BBS editing functions some 
+    of which were ok... some horrendous.)</font><p><font face="Tahoma">
+    Because some BBSes do not have a word wrap feature in the message editor, 
+    the Alarm Column feature will give an alarm beep when your typing gets near the 
+    end of the BBS line.&nbsp; I have discovered that setting this alarm column 
+    to 30 works nicely on a 40 column BBS.&nbsp; This allows you a few extra 
+    chars to finish typing the line you are working on before hitting &lt;return&gt; 
+    and moving to the next line.</font></p>
+    <p><font face="Tahoma">Windows Cut, Copy and Paste can be used in 
+    the Box.</font></p>
+    <p><font face="Tahoma">Detected URLs can be pasted into the box for editing 
+    and sending to the BBS. (I don't know why anyone would want to do that but 
+    maybe you do.)&nbsp; Author's Note: I have found myself doing this more 
+    frequently since adding it.</font></p>
+    <p><font face="Tahoma">The Box can be totally disabled in the 
+    <a href="#config">Configuration</a> Screen so it never appears...</font></p>
+    <p><font face="Tahoma"><b>Buttons</b></font></p>
+    <ul>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma"><b>Clear - </b>Clears the contents of the 
+      Box</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma"><b>Send - </b>Sends<b> </b>the contents 
+      of the Box to the BBS</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma"><b>Send/Clear - </b>Sends the contents of 
+      the Box to the BBS and clears the window<b> </b>(hitting<b> </b>
+      your&lt;Return&gt; key<b> </b>in the box does the same thing if 'Auto C/R' 
+      is enabled.)</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma"><b>C/R - </b>Sends an ATASCII CR 
+      (chr(155)) to the BBS<b> </b>(hitting<b> </b>your&lt;Return&gt; key<b> </b>in 
+      the box does the same thing if 'Auto C/R' is enabled.)</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma"><b>40 / 80 - </b>Toggles the editor box width 
+      from 40 cols to 80 columns.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma"><b>Box - </b>Hides / Displays the Box window.&nbsp; 
+      Box ON... Box OFF.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma"><b>View System Log</b> - opens the 'System Log' 
+      form for viewing the log.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma"><b>Clipboard to Box</b> - Pastes the 
+      contents of the clipboard into the box.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma"><b>Box to ATE</b> - This button sends the contents 
+      of the Box to the ATEditor to do whatever you want with it.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma"><b>1) Scrollback to Box</b> - pastes the last 400 (or 
+      how many bytes indicated in the Scrollback field) bytes in the Box for 
+      editing prior to quoting.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma"><b>2) Edit Box</b> - 
+      Clicking this button places the cursor at the top of the quote text in 
+      'The Box' readying it for editing, formatting and sending.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma"><b>3) Format Edited Box</b> - Automagically changes the 
+      contents of the Box (or the Quote) into the correct format for sending to 
+      the BBS message editor using the 'Send Formatted' button.&nbsp; Both the 'Scrollback 
+      to Box' and the 'Format Edited Box' buttons automatically disable the 'Auto C/R' 
+      function and enable the 'Send Formatted Box' button.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma"><b>4) Send Formatted Box</b> - coupled with the
+      <b>Auto C/R checkbox</b>, this allows you to format text in the box 
+      before sending it to the BBS.&nbsp; Disable the 'AutoCR' to enable the 
+      'Send Formatted' button.&nbsp; This button is also the last step <b>(4)
+      </b>in 
+      the Quoting System.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma"><b>Sign</b> - Sends the signature for this BBS to 
+      the connected BBS.&nbsp; This is a way to sign your messages (or posts.)&nbsp; 
+      The signature is a part of the BBS record and is edited in the BBS form..&nbsp; 
+      The 'Sign' button also exists on the BBS form.</font></li>
+    </ul>
+    <p><b><font face="Tahoma">Flags</font></b></p>
+    <ul>
+      <li><font face="Tahoma"><b>Auto C/R</b> - turns on the Auto C/R 
+      function which means all data in the box is sent to the BBS when a 
+      typed Carriage Return (C/R) is detected.&nbsp; This must be disabled to '<b>Send Formatted</b>' 
+      data from the box.</font></li>
+    </ul>
+    <p><b><font face="Tahoma">Fields, Controls &amp; Keystrokes</font></b></p>
+    <ul>
+      <li><font face="Tahoma"><b><font size="4">Q&gt;</font> </b>Used for changing 
+      the Quote Prefix to the original poster's initials or whatever...</font></li>
+      <li><font face="Tahoma"><b># Chars - </b>displays the number of 
+      characters in the Box.</font></li>
+      <li><font face="Tahoma"><b>AlrmCol - </b>Number of the column at 
+      which point the alarm goes off as a signal to hit your &lt;return&gt; key and 
+      start the next line.<b> </b>&nbsp;The <b>CheckBox</b> to the right of this 
+      field enables / disables this Box alarm.</font></li>
+      <li><font face="Tahoma"><b>{Alt}-T - </b>Toggles the focus 
+      between the Box and the main screen.</font></li>
+      <li><font face="Tahoma"><b>Focus Indicator - </b>indicates 
+      whether the Main screen or Box has the focus (tiny green indicator next to 
+      the Main Screen and the Box.)</font></li>
+      <li><font face="Tahoma"><b>Delay(ms)</b> - Delays each char of 
+      the data being sent to the BBS from the Box by the number of milli-seconds.&nbsp; 
+      Some BBSes process incoming data slower than others. This value is 
+      normally set in the BBS record for each BBS but may be temporarily changed 
+      here.</font></li>
+      <li><font face="Tahoma"><b>BaudSim - </b>Allows a quick and local 
+      way to change the Global BaudSim value temporarily.&nbsp; Values of 0 - 5 are used here with 
+      0 being the fastest and 9 being the slowest.&nbsp; <u> <b>Do not put a baud rate here!!!</b></u></font></li>
+      <li><font face="Tahoma"><b><span style="background-color: #00FFFF">
+      00:00:00</span> - </b>Time Online Display<b> </b>shows the amount of time 
+      (hh:mm:ss) online to the currently connected BBS.<b><br>
+      <br>
+      </b></font><font size="1" face="Tahoma">Thanks to Andy K for suggesting the name &quot;Box&quot; 
+for the text window!</font></li>
+    </ul>
+    <p>&nbsp;</p>
+    <p><font face="Tahoma" size="5"><b><a name="Scrollback Controls">Scrollback Controls</a></b></font></p>
+    <p><font face="Tahoma"><b><br>
+    </b>The Scrollback controls are located below the Box controls for easy 
+    access.&nbsp; This allows viewing of the last few bytes that came across the 
+    data stream.&nbsp; Sometimes they go by too fast.&nbsp; The scrollback 
+    function slows down the display a little for easier viewing (and so you can 
+    watch those 'Mojis go by in slower motion.)&nbsp; You can also Pause and 
+    Resume the scrollback display.</font></p>
+    <p><font face="Tahoma">The <b>scrollback buffer</b> has a max size of 2048 bytes.&nbsp; 
+    AT_Connect maintains this circular FIFO buffer when it is enabled and always 
+    puts the last 2048 bytes received from (or sent to) the BBS in the buffer.&nbsp; 
+    AT_Connect maintains a pointer to the last data placed in the buffer so it 
+    knows where to start the scrollback display.</font></p>
+    <p><font face="Tahoma">You can set the number of bytes to scroll back in the
+    <b>Buffer Size</b> field.&nbsp; It doesn't change the size of the buffer but 
+    rather only displays the last number of bytes as designated in the field.&nbsp; 
+    So for example, if you hit the 'Scrollback' button and it didn't display 
+    enough, you can increase (or decrease) the size in the field and hit 'Scrollback' 
+    again to display more (or less) buffer bytes.&nbsp; The contents of the 
+    scrollback buffer does not change until the BBS starts sending more data or 
+    you start typing into the BBS.</font></p>
+    <ul>
+      <li><b><font face="Tahoma">Scrollback</font></b><font face="Tahoma"><b> - </b>
+      Sends the contents of the scrollback buffer to the screen after sending a 
+      clear screen (125) code.</font></li>
+      <li><font face="Tahoma"><b>Buffer Size</b> - field to the left of the 
+      Scrollback button allows editing of the buffer size up to the 2048 byte 
+      limit.&nbsp; This number determines how many bytes or chars will be sent 
+      to the screen (or box when quoting.)</font></li>
+      <li><font face="Tahoma"><b>Pause </b>- Pause / Resume the display of the 
+      scrollback buffer.&nbsp; Only visible during scrollback.</font></li>
+      <li><font face="Tahoma"><b>Abort</b> - Stops and aborts the Scrollback 
+      function. Only visible during scrollback.</font></li>
+      <li><font face="Tahoma"><b>Green Indicator</b> - Indicates that the 
+      scrollback buffer is being displayed.&nbsp; Only visible during scrollback.</font></li>
+    </ul>
+    <p><font face="Tahoma">After scrollback is complete, the focus is returned 
+    to the BBS screen and AT_Connect is ready for your next keystroke.</font></p>
+    <p>&nbsp;</p>
+    <p><b><font face="Tahoma" size="2"><a href="#top">Back to Top</a></font></b></td>
+    <td width="50%">
+    <p align="center">
+    <img border="0" src="images/scrollback.jpg" width="682" height="337"><br>
+    <b><font face="Tahoma" size="1">'The Box' and additional controls shown here 
+    in 80-col mode</font></b><p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    <img border="0" src="images/scrollback.jpg" width="682" height="335"><br>
+    <b><font face="Tahoma" size="1">The Box - Text Window / Message Editor shown here in 
+    80-col mode.&nbsp; 40-col mode is also available</font></b><p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+<img border="0" src="images/Scrollback.jpg" width="682" height="334"><br>
+    <b><font face="Tahoma" size="1">Scrollback Buffer Controls</font></b><p align="center">
+    &nbsp;<p align="center">
+    <img border="0" src="images/scrollback2.jpg" width="252" height="26"><br>
+    <b><font face="Tahoma" size="1">Buttons seen during scrollback</font></b></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="1" style="border-collapse: collapse" bordercolor="#111111" width="100%">
+  <tr>
+    <td width="50%"><b><font face="Tahoma" size="5"><a name="Message Quoting System">Message Quoting System</a></font></b><p>
+    <font face="Tahoma">This system is used to create quoted messages on a BBS.&nbsp; 
+    This allows you to quote desired content from a previous message and 
+    incorporate it in your current message.&nbsp; It is a somewhat primitive 
+    system.&nbsp; Usually the BBS handles quoting of previous messages, but the 
+    old Atari 8-bit BBSes did not do this.&nbsp; Hence this system...</font></p>
+    <p><font face="Tahoma">When you see a message that you want to quote in your 
+    next message, do the following five steps in this order:</font><ol>
+      <li><font face="Tahoma"><b>Send Buffer to Box</b> - Hit the ‘<u>1) Scrollback to Box</u>’ button – this sends 
+      the contents of the scrollback buffer to the Box.&nbsp; In the picture to 
+      the right, the last 1000 characters will be sent to the box.&nbsp; 
+      Increase or decrease this number if you need more or less.<b><br>
+      Prep the BBS</b> - In the BBS, set up your reply to the message until 
+      you are in the message line editor.&nbsp; Doing this step after step #1 
+      ensures that you are sending the most relevant buffer contents to the Box 
+      because none of your message prep data will take up extra space in the Box.</font></li>
+      <li><font face="Tahoma"><b>Edit the Box</b> - The '<u>2) Edit Box</u>' button 
+      will place your cursor in the box at position 0 to begin the edit process.&nbsp; Manually edit the quoted message in the box until 
+      it only contains the text you are interested in quoting.<br>
+      <b><font size="4">Q&gt;</font></b> You may place the original poster's 
+      initials in this box to act as the prefix for each line of the quoted 
+      material.&nbsp; It might look like this:&nbsp; <b>JP:&nbsp;&nbsp; </b>or&nbsp;
+      <b>&nbsp;a&gt;</b>&nbsp; or <b>&nbsp; bf.</b>&nbsp;&nbsp; Whatever you like.&nbsp; 
+      Just make sure to change it for each message quoted when the OP changes.&nbsp; 
+      Leaving it blank will use the default prefix from the configuration.&nbsp; 
+      Logging off of the BBS will make it blank.</font></li>
+      <li><font face="Tahoma"><b>Make the Quote</b> - Hit the ‘<u>3) Format Edited Box</u>’ button to automatically modify 
+      the text in the box to add your quote prefix and special ATASCII Carriage 
+      Returns (155). The text might look a little strange to the eye but it 
+      should format correctly in the BBS after you send it.&nbsp; Pressing the 
+      'Format Edited Box' button also disables the 'Auto C/R' function and enables the 
+      'Send Formatted Box' button.</font></li>
+      <li><font face="Tahoma"><b>Send it to the BBS</b> - Hit the ‘<u>4) Send Formatted 
+      Box</u>’ button to send box text 
+      to the BBS.</font></li>
+      </ol>
+    <p><font face="Tahoma">You may then continue to enter your message into the 
+    BBS.</font></p>
+    <p><font face="Tahoma">&nbsp;&nbsp; <b>NOTES:</b>&nbsp; </font>
+      <ul>
+        <li><font face="Tahoma">During the quoting process, the next step in the 
+        process will be underlined with a <font color="#008000">GREEN</font> line indicator seen in the picture 
+        to the right.</font></li>
+        <li><font face="Tahoma">The ‘<u>3) Format Edited Box</u>’ command uses the Alarm Column 
+        value to determine the length of the line. You might have to experiment 
+        with this value. During testing, I used a value of  32 
+        here to help eliminate those long words that happen to cross this 
+        threshold from causing an inadvertent word wrap after the ‘Format Edited Box’ 
+        function modifies the Box Text and during the ‘<u>4) Send Formatted Box</u>’ function.&nbsp; 
+        Not the end of the world, but it can happen.&nbsp; Modifications to the 
+        process have almost eliminated this anomaly... almost.</font></li>
+        <li><font face="Tahoma">If the '<u>1) Scrollback to Box</u>' function cuts off the 
+        top part of the message, you can clear the box, increase the buffer size 
+        in the field (shown here at 1000) next to the 'Scrollback' button, and 
+        hit the 'Scrollback to Box' button again.&nbsp; This will reload the box 
+        with more characters this time.&nbsp; Repeat until you get what you want 
+        in the box.&nbsp; Remember, the max size of the scrollback buffer is the last 2048 
+        bytes.</font></li>
+        <li><font face="Tahoma">Hitting the 'Scrollback to Box' or other Quote 
+        buttons will automatically and temporarily disable the 'Auto C/R' to 
+        allow better and cleaner editing in the Box.</font></li>
+        <li><font face="Tahoma">The Quote Prefix defaults to this: ‘.&gt; ‘. It can 
+        be changed in the configuration form.</font></li>
+        <li><font face="Tahoma">The Quote Box function needs to be smarter… it 
+        isn’t smart enough to quote a previously quoted message properly… it 
+        still works but not as cleanly as I would like.</font></li>
+        <li><font face="Tahoma">Using Ctrl-Z while in the Box will add a 
+        Chr(155) (ATASCII CR) to allow some extra formatting in the Box.</font></li>
+        <li><font face="Tahoma">There is an additional field in the BBS form for 
+        you to check if the BBS is a Carina BBS.&nbsp; Carina likes to reformat 
+        your text a bit.&nbsp; The 'No-Wrap' function helps to prevent this.</font></li>
+        </ul>
+        <p><font face="Tahoma">With a little practice, I can do the quote in 
+        about 20 seconds now.</font></p>
+    <p>&nbsp;</td>
+    <td width="50%">
+    <p align="center">
+<img border="0" src="images/Scrollback.jpg" width="682" height="356"><br>
+    <b><font face="Tahoma" size="1">Quoting System</font></b><p align="center">
+&nbsp;<p align="center">
+&nbsp;<p align="center">
+&nbsp;<p align="center">
+<img border="0" src="images/quotedmsg.jpg" width="537" height="224"><br>
+<b><font face="Tahoma" size="1">Quoted Message</font></b></td>
+  </tr>
+</table>
+<p><b><font face="Tahoma" size="2"><a href="#top">Back to Top</a></font></b></p>
+<table border="1" cellpadding="0" cellspacing="1" style="border-collapse: collapse" bordercolor="#111111" width="100%">
+  <tr>
+    <td width="50%"><b><font face="Tahoma" size="5"><a name="AutoPause">AutoPause</a></font></b><p>
+    <font face="Tahoma">AutoPause is a small system that can interrupt a message 
+    display on a BBS that does not have a page length setting for users.&nbsp; 
+    Some BBSes (like BBS:Express v1.0 and FoReM XE), don't have a way to pause the message 
+    especially when they are running ultra-fast on the internet.&nbsp; After 
+    hitting the [A]gain command to reread the current message, you 
+    cannot hit the Ctrl-S fast enough to pause the display before the data has 
+    completely been sent to you.&nbsp; This makes it difficult to read the 
+    beginning of the longer messages.</font></p>
+    <p><font face="Tahoma">In your BBS record, you can set AutoPause <b>on</b> 
+    using the AutoPause Checkbox for each 
+    BBS that you need it on as seen here on the right.&nbsp; You should also set 
+    the AutoPause delay to a value between 300 and 600ms.&nbsp; You may have to 
+    experiment with this value on different BBSes.</font></p>
+    <p><font face="Tahoma">There are three invisible buttons in the lower right 
+    corner of the control panel which will appear when you connect to a BBS that 
+    you have enabled AutoPause.&nbsp; These buttons are:</font></p>
+    <ul>
+      <li><b><font face="Tahoma">Again</font></b><font face="Tahoma"> - using this 
+      button, AT_Connect sends the [A] command first to redisplay the current message 
+      and then after a slight delay (300-600 ms), sends the Ctrl-S to pause the 
+      message before it displays too much to read.&nbsp; Then Ctrl-S (or the <b>
+      ...</b> 
+      button) can be used to restart and stop the message as necessary.</font></li>
+      <li><font face="Tahoma"><b><font size="5">...</font></b> - will send the 
+      resume command (Ctrl-S or 
+      Chr[155] in BBS:Express) followed by the delay and then the Ctrl-S again.&nbsp; 
+      This will continue to display and pause the current msg.</font></li>
+      <li><b><font face="Tahoma" size="5">!!!</font></b><font face="Tahoma"> - 
+      this button will resume displaying the message from the current position 
+      to the end of the message.</font></li>
+    </ul>
+    <p>&nbsp;<p><font face="Tahoma"><b>NOTE:</b>&nbsp; Ctrl-S can be used to <b>
+    stop and restart</b> the message display.</font><p><font face="Tahoma"><b>
+    NOTE2:</b>&nbsp; Currently, this system is programmed for use with 
+    BBS:Express v1.0 and FoReM XE.&nbsp; If we decide that it needs to be programmed for 
+    other ATASCII BBSes, I will consider this for future releases.</font></td>
+    <td width="50%">
+    <p align="center">&nbsp;</p>
+    <p align="center"><img border="0" src="images/AP_BBS.jpg" width="186" height="36"><br>
+    <b><font face="Tahoma" size="1">Set AutoPause in the BBS Record</font></b></p>
+    <p align="center">&nbsp;</p>
+    <p align="center">
+    <img border="0" src="images/autopause.jpg" width="257" height="86"><br>
+    <font face="Tahoma" size="1"><b>AutoPause Controls (in lower right corner of 
+    control panel)</b></font></td>
+  </tr>
+</table>
+<p><b><font face="Tahoma" size="2"><a href="#top">Back to Top</a></font></b></p>
+<table border="1" cellpadding="0" cellspacing="1" style="border-collapse: collapse" bordercolor="#111111" width="100%">
+  <tr>
+    <td width="50%"><b><font face="Tahoma" size="4"><a name="System Log">System Log</a></font></b><p>
+    <font face="Tahoma">The System Log can optionally be used to keep track of 
+    your BBS activity.&nbsp; The number of characters in the current log is 
+    displayed at the bottom of the form.&nbsp; While the log cannot be edited 
+    anywhere in AT_Connect, 
+    several things can be done to it here in this form:</font></p>
+    <ul>
+      <li><font face="Tahoma">It can be cleared and restarted here.</font></li>
+      <li><font face="Tahoma">It can be deleted and optionally turned off for 
+      this session.</font></li>
+      <li><font face="Tahoma">It can be renamed and saved (like an archive 
+      function).&nbsp; It automagically assigns a &quot;unique&quot; filename based on the 
+      time and date rounded to the nearest second and stores it in the LOGS 
+      folder which is created the first time you use it.</font></li>
+    </ul>
+    <p><font face="Tahoma">It can be permanently disabled in the configuration 
+    menu.</font></p>
+    <p><font face="Tahoma">The log file is located in the System folder and is 
+    called 'AT3_Log.txt'.</font></p>
+    <p><font face="Tahoma">The time value is stored as a long integer in the BBS 
+    List for each BBS.&nbsp; This means it will roll over at some point... when 
+    you reach 69 years of time online.</font><p>&nbsp;<p>&nbsp;<p>&nbsp;</td>
+    <td width="50%">
+    <p align="center">
+    <img border="0" src="images/systemlog.jpg" width="733" height="482"><br>
+    <b><font face="Tahoma" size="1">System Log Form</font></b></td>
+  </tr>
+</table>
+<p><b><font face="Tahoma" size="2"><a href="#top">Back to Top</a></font></b></p>
+<p>&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="1" style="border-collapse: collapse" bordercolor="#111111" width="100%">
+  <tr>
+    <td width="50%"><b><font face="Tahoma" size="4"><a name="Time Online Reports">Time 
+    Online Report</a></font></b><p><font face="Tahoma">The Time Online report 
+    is a report showing the time online of the various BBSes in the AT_Connect 
+    BBS file.&nbsp; The 'online timer' must be enabled in the configuration in 
+    order to collect the time online and display it in this report.</font></p>
+    <ul>
+      <li><b><font face="Tahoma">Show All</font></b><font face="Tahoma"><b> BBSes</b> - checking this box allows 
+      all BBSes in your BBS File to show up in the report.&nbsp; When it is unchecked, only the 
+      BBSes with actual connect time will show up.</font></li>
+      <li><font face="Tahoma"><b>Save As</b> - allows the saving of this report 
+      into the System Folder after prompting for a filename.</font></li>
+    </ul>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p><font face="Tahoma"><b><font size="2">Programming Note</font></b><font size="2"> 
+    - The same form is used for both the 'System Log' and the 'Time Online 
+    report'.&nbsp; The data it displays and the functions that are allowed are 
+    determined by a system variable called &quot;TPSreports&quot;.</font></font></td>
+    <td width="50%">
+    <p align="center">
+    <img border="0" src="images/tor.jpg" width="735" height="483"><br>
+    <b><font face="Tahoma" size="1">Time Online Report</font></b></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p><b><font face="Tahoma" size="2"><a href="#top">Back to Top</a></font></b></p>
+<p>&nbsp;</p>
+<hr>
+<h3><font face="Tahoma" size="5"><a name="Detect URLs">Detect URLs</a></font></h3>
+<table border="1" cellpadding="0" cellspacing="1" style="border-collapse: collapse" bordercolor="#111111" width="100%">
+  <tr>
+    <td width="58%"><font face="Tahoma">AT Connect III can now 
+    automatically detect URLs in the incoming data stream and create links that 
+    can be accessed with 1-click from within ATC.&nbsp; Clicking a link 
+    will automatically load the system browser or the browser pointed to in the ATC Configuration form.&nbsp; The system will save the last 
+    Ten URLs 
+    detected in the current ATC session into a FIFO buffer.&nbsp; These URLs detected are kept 
+    in memory only and are not saved when ATC is 
+    shut down.&nbsp;They can, however, be exported to a text file.&nbsp; The URL button to open and close the window below is 
+    located to the right of the 'Edit BBS' button in the control panel below the main screen.</font><ul>
+      <li><font face="Tahoma"><b>Clear URLs</b> - this button will 
+      clear all URLs from the form.</font></li>
+      <li><font face="Tahoma">The little green caret to the right of 
+      the links indicates the last URL detected.</font></li>
+      <li><font face="Tahoma"><b>Copy</b> - this button will copy the 
+      URL to the clipboard where you can do with what you will... paste it into 
+      the box for editing, paste it to a new text file, etc.</font></li>
+      <li><font face="Tahoma"><b>Export</b> - exports all of the available URLs 
+      in the form to a text file that you name.</font></li>
+    </ul>
+    <p>&nbsp;</td>
+    <td width="42%">
+    <p align="center">
+    <img border="0" src="images/URL-Buttons.jpg" width="442" height="28">&nbsp; </td>
+  </tr>
+</table>
+<p align="center">
+<img border="0" src="images/URL.jpg" width="566" height="324"></p>
+<p>&nbsp;</p>
+<p><font face="Tahoma" size="2">* Isn't there an Atari video game called 'The 
+Last URL'?&nbsp; If there isn't, there certainly should be.</font></p>
+<p><font face="Tahoma" size="1">Thanks to Mark L for the URL ideas&nbsp; I 
+wanted an easy way to click on the new URLs he posted every day, hence the birth of URL 
+detection in ATC.</font></p>
+<p><b><font face="Tahoma" size="2"><a href="#top">Back to Top</a></font></b></p>
+<hr>
+<p><b><font face="Tahoma" size="5"><a name="The ATEditor">The ATEditor</a></font></b></p>
+<table border="1" cellpadding="0" cellspacing="1" style="border-collapse: collapse" bordercolor="#111111" width="100%">
+  <tr>
+    <td width="100%"><font face="Tahoma">The ATEditor is a brand new 
+    feature for AT_Connect III which can be used to edit sequences of ATASCII 
+    characters into macros or 'Mojis* as we like to call them.&nbsp; While 
+    offline and not connected to a BBS, you can draw ATASCII images on the main 
+    screen and each typed ATASCII keycode will be copied into the ATEditor 
+    window, where it can be edited, sent to the main screen for testing, and 
+    saved to the 'Mojis folder which is a sub-folder of the 'documents\AT_Connect' 
+    system 
+    folder.&nbsp; The codes can be sent to the main screen while connected to a 
+    BBS with certain constraints.</font><p><font face="Tahoma">It is 
+    also possible to turn on your capture buffer, capture something from a BBS, 
+    and send this captured data to the ATEditor.&nbsp; In other words, Steal a 
+    'Moji...</font></p>
+    <p><font face="Tahoma">This editor was born during the 
+    troubleshooting phase (which never ends) of AT_Connect III when I was trying 
+    to figure out which characters were not being processed correctly by the 
+    screen handler.&nbsp; I kept adding things to try to help me do the job 
+    better and I realized at some point that this might be a cool feature to 
+    have as part of the program... so I further developed it into the ATEditor.</font></p>
+    <p>&nbsp;</td>
+  </tr>
+</table>
+<table border="1" cellpadding="0" cellspacing="1" style="border-collapse: collapse" bordercolor="#111111" width="100%">
+  <tr>
+    <td width="50%">
+    <p align="center">
+    <img border="0" src="images/ATE1.jpg" width="603" height="437"><br>
+    <b><font face="Tahoma" size="2">ATEditor</font></b></td>
+    <td width="50%">
+    <p align="center">
+    <img border="0" src="images/ATE2.jpg" width="683" height="437"><br>
+    <b><font size="2" face="Tahoma">Used in conjunction with the Main Screen for 
+    editing ATASCII chars and 'Mojis</font></b></td>
+  </tr>
+  <tr>
+    <td width="50%">
+    <ul>
+      <li><font face="Tahoma"><b>Enable Editing Checkbox - </b>This box 
+      must be checked before any typing can be done in the ATEditor window.&nbsp; 
+      Nothing but ATASCII char codes should be typed into this window.&nbsp; All character codes must be separated by a semi-colon.</font></li>
+      <li><font face="Tahoma"><b>Clear Main Screen before send checkbox 
+      - </b>sends a clear screen code (125) to the main screen when the 'Send to 
+      Screen' button is pressed before the data in the window is sent.</font></li>
+      <li><font face="Tahoma"><b>Inverse Characters checkbox - </b>
+      turns on inverse characters in the main screen until you uncheck the box.&nbsp; 
+      The <b>&lt;End&gt;</b> key does the same thing.</font></li>
+      <li><font face="Tahoma"><b>CLS button</b> - Clears both the text 
+      window in the ATEditor and the main screen.</font></li>
+      <li><font face="Tahoma"><font color="#FF0000"><b>*** Edited ***</b>
+      </font>- Indicates that 
+      the contents of the window were edited and changed manually and a save or test might 
+      be necessary. (Flashes Green and Red).</font></li>
+      <li><font face="Tahoma"><b>Send to Main button</b> -&nbsp; sends 
+      the contents of the window to the main screen in both offline and online 
+      modes.&nbsp; The <font color="#FF0000">RED</font> warning label seen at 
+      the top of the form is displayed on the first push as a reminder to turn 
+      on graphics mode in the message editor if sending a message.&nbsp; The 
+      second push sends the data.</font></li>
+      <li><font face="Tahoma"><b>'Clear After Send' checkbox</b> - checking this 
+      will clear the ATE after sending the contents to the BBS or main screen.</font></li>
+      <li><font face="Tahoma"><b>'Create File' checkbox</b> - This will 
+      translate the contents of the ATEditor and send it to a new file after 
+      prompting for a filename.</font></li>
+      <li><font face="Tahoma"><b>Delay (ms)  field</b> - sets a 
+      delay between the sending of each character.&nbsp; This is necessary on 
+      some BBSes and recommended for most testing.&nbsp; This field can be 
+      modified permanently  in the Config form and saved as a parameter.</font></li>
+      <li><font face="Tahoma"><b>File Controls</b> - The 'Load', 'Save' 
+      and 'Delete' buttons work on the files selected in the Filebox in the 
+      bottom left corner.&nbsp; The 'Load' and 'Delete' buttons are disabled 
+      until a file is selected in the box.&nbsp; Click on the filebox to select 
+      a file.&nbsp; Dbl-clicking the file in the filebox loads the file into ATE automatically.</font></li>
+      <li><font face="Tahoma"><b>Clear button</b> - clears the contents 
+      of the window.&nbsp; There is no prompt to save the contents so be 
+      careful.</font></li>
+      <li><b><font face="Tahoma">Close</font></b><font face="Tahoma"><b> button</b> - closes the ATEditor 
+      window.</font></li>
+      <li><font face="Tahoma"><b>File: label - </b>indicates the name 
+      of the last loaded file.</font></li>
+    </ul>
+    <p><b><font face="Tahoma">The ChXbox System</font></b></p>
+    <ul>
+      <li><font face="Tahoma"><b>'1) Start -X-' button</b> - creates a checked 
+      chXbox in the ATE.</font></li>
+    </ul>
+    <p><font face="Tahoma">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>
+    <b>OR</b></u></font></p>
+    <ul>
+      <li><font face="Tahoma"><b>'1) Start -_-' button</b> - creates an unchecked 
+      chXbox in the ATE.</font></li>
+      <li><font face="Tahoma"><b>'2) Insert Label' button</b> - type your label 
+      into the label text box and insert it using the button.</font></li>
+      <li><font face="Tahoma"><b>'3) Finish' button</b> - finishes the chXbox 
+      in the ATE after a caption has been added.</font></li>
+    </ul>
+    <ol>
+      <li><font face="Tahoma">To use the chXbox system, first decide will this 
+      be a 'X'ed box or an un'X'ed box...</font></li>
+      <li><font face="Tahoma">Click the 'Start -X-' or 'Start -_-' button 
+      depending on the decision in Step 1.&nbsp; This will load the 'Moji 'chX1' 
+      (or 'chX2') into the ATE.</font></li>
+      <li><font face="Tahoma">In the Label text box, type in the caption for the chXbox.&nbsp; 
+      It can be anything you want (Like, Dislike, What, where or whatever or 
+      poop).</font></li>
+      <li><font face="Tahoma">Click the '2) Insert' button below the box to 
+      insert your caption into the ATE.</font></li>
+      <li><font face="Tahoma">Click the 'Finish -X_-' button to load the 'chX3' 
+      'Moji and finish the chXbox.</font></li>
+      <li><font face="Tahoma">Repeat steps 1-5 for each additional chXbox.</font></li>
+      <li><font face="Tahoma">When you have finished all chXboxes, click 'Send 
+      to Main' to send the chXboxes to the BBS.&nbsp; Or you can 'Send to Main' 
+      after each ChXbox is built.&nbsp; Both ways work.</font></li>
+    </ol>
+    <p><font face="Tahoma"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Note:</b> 
+    The label can also be entered into 'The Box' and the 'Box to ATE' button 
+    used to add it to the ATE ChXbox being constructed.</font></p>
+    <p>&nbsp;</td>
+    <td width="50%"><b><font face="Tahoma">The AutoStart 'Moji</font></b><p>
+    <font face="Tahoma">As of ATC v3.20, there is a 'moji that AT_Connect will 
+    run at the startup of the system.&nbsp; The filename of this 'moji is &quot;ATC 
+    Ready&quot;.&nbsp; It is automatically generated at installation time or 
+    re-created along with the system 'mojis in the Configuration editor.</font></p>
+    <p align="left"><font face="Tahoma">Or you can use the ATEditor to create 
+    your own version of this file.</font></p>
+    <p align="center"><font face="Tahoma">
+    <img border="0" src="images/atcready.jpg" width="650" height="155"><br>
+    <b><font size="2">a modified 'ATC Ready' 'moji which displays at ATC startup</font></b></font></p>
+    <p align="center">&nbsp;</p>
+    <p align="center">&nbsp;</p>
+    <p><b><font face="Tahoma">&nbsp;Caveats &amp; Conundrums</font></b></p>
+    <p>
+    <font face="Tahoma">Certain things must be taken into consideration 
+    when sending these 'Mojis to a BBS.</font></p>
+    <ul>
+      <li><font face="Tahoma">If you are logged into a BBS that doesn't 
+      allow ATASCII graphics characters in the message bases, you might see 
+      nothing but garbage on your screen when you hit 'Send to Main'...</font></li>
+      <li><font face="Tahoma">All of the ATASCII BBSes I know of use 
+      line editors for their message bases.&nbsp; Some of these line editors 
+      only allow 40 characters on a line so if these 'Mojis are too large for 
+      the single line (more than 40 characters), they may not fully execute.&nbsp; 
+      Sometimes integrating C/Rs (155) into your 'Mojis will solve this to a 
+      certain degree or setting your line length to 80 cols.</font></li>
+      <li><font face="Tahoma">If your Moji contains a C/R (155) and the 
+      next character is a front slash (/), your 'Moji might kick a BBS:Express 
+      BBS 
+      system into the message editing menu.&nbsp; Something to think about...</font></li>
+      <li><font face="Tahoma">Some BBSes use a CR on a blank line to 
+      launch the message editing mode.&nbsp; Beware of this if your 'Moji has 2 
+      chr(155)s in a row.</font></li>
+      <li><font face="Tahoma">What else?</font></li>
+    </ul>
+    </td>
+  </tr>
+</table>
+<p><font face="Tahoma" size="2">* 'Mojis - after all... years ago, they were 
+called 'emoticons' which I thought was a perfectly good name for them since it 
+was probably the first name for them but you know how it is... a new generation 
+comes along and decides to rename them to Emojis so they can take credit for 
+inventing them and pat themselves on the back and maybe take home a paycheck.&nbsp; So I decided for the 
+purpose of At_Connect, I will call them 'Mojis and to hell with everything 
+else... where's MY paycheck?</font></p>
+<p><font face="Tahoma" size="1">Thanks to Rob S. for getting us started with the 
+'Mojis.</font></p>
+<p><b><font face="Tahoma" size="2"><a href="#top">Back to Top</a></font></b></p>
+<hr>
+<h3><font face="Tahoma">System <a name="notes">Notes</a></font></h3>
+<ul>
+  <li>
+  <p align="left"><font face="Tahoma">AT_Connect uses Winsock to connect to 
+  Atari 8-bit internet-based BBSes.&nbsp; <b>It will NOT use a modem connected to your PC 
+  for anything.&nbsp; </b>You cannot use it for connecting to conventional 
+  dialup BBSes. (If your internet connection is a dialup one, that is fine.&nbsp; 
+  Your PC dials into your ISP and then AT_Connect will work normally).</font></li>
+  <li>
+  <p align="left"><font face="Tahoma">AT_Connect does not  support ASCII terminal connections.&nbsp; If you use it to connect to an ASCII 
+  BBS system, the screen will look terrible and your {Enter} key will not 
+  function correctly.&nbsp; <b>HINT:</b> Use {Ctrl}-M as ASCII {Enter} if you 
+  need to.</font></li>
+  <li>
+  <p align="left"><font face="Tahoma">AT_Connect does not use an ATASCII font.&nbsp; 
+  It's terminal screen 'font' is internally generated within the program using 
+  bitmap images of the ATASCII character set. Therefore, I cannot make the font 
+  bigger or smaller.&nbsp; If this seems like it would be slow, 
+  remember that we need the <a title="The Baud Rate Simulator" href="#BaudSim">BaudSim</a> 
+  function to 
+  actually slow down the display to the screen.</font></li>
+  <li>
+  <p align="left"><font face="Tahoma">The BBS Editor uses a text file (<b>AT3_BBS.INI</b>) 
+  to store the information for each BBS.&nbsp; <b>This text file MAY be edited manually but 
+  that is not recommended</b>.</font></li>
+  <li>
+  <p align="left"><font face="Tahoma">AT_Connect stores it's configuration 
+  settings in a text 
+  file (<b>AT3_CFG.INI</b>).&nbsp; <b>This text file MAY also be edited manually but that 
+  is not recommended</b>.</font></li>
+  <li>
+  <p align="left"><font face="Tahoma">AT_Connect does not write any information to 
+  the Windows registry.</font></li>
+  <li>
+  <p align="left"><font face="Tahoma">The 'Screen to BMP dump' and 'PrintScreen' 
+  functions do not work in 80-column mode due to constraints within the 
+  workings of the program.</font></li>
+  <li>
+  <p align="left"><font face="Tahoma">When the 'About' form (below) is displayed in 
+  AT_Connect, the 'Monitor ON/OFF' button in the lower right corner of the form 
+  will unload it.</font></li>
+  <li>
+  <p align="left"><font face="Tahoma">AT_Connect does not 
+  support file transfers or file transfer protocols (XModem, YModem etc).</font></li>
+  <li>
+  <p align="left"><font face="Tahoma">In Windows 7, 10 or 11, running 
+  AT_Connect 
+  in compatibility mode may be required.&nbsp; Also some additional tweaking of 
+  permissions may be required.</font></li>
+  <li>
+  <p align="left"><font face="Tahoma">AT_Connect has never been tested 
+  in Windows 8 to my knowledge.</font></li>
+</ul>
+  <p align="left"><b><font face="Tahoma" size="4">Things that are not right 
+  yet!</font></b><ul>
+  <li>
+  <p align="left"><font face="Tahoma" size="2">There are still a couple of chars 
+  not processing correctly.&nbsp; They need to be identified and fixed.</font></li>
+  <li>
+  <p align="left"><font face="Tahoma" size="2">There is an anomaly where 
+  apparently there are some cases where a char appears to have 15 pixels instead 
+  of 16.</font></li>
+  <li>
+  <p align="left"><font face="Tahoma" size="2">With most of the new background 
+  screen colors, occasionally an off-color cursor will be displayed in odd 
+  places.&nbsp; I am trying to ID and fix this but I did not think it bad enough 
+  to warrant delaying the release of the new stuff.</font></li>
+</ul>
+  <p align="left">&nbsp;<h5><font face="Tahoma"><a href="#top">Back to Top</a></font></h5>
+<hr>
+<h3><a name="about"><font face="Tahoma">About</font></a></h3>
+<table border="0" cellpadding="0" cellspacing="1" style="border-collapse: collapse" bordercolor="#111111" width="100%">
+  <tr>
+    <td width="55%"><font face="Tahoma"><b><font size="5">AT_Connect III Help File</font></b><br>
+    <b><font size="2">Copyright © 2009-2026; Cabell Clarke; ALL RIGHTS RESERVED.<br>
+Revised: 10.3.26</font></b></font><p>
+    <b><font face="Tahoma" size="2">AT_Telnet is Copyright © Tom Hunt; Closer To 
+    Home Enterprises</font></b></p>
+    <p>
+    <b><font face="Tahoma" size="2">AT_Connect is Copyright © Tom Hunt; Closer To 
+    Home Enterprises, and Cabell Clarke; Boot Factory BBS</font></b></p>
+    <p><b><font face="Tahoma" size="2">BBS Editor, ATEditor, URL Detection, The 
+    Box, Scrollback System, Quoting System, AutoPause, Help System<br>
+    and additional code are 
+    Copyright © Cabell Clarke</font></b></p>
+    <p><b><font face="Tahoma" size="2">Screens and References to Bob Term are 
+    Copyright © Robert Puff</font></b><p><b><font face="Tahoma" size="2">Help 
+    Contact: Cabell Clarke (BF2k+)</font></b><p><b><font face="Tahoma" size="2">My 
+    BBS - The Boot Factory 2k+ : <a href="telnet://bfbbs.no-ip.com">bfbbs.no-ip.com</a>&nbsp; Port : 
+    8888</font></b><p>
+    <b><font face="Tahoma" size="2"><a href="http://www.atariage.com">AtariAge</a>: bf2k+</font></b><p>
+    <font face="Tahoma" size="2"><b>Beta Testers:</b> Tillek, Amis, John Polka, 
+    [Giarc], Bob_C, Slacker, mhansel739<br>
+    <b>Help on Help:</b> mhansel739</font><p>&nbsp;</td>
+    <td width="45%">
+    <p align="center">
+    <img border="1" src="images/about.jpg" width="403" height="322"></td>
+  </tr>
+  <tr>
+    <td width="55%"><font face="Tahoma"><b><font size="5">Change Log</font></b><font size="4">
+    </font></font>
+    <p><b><font face="Tahoma">v3.24 - Build: 958 - 10.4.26 </font></b>
+    <font face="Tahoma"><b>(Katara) (BugFix&nbsp; release)</b></font></p>
+    <ul>
+      <li><font face="Tahoma">Added session timer to display elapsed time in 
+      log, titlebar and status form.&nbsp; Session defined as time between ATC 
+      start and ATC stop.</font></li>
+      <li><font face="Tahoma">Added user-defined titlebar message. It can be 
+      displayed by itself or as part of the revolving marquee.</font></li>
+      <li><font face="Tahoma">Added the ConvertMacro processing to the 
+      ConnectMsg and DisconnectMsg display to allow the carriage return &lt;cr&gt; as 
+      a valid entry.<br>
+      Example: “CONNECT...&lt;cr&gt;” becomes CONNECT… with a CR (155) on the end 
+      which gets executed by ATC.</font></li>
+      <li><font face="Tahoma">Changed Session Number from LONG int to string 
+      (format: YYMMDDHHMMSS)</font></li>
+      <li><font face="Tahoma">Minor internal changes.</font></li>
+    </ul>
+    <p><b><font face="Tahoma">Bugs</font></b></p>
+    <ul>
+      <li><font face="Tahoma">Fixed missing cursor after screenscroll that I 
+      somehow introduced.</font></li>
+      <li><font face="Tahoma">Fixed annoying bell when a Box changed event 
+      forced a beep even when pasting to the BOX.</font></li>
+      <li><font face="Tahoma">Disabled the Combo box in the BBS form when online 
+      to prevent data corruption possibility.</font></li>
+      <li><font face="Tahoma"><font color="#FF0000"><b>Nasty</b></font> bug in 
+      the ATEditor 'Clear' button would crash AT_Connect.&nbsp; (This is the 
+      reason for the bugfix release.)</font></li>
+    </ul>
+    <p>&nbsp;</p>
+    <p><font face="Tahoma"><b>v3.23 - Build: 922 - 4.12.26 (Katara) (maintenance 
+    release)</b></font></p>
+    <ul>
+      <li><font face="Tahoma">Set the max number of BBSes supported to 500.&nbsp; 
+      Having a max number of 65535 caused other problems that I did not 
+      anticipate.</font></li>
+      <li><font face="Tahoma">Added a 'View / Hide Gateway' button to the BBS 
+      Editor form for sizing purposes.&nbsp; It does not affect the use of the 
+      gateway.</font></li>
+      <li><font face="Tahoma">On the initial installation of ATC, where files, 
+      folders, and configs are created, I tweaked the window placement to make a 
+      cleaner initial installation.</font></li>
+      <li><font face="Tahoma">Minor internal changes to some variable structures 
+      and placements.</font></li>
+    </ul>
+    <p>&nbsp;</p>
+    <p><b><font face="Tahoma">v3.22 - Build: 912 - 3.19.26&nbsp; (Katara)</font></b></p>
+    <ul>
+      <li>
+    <p style="margin-top: 6"><font face="Tahoma">Added support for the new Atari 
+    BBS gateway created by AMIS.&nbsp; This allows you to connect to your favorite BBS 
+    thru the gateway and still have access to your assigned macros for that 
+    BBS.</font></p>
+      </li>
+      <li>
+    <p style="margin-top: 6"><font face="Tahoma">Added combo box to BBS form to 
+    allow selection of BBS via drop-down list rather than having to use the 
+    Next / Prev buttons.</font></p>
+      </li>
+      <li>
+    <p style="margin-top: 6"><font face="Tahoma">Added a BBSList automatic 
+    backup function which can be enabled or disabled.&nbsp; BBS form indicates 
+    when the BBS needs a backup and it can be done manually or automatically at 
+    startup depending on how it is configured.</font></p>
+      </li>
+      <li>
+    <p style="margin-top: 6"><font face="Tahoma">Added a Backup folder for 
+    backed up BBS Lists and CFG files.</font></p>
+      </li>
+      <li>
+    <p style="margin-top: 6"><font face="Tahoma">Added 'Abort' switch to splash 
+    screen.&nbsp; This will shut down AT_Connect before it starts.</font></p>
+      </li>
+      <li>
+    <p style="margin-top: 6"><font face="Tahoma">Added a 'Backup CFG File' 
+    button at the bottom of the Config form and a backup folder option under the 'Paths' 
+    tab.</font></p>
+      </li>
+      <li>
+    <p style="margin-top: 6"><font face="Tahoma">Major Clean-up to 'AddBBS', 'CopyBBS' 
+    and 'DeleteBBS' functions on the BBS form.&nbsp; Fixed 'DeleteBBS' function 
+    so it will not attempt to delete an already deleted record.</font></p>
+      </li>
+      <li>
+    <p style="margin-top: 6"><font face="Tahoma">Added ability to add a BBS by 
+    editing an empty BBS record.</font></p>
+      </li>
+      <li>
+    <p style="margin-top: 6"><font face="Tahoma">Removed the old BBSMap from the 
+    AT3_BBS.ini file.&nbsp; This also allows the max number of supported BBSes 
+    to go from 255 to 65535... not that we really needed more but removing the 
+     
+    map cleaned up the BBSList file.&nbsp; I HATED the map.</font></p>
+      </li>
+      <li>
+    <p style="margin-top: 6"><font face="Tahoma">Removed the 'Fix BBSList' function 
+    as it is no longer needed.</font></p>
+      </li>
+      <li>
+    <p style="margin-top: 6"><font face="Tahoma">Added a new Log Header to 'Rename 
+    Log' and 'Clear Log' functions.&nbsp; The header contains additional info at 
+    the top of the newly created log file.</font></p>
+      </li>
+      <li>
+    <p style="margin-top: 6"><font face="Tahoma">Added ability to type inverse 
+    chars into a BBS using the 'inverse chars' checkbox in the ATEditor.&nbsp; 
+    The BBS must also support the inverse chars.&nbsp; The 'inverse char' 
+    checkbox is now highlighted <span style="background-color: #FF0000">&nbsp;<b>RED</b>
+    </span>&nbsp;when inverse chars are enabled.</font></p>
+      </li>
+      <li>
+    <p style="margin-top: 6"><font face="Tahoma">Added a &quot;Connecting to &lt;bbsname&gt;...&quot; 
+    message at the beginning of each connection attempt.&nbsp; This also 
+    reflects using the gateway for the connection.</font></p>
+      </li>
+      <li>
+    <p style="margin-top: 6"><font face="Tahoma">Added a field in the BBS form 
+    for the date that the Max BPS was achieved.</font></p>
+      </li>
+      <li>
+    <p style="margin-top: 6"><font face="Tahoma">Lots of minor changes:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#9702; BBS form 'Save' buttons now have a yellow 
+    background when a 'save' is needed.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#9702; Backspace key now works in Inverse Char 
+    mode.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#9702; Added space to generic quote string.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#9702; Added minor color changes to some forms 
+    and buttons.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#9702; ATEditor Text window flattened.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#9702; Edited a few ToolTips.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#9702; The background 'Atari' image made the 
+    help file hard to read so I removed it.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#9702; Quite a few minor internal changes that 
+    are not noticeable.</font></p>
+      </li>
+      <li>
+    <p style="margin-top: 6"><font face="Tahoma">New Dragon Name: Katara</font></p>
+      </li>
+    </ul>
+    <p style="margin-top: 6"><b><font face="Tahoma">Bugs</font></b></p>
+    <ul>
+      <li>
+    <p style="margin-top: 6"><font face="Tahoma">While not actually a bug, the 
+    BBS form has always loaded the first record in the BBS list when ATC starts 
+    up.&nbsp; Now it loads the first record enabled in the dial list instead of 
+    record #1.</font></p>
+      </li>
+      <li>
+    <p style="margin-top: 6"><font face="Tahoma">'AddBBS', 'CopyBBS' and 'DeleteBBS' 
+    functions all had bugs in them.&nbsp; They should be cleaned up now.</font></p>
+      </li>
+      <li>
+    <p style="margin-top: 6"><font face="Tahoma">The MaxBaud bug has finally 
+    been squashed (hopefully).&nbsp; This would cause bogus data to be written 
+    into the BBS record and was most noticeable when the MaxBaud value was 
+     
+    different.&nbsp; It could also have been affecting other data in the BBS 
+    record but this was not ever noticed.</font></p>
+      </li>
+    </ul>
+    <p>&nbsp;</p>
+    <p><b><font face="Tahoma">v3.20 - Build:829 - 4.18.25 (Apophys)</font></b><img border="0" src="images/major.jpg" width="75" height="41" align="right"></p>
+    <ul>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added seven new background 
+    screen colors which can be chosen in the configuration screen.&nbsp; ATC 
+    restart required after choice. Colors: Atari Classic white on blue, Green 
+    Screen, Amber Waves, Purple Haze, Midnight Blue; pSycH0dElikA; Paperwhite</font><img border="0" src="images/major.jpg" width="75" height="41" align="right"></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6; margin-top:12"><font face="Tahoma">Changed the width of the 
+    main screen to make it a little smaller.&nbsp; This was actually a somewhat major 
+    change to the system.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6; margin-top:6"><font face="Tahoma">Removed most of the old 3d 
+    look which came from the VB 6 environment... like checkboxes, data-entry 
+    fields, etc.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added four new buttons <b>'&gt;&gt;&gt;'</b> 
+    and <b>'&lt;&lt;&lt;'</b> to the BBS form to allow moving quickly to the beginning and end of BBS records.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Re-programmed much of the 
+    BBS form and added functionality.&nbsp; Some of the buttons have changed.&nbsp; 
+    The BBS data structure is now record-based rather than number-based.&nbsp; 
+    Removed the old 'Save + Close + Connect' button.&nbsp; Also removed the 
+    'Import BBS' button which had never been programmed and was not high on the 
+    list..</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">The 'Fix BBS List function' 
+    is reprogrammed.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added the animated startup 
+    'Moji named 'ATC Ready' which can be programmed to display anything you 
+    like.&nbsp; This replaced one of the old Bobterm pictures which did not 
+    display correctly with some of the new background colors.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added the 'Pick any file to 
+    view' option to the capture menu.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added the 'Slow display' 
+    checkbox to the capture configuration screen for displaying files at fast or 
+    slow speeds.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added the 'MaxBPS achieved' 
+    green indicator on the BBS form which lights up when the current MaxBPS 
+    record for this BBS has been broken.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Translated the &lt;<b>TAB</b>&gt; key 
+    which had never been done in 25 years.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Re-enabled connections from 
+    the BBS form via a new 'Connect' button located on the form so that BBSes 
+    that are 'hidden' from the dial list can still be connected to.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">New Dragon Name: Apophys</font></p>
+      </li>
+    </ul>
+    <p style="margin-bottom: 6"><b><font face="Tahoma">Bugs</font></b></p>
+    <ul>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Fixed an old bug which would 
+    crash ATC when a specific type of screen was displayed in 80 column mode.&nbsp; 
+    This had to be fixed in four different functions.&nbsp; Thanks to Matt H. for 
+    finding this one.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Clicking on a blank URL no 
+    longer processes the blank URL.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Fixed a bug in the 'View 
+    capture file' function which caused it to print too many chars.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Bug in 'CopyBBS' function 
+    could crash ATC in certain situations.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Fixed a disconnect issue 
+    when Winsock throws an error 10053 - thanks to Slacker for help with this 
+    one.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Fixed a bug that was loading 
+    frmLastURL before the form positions had been read from config file.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Fixed a bug where the 
+    different form positions needed to be written upon first installation and 
+    first running of ATC.</font></p>
+      </li>
+    </ul>
+    &nbsp;<p><b><font face="Tahoma">v3.14 -Build:717 -  2.1.25 (Xeraxes)</font></b></p>
+    <ul>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Added bits per second 
+      calculations and chars per second measurement to create the new Speed 
+      Check mode.&nbsp; It can be enabled in the Status Form as well as the 
+      Config form.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Also added the Speed Test 
+      which disables the screen and keyboard for better accuracy in 
+      speed tests.&nbsp; Average and current speeds displayed in the Status 
+      form.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Added 'Maxbps' speed calc 
+      value to 
+      BBS record and log entry.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Added the 'AutoNext' 
+      feature which detects when a BBS logs you off, and allows you to hit 
+      &lt;Enter&gt; and immediately connect to the next BBS in the combo box.&nbsp; It 
+      is very FAST.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Added manual quote prefix 
+      ( <b><font size="4">Q&gt;</font></b>) to quoting system for adding the quotee's initials or whatever.&nbsp; 
+      This overrides the default prefix set in the Config form until 
+      disconnection from the BBS.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Added {Ctrl}-Z keystroke in the Box to 
+      place an ATASCII CR (155) in the current cursor position for better 
+      formatting of quotes and things like separation of quotes within quotes.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Pre-loaded the session 
+      number with a 1 if it was equal to 0.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Character Totalizer manual 
+      calculation is now a log entry when executed.&nbsp; It is still executed 
+      automatically when logging off.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Added the “one char at a 
+      time” Macro send for cases where it is needed. Can be selected in the BBS 
+      record for each individual BBS.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">'AutoPause' function expanded to work with FoReM XE.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Changed the Autopause command buttons to the following:<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &#9702; '<b>Again</b>' – redisplays the previous message and after a 
+      delay, sends {Ctrl}-S to pause it.<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &#9702; '<b><font size="4">. . .</font></b>' - restarts the paused message and pauses it 
+      again after the delay.<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &#9702; '<b><font size="4">! ! !</font></b>' - restarts the paused message and displays 
+      until the end of message.<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &#9702; All three of these work this way for BBS:Express v1 
+      and FoReM XE.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Added speed (maxbps) to 
+      Time Online report.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Better quoting in 80 cols.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Added the Graphics Mode 
+      enable (/g) reminder to the ATE top of form (red label) before sending 
+      ATEditor data to screen.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Increased size of BBS Name 
+      in Status Form.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Added a 'Status' button on 
+      the control panel to open the status form when it is closed.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Added a 'Beep on 
+      Connection' notification option setting in Config form.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Added an 'ALL ON / All 
+      OFF' button in the Config form for toggling between 'Classic AT_Telnet' 
+      view 
+      and 'AT_Connect 3' view.&nbsp; One button toggles all options on and off.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Added a Yes/No query to 
+      the Delete Log file question.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Modifications to BaudSim 
+      mode to allow a wider range of speed (0-9 instead of 0-5).&nbsp; The new 
+      wider range allows more flexibility in the baud control for different PCs.&nbsp; 
+      I found that even at the slowest baud rate, my Core i9 PC still ran full 
+      speed with no apparent slowdown.&nbsp; The wider range along with an 
+      additional 2ms multiplier increased the control therefore the appearance 
+      of a baud rate where none exists.&nbsp; (A value of 9 appears to be approx 
+      300Baud.)</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Beginning to use Git for 
+      version control.&nbsp; Github for Windows on the local PC.&nbsp; There is 
+      no remote repository (yet).</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">General Cleanup.</font></li>
+    </ul>
+    <p style="margin-bottom: 6"><b><font face="Tahoma">Bugs</font></b></p>
+    <ul>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Fixed a bug in combo box 
+      select bbs code.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Fixed a bug in &quot;Choose 
+      Port&quot; section of code.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Fixed a bug in the 
+      character Speed Check averaging system where the chars would only be 
+      averaged in BaudSim mode.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Fixed a bug that would 
+      crash ATC when the incoming char monitor in the status form was enabled.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Fixed a bug in the 
+      ‘Autonext’ code which caused a ATC crash when the combo1.listindex tried 
+      to increment past the combo1.listcount.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Fixed an OLD bug that 
+      prevented the BaudSim Value from being saved to the config file.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Fixed a REAL OLD bug in the 'Print 
+      Screen' 
+      button on the menu bar that would crash ATC if the print dialog 'cancel' 
+      button was pushed.&nbsp; Thanks to <b>Slacker</b> for finding this one.&nbsp; 
+      I had not pushed that button in at least 20 years.</font></li>
+    </ul>
+    <p style="margin-bottom: 6">&nbsp;</p>
+    <p><b><font face="Tahoma">v3.12 -Build:602 - 12.14.23 (Xeraxes)</font></b></p>
+    <ul>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Added the AutoPause 
+      feature for slowing down the message displays on BBSes with no page length 
+      setting.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Added the Status Window 
+      for status information during connections.&nbsp; It displays the BBS name, 
+      URL and Port as well as the incoming character counts.&nbsp; It also has a 
+      provision for entering some text into the system log as a log entry.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Added a flag in the config 
+      page to enable / disable clearing the box when the 'Scrollback to Box' 
+      button is pressed.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Added session numbers for 
+      knowing how many ATC sessions you have experienced.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Added additional logging 
+      for some errors.&nbsp; </font>
+    <ul>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Added the ==== separator 
+      for the log session entries making the log a little easier to read.&nbsp; </font>
+      </li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Modified the 'View System 
+      Log' button to move the cursor to the end of the log when opening it.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">General cleanup of 
+      logging...</font></li>
+    </ul>
+      </li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Modified 'Look &amp; Feel' of 
+      the Quoting and ChXbox systems as well as general cleanup of these 
+      systems.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Added the status bar value to 
+      the status field 'tooltiptext' property so if a status is longer than the 
+      status window can display, hovering the cursor over the status field will 
+      display the entire contents of the field in the tooltip.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Renamed the CHX1,2,3 files 
+      to _CHX1,2,3.&nbsp; Filename prefixed with an underscore to make them rise 
+      to the top of the files display.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Added the 'No Word Wrap' 
+      quoting modification for making the quotes look better on a Carina BBS 
+      system. Carina tends to modify the format of the messages even after they 
+      are entered and saved.&nbsp; This option helps with making the quotes a 
+      little better to view if you choose to use it.&nbsp; This feature also 
+      swatted the chr(13) - chr(10) display bug in the Carina quotes.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Changed the colors of the 
+      quote step indicator bar from <font color="#FF0000">Red</font> to
+      <font color="#008000">Green</font>.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Added a 'Yes / No' query 
+      to the 'Clear System Log' function.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">General Cleanup.</font></li>
+    </ul>
+    <p style="margin-bottom: 6"><b><font face="Tahoma">Bugs</font></b></p>
+    <ul>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Bug fixed - Send to BBS 
+      function would crash ATC if not online.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Bug fixed - bug in Help 
+      file display code</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Bug fixed - not really a 
+      bug but using the Previous (&lt;&lt;) and Next (&gt;&gt;) buttons in the BBS editor now 
+      forces a re-selection of the BBS in the combo box in order to better keep it all 
+      in sync.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Bug fixed - Swatted the 
+      Ctrl-M bug that has been in the program since 2000. </font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Fixed a problem with the 
+      Help file installation during setup.</font></li>
+    </ul>
+      <p style="margin-bottom: 6">&nbsp;<p><b><font face="Tahoma">v3.11 -Build:548 - 9.15.23 (Xeraxes)</font></b></p>
+    <ul>
+      <li>
+      <p style="margin-top: 0; margin-bottom: 6"><font face="Tahoma">Added the 'ChXbox Creation System' which uses a 
+      combination of 'The Box' and the 'ATEditor' to create cute little ATASCII chXboxes for graphics-enabled message bases.&nbsp; 
+      The chXboxes are also correctly visible in ASCII and ANSI connections.</font></li>
+      <li>
+      <p style="margin-top: 0; margin-bottom: 6"><font face="Tahoma">Added an optional Incoming Character Count 
+      display for each ATC session as well as a totalizer.&nbsp; Both of these 
+      counts are displayed at the end of the system log.</font></li>
+      <li>
+      <p style="margin-top: 0; margin-bottom: 6"><font face="Tahoma">Made 'classic mode' more classic by adding the 
+      'Enable Online Timer' function to classic check boxes group in Configuration 
+      file.</font></li>
+      <li>
+      <p style="margin-top: 0; margin-bottom: 6"><font face="Tahoma">Added &quot;Last Time Online&quot; data to BBS record to 
+      display the length of the last connection to that BBS.</font></li>
+      <li>
+      <p style="margin-top: 0; margin-bottom: 6"><font face="Tahoma">Added the &quot;2) Edit Box&quot; button to the quoting 
+      system to place the cursor into the box quickly at position 0 in the box 
+      rather than the old manual method.</font></li>
+      <li>
+      <p style="margin-top: 0; margin-bottom: 6"><font face="Tahoma">Added quote step indicators (<font color="#FF0000"> </font>
+      which look like this:<font color="#FF0000">&nbsp; ______ </font>) below each button to 
+      remind you of the next step while creating quotes.</font></li>
+      <li>
+      <p style="margin-top: 0; margin-bottom: 6"><font face="Tahoma">Updated ATEditor to optionally create a file when 
+      using the 'Send to Main' function.</font></li>
+      <li>
+      <p style="margin-top: 0; margin-bottom: 6"><font face="Tahoma">Cleanup of the Total Online Report</font></li>
+      <li>
+      <p style="margin-top: 0; margin-bottom: 6"><font face="Tahoma">Added the  Signature function for each BBS record 
+      so each BBS can have its own signature.</font></li>
+      <li>
+      <p style="margin-top: 0; margin-bottom: 6"><font face="Tahoma">Added the 'Scrollback Abort' button for stopping 
+      the scrollback function.</font></li>
+      <li>
+      <p style="margin-top: 0; margin-bottom: 6"><font face="Tahoma">Added the 'Box to ATE' button for copying the 
+      contents of the box to the ATEditor.&nbsp; Why do we need this? I don't 
+      know but I added it anyway because I could.&nbsp; (And now it is used for the chXbox 
+      system.)</font></li>
+      <li>
+      <p style="margin-top: 0; margin-bottom: 6"><font face="Tahoma">Moved Quoting buttons into different positions 
+      around the Box to make quoting more intuitive.</font></li>
+      <li>
+      <p style="margin-top: 0; margin-bottom: 6"><font face="Tahoma">Enlarged the Log Form to prevent word wrapping of 
+      log entries.</font></li>
+      <li>
+      <p style="margin-top: 0; margin-bottom: 6"><font face="Tahoma">Minor Cleanup of program and help file.</font></li>
+    </ul>
+    <p><b><font face="Tahoma">Bugs</font></b></p>
+    <ul>
+      <li>
+      <p style="margin-top: 0; margin-bottom: 6"><font face="Tahoma">BUG Fixed - 'Scrollback to Box' function would 
+      crash AT_Connect if there were less than 2048 chars in the scrollback 
+      buffer.&nbsp; Fixed by requiring 2048 chars in the buffer before 'SB to 
+      Box' will do anything.</font></li>
+      <li>
+      <p style="margin-top: 0; margin-bottom: 6"><font face="Tahoma">BUG Fixed - bug in 'View Capture' function which 
+      prevented some files from being viewed.</font></li>
+      <li>
+      <p style="margin-top: 0; margin-bottom: 6"><font face="Tahoma">BUG Fixed - bug in Time Online function would 
+      erase the time if the BBS record got changed to a different BBS and then a 
+      logoff occurred.&nbsp; Disabled the problem buttons that caused this so the 
+      BBS record could not be changed while online. ( '&gt;&gt;', '&lt;&lt;', and 
+      'BBS Select' combo box)</font></li>
+      <li>
+      <p style="margin-top: 0; margin-bottom: 6"><font face="Tahoma">BUG Fixed - BBS Select combo box was not properly 
+      updated when  a BBS was changed from 'Show in List' to 'Don't show in 
+      list' (and vice versa). Now the combo box is reset to zero (default) if 
+      this function is toggled.</font></li>
+    </ul>
+    <p>&nbsp;</p>
+    <p><b><font face="Tahoma">v3.10 -Build:516 - 3.10.23 (Xeraxes)</font></b><img border="0" src="images/major.jpg" width="75" height="41" align="right"></p>
+    <ul>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added the 'Scrollback' 
+    feature which when enabled, saves the last 2048 chars in a circular buffer 
+    which&nbsp;can be re-displayed in user-defined-sized chunks on demand.&nbsp; The 
+    playback is slightly delayed for ease of viewing and 'Pause' 
+    and 'Resume' buttons are available.</font><img border="0" src="images/major.jpg" width="75" height="41" align="right"></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added the Automated Message 
+    Quoting System for quoting parts of messages when entering a new message.&nbsp; 
+    This feature uses the Scrollback Buffer for capturing the contents of 
+    previous messages.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added the Online timer which 
+    displays below the Macro Keys in the Control Panel.&nbsp; This display is 
+    updated every second.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added the Online Timer 
+    totalizer for the total time spent on each BBS.&nbsp; This is viewed in the 
+    BBS Editor form.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added the 'Time Online 
+    Report' which displays &amp; Saves the total number of connects and time online 
+    for each BBS.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added the 'System Log file' 
+    which can be enabled or disabled in the config form.&nbsp; This log file is 
+    named 'AT3_Log.txt' and is located in the System Folder.&nbsp; 
+    Right-Clicking the screen displays the Capture file menu which also holds a 
+    menu entry for viewing this log in a separate form.&nbsp; In this form, the 
+    log can be saved (archived), cleared or deleted.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added an 'Export URL' button 
+    to the URL form for exporting the URLs to a text file.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Increased the number of URLs 
+    displayed in the form from 5 to 10.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added some initialization 
+    variable values for the first run setup of ATC.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Fixed some mislabeled 
+    tool-tip-texts in the control panel.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">New Dragon Name: Xeraxes</font></p>
+      </li>
+    </ul>
+    <p style="margin-bottom: 6">&nbsp;</p>
+    <p><b><font face="Tahoma">v3.01 -Build:466 - 2.15.23 (Vhagar)</font></b></p>
+    <ul>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added names of beta testers 
+    to the 'About' dialog.</font></p>
+      </li>
+    </ul>
+    <p>&nbsp;</p>
+    <p><b><font face="Tahoma">v3.00 -Build:465 - 2.14.23 (Vhagar)</font></b></p>
+    <ul>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Migrated 
+    AT_Telnet II to new 
+    name: AT_Connect III</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6">
+    <img border="0" src="images/major.jpg" width="75" height="41" align="right"><font face="Tahoma">Created code for 
+    a new System Folder (AT_Connect) which resides in the users 'Documents' 
+    folder.&nbsp; This will overcome the UAC issues outlined in v2.12 below.&nbsp; This 
+    folder is automagically created on the initial running of AT_Connect.&nbsp; 
+    Enlarged the config form to display the new system folder (read-only).&nbsp; 
+    Modified code for the config file, the bbs file, the screen dump system 
+    and the 
+    capture file to reside 
+    in this new folder tree.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6">
+    <img border="0" src="images/major.jpg" width="75" height="41" align="right"><font face="Tahoma">Added 
+    'The 
+     
+    Box' (or Text Window) for easy editing of messages before sending them to the BBS.&nbsp; 
+    Lots of features in this function... supports 40 and 80 columns; is 
+    configured for use in the BBS record for each BBS; can be made completely 
+    invisible to the user if desired; monitors the current number of chars in 
+    the editor window; has a right column alarm for BBSes that don't have word 
+    wrap in their message editors; the {Alt} - T keystroke is used to toggle 
+    between the main screen and the box editor.&nbsp; Focus Indicator for Main 
+    screen as well as Text Window makes it easy to tell who has the focus; Can 
+    send formatted text to a BBS.&nbsp; Can optionally be hidden from viewing.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6">
+    <img border="0" src="images/major.jpg" width="75" height="41" align="right"><font face="Tahoma">Added a new 
+    system to automagically detect URLs in the incoming data stream and convert 
+    them into one-click links that can be accessed from within AT_Connect.&nbsp; 
+    The last ten links are saved for the current session and can optionally be 
+    cleared for the current session.&nbsp; This detection can be enabled or 
+    disabled in configuration and can optionally be hidden from view.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6">
+    <img border="0" src="images/major.jpg" width="75" height="41" align="right"><font face="Tahoma">Added the 
+    ATEditor for capturing, editing and sending almost anything ATASCII.&nbsp; 
+    Great for making those little 'Mojis and any other combination of text, 
+    graphics characters and inverse characters in a macro-like format for 
+    sending to the BBS.&nbsp; Can optionally be hidden from view.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6">
+    <font face="Tahoma">Added a 'Capture' folder for saving all 
+    captured data files.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6">
+    <font face="Tahoma">Added the ability to save the window 
+    positions for the Main screen, BBS Editor, ATEditor, Last5URL and WebSite 
+    windows.&nbsp; These positions are saved in the config file so the windows 
+    always return to where you want them positioned.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added a 'Capture 
+    in process' indicator (flashing green bar at the top of the main screen) to help remind you that you are in 
+    'capture' mode.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Simplified the 
+    BaudSim function to entering an integer only; 0 for fastest; 5 for slowest. 
+    (5 is VERY slow - not recommended.&nbsp; Typically 0 and 1 are all that is 
+    needed.)</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added a reminder 
+    to the 'Hidden' button on the BBS Editor form to prompt to create a new 
+    AT_Connect password in the configuration form when none exists.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added encryption 
+    to hidden macros for storage in the BBS file.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Gave new versions dragon 
+    names - this one is Vhagar.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Various cosmetic changes throughout... 
+    including this help file!</font></p>
+      </li>
+    </ul>
+    <p style="margin-bottom: 6"><b><font face="Tahoma">Bugs</font></b></p>
+    <ul>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Fixed a bug 
+    where a Clear Screen (ATASCII 125) would not be executed if it followed a 
+    Ctrl-Insert (ATASCII 255).&nbsp; This bug would actually prevent anything 
+    that followed a Ctrl-Ins from executing.&nbsp; This fixed a LOT of things in 
+    the display functions.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Fixed a BUG 
+    in the Portlist creation function.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Fixed a BUG in 
+    the BBS Editor that allowed editing of hidden macros while they were locked 
+    and protected from sight.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Fixed the old 
+    Control-Delete processing issue (somewhat), which has existed in ATx for 
+    more than 20 years, however there are still others to be 
+    identified and fixed.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Found that the 
+    keyclick sound (sp0000.wav) was not being installed with the new AT_Connect 
+    setup package and fixed it.</font></p>
+      </li>
+    </ul>
+    <p style="margin-bottom: 6">&nbsp;</p>
+    <p><b><font face="Tahoma">v2.12 - 6.21.20</font></b></p>
+    <ul>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Tested under 
+    Windows 10 (Note: UAC issues cause some files to reside in strange places.&nbsp; 
+    To be documented and fixed in v3.)</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Installing Visual Basic 6 into my 
+    Windows 10 box allowed me to work in a host environment rather than on a 
+    virtual machine.&nbsp; The Win10 compiled version of the program displays to 
+    the screen at a much higher rate of speed... like going from 2400 baud to 
+    9600 baud.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Masked an error 
+    in the Ctrl-Del key screen processing.&nbsp; This prevents the program from 
+    crashing even though the key is not correctly processed and displayed.&nbsp; 
+    I will try to fix this in v3.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added a function 
+    to clear the incoming buffer when the connection is broken.&nbsp; This can 
+    be enabled or disabled in the Config screen.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added 
+    UseBBSEditor function for displaying the BBS Editor form next to the 
+    AT_Telnet screen during your BBS sessions allowing you to view info about 
+    the BBS as you connect to it.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Various minor 
+    changes and fixes.</font></p>
+      </li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Not released to the public.</font></p>
+      </li>
+    </ul>
+    <p><b><font face="Tahoma">v2.10 - 1.18.13</font></b></p>
+    <ul>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Removed the BBS 
+      Database and went back to the old text file for BBSes.&nbsp; The DB 
+      increased the size of the setup ZIP file from 1.5 mb to 7 mb.&nbsp; I didn't 
+      like that.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Tested and 
+      working in Windows 7 x64 (in compatibility mode).</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Added 'Browse' 
+      buttons for filling in browser and screen dump path fields in Config form.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Added 'Abort' 
+      connect function to the 'Connect' button.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Added multiple 
+      Ports for each BBS in BBS Editor.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Added 'Edit 
+      RAW BBS List' feature with config disable/enable feature.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Added 'Fix BBS 
+      List' feature with config disable/enable feature.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Added ability 
+      to mark a BBS as down so it doesn't show up in dial list box without 
+      having to delete it from the BBS List.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Added Password 
+      Tab to configuration form.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Added visual 
+      masking and password protection to Macros to hide passwords and logins 
+      from sight, etc.</font></li>
+      <li>
+      <p style="margin-bottom: 6"><font face="Tahoma">Various minor 
+      changes and fixes.</font></li>
+    </ul>
+    <b>
+    <p style="margin-bottom: 6"><font face="Tahoma">v2.00 - 11.5.09 
+    - Version 2 Release</font></b><ul>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added the ATDB BBS 
+    database in place of the old text bbs list. ATDB adds a whole slew of new 
+    functions including keyboard macros, individual BBS configuration, session 
+    information and others.</font></li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added ‘Ctrl-C’ 
+    processing for aborting long text files. This works as well as can be 
+    expected in light of the speed at which the data comes across the winsock 
+    pipe.</font></li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Cleaned up a few 
+    minor bugs.</font></li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Minor cosmetic 
+    changes throughout the program.<br>
+&nbsp;</font></li>
+    </ul>
+    <b>
+    <p style="margin-bottom: 6"><font face="Tahoma">v1.20</font></b><ul>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Changed the prompts 
+    in the marquee to reflect the CTH new website and bbs URL’s.</font></li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Minor modifications to the 
+    status bar.</font></li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added the 
+    ‘PrintScreen’ function to print the contents of the current screen. Click 
+    the printer icon to access this function.</font></li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added code to 
+    update the BBS list combo box after the list was edited using notepad.</font></li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added ‘CAPTURE’ 
+    mode for capturing text from the BBS. Right-clicking the screen opens the 
+    “CAPTURE MENU” for access to all capture functions. While viewing the 
+    capture file, an ‘Abort Capture’ button is visible at the bottom of the 
+    window for aborting the viewing.</font></li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added the About 
+    Dialog Box and a FUJI icon to the toolbar for “About” access.</font></li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Enhanced the 
+    Winsock Error code to better describe the error in a dialog box.</font></li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Re-enabled the 
+    BaudSim function.</font></li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Fixed a bug which 
+    left data in the Winsock Buffer at odd times.</font></li>
+    </ul>
+    <p style="margin-bottom: 6">&nbsp;<b><p style="margin-bottom: 6"><font face="Tahoma">v1.10</font></b><ul>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Cursor Controls – 
+    added support for the four arrows, Control-Insert, Control-Delete, 
+    Shift-Insert, Shift-Delete, and Tab.</font></li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Changed the 
+    CursorOn( ) and CursorOff( ) subroutines to support non-destructive printing 
+    to the screen. This is necessary when the cursor passes over an existing 
+    char on the screen to keep it from wiping out that char during calls to 
+    either of these subs.</font></li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Changed all char 
+    sizes from 15 to 16 to keep the cursor from wiping out 1 pixel from any char 
+    it passes next to. Had to change the Charset image( atari4.gif ) by adding 
+    one pixel of white at the end of each row which ended in an inverse char 
+    because the above change made the chars at the end of that row have a one 
+    pixel dark line at the end of the char. For example, if AT1 printed another 
+    inverse char next to one of these chars, the two chars would appear to be 
+    separated by a 1 pixel dark line. (Changing the char size from 15 to 16 
+    introduced this “feature”).</font></li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added the Baud Rate 
+    simulator for smoother viewing of ATASCII cartoons. This feature is still 
+    under construction. Even though it appears to work fine, I am not totally 
+    happy with it.</font></li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Fixed a bug which 
+    would stop the program if the remote computer closed the connection and you 
+    typed a char. Sending a char to Winsock generated a fatal error. The fix was 
+    to set the “Connected” variable False when the remote BBS disconnected.</font></li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added code to 
+    properly process ATASCII 255 (Control-Insert) which the Telnet protocol uses 
+    for an escape sequence.</font></li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Made use of the VB 
+    internal Project properties for Application Version control to help keep me 
+    straight.</font></li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Centered the Splash 
+    Form and MDI form in the middle of the screen.</font></li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added the 
+    “StayAlive” button and code to send a single configurable char (default = 
+    “/”) to the remote BBS to stay connected while viewing a long text file in 
+    Baud Simulator mode.</font></li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added a StatusBar 
+    at the bottom of the form to replace the “Connection Status” Textbox.</font></li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added the Appinfo 
+    to this statusbar.</font></li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added a toolbar for 
+    quick access to all commands.</font></li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Fixed ShiftInsert() 
+    and ShiftDelete() to move the cursor back to X = 0.</font></li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Rewrote the Tab 
+    routines to fix a bug in them.</font></li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added the 
+    AUTOSTAYALIVE Boolean. When this var is True, “StayAlive” is enabled upon 
+    connection to a BBS.</font></li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added the 
+    AUTOBAUDSIM Boolean. When this var is True, “BaudSim” is enabled upon 
+    connection to a BBS.</font></li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added the 
+    Configuration Dialog and Config file which retains the values of “AutoBaudSim”, 
+    “AutoStayAlive” and the “StayAliveChar” (“/” or “whatever”).</font></li>
+      <li>
+    <p style="margin-bottom: 6"><font face="Tahoma">Added two more 
+    marquee items to describe BaudSim and StayAlive.</font></li>
+    </ul>
+    <b>
+    <p style="margin-bottom: 6"><font face="Tahoma">v1.00 - Initial 
+    Release</font><p style="margin-bottom: 6">&nbsp;</td>
+    <td width="45%">
+    <p align="center">
+    <img border="0" src="images/scrollback.jpg" width="682" height="337"><p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    <img border="0" src="images/frmstatus.jpg" width="468" height="157"><p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    <img border="0" src="images/about2.jpg" width="628" height="768"><p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    <img border="0" src="images/about2.jpg" width="628" height="768"><p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    <img border="0" src="images/about2.jpg" width="628" height="768"><p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    &nbsp;<p align="center">
+    <img border="0" src="images/about2.jpg" width="628" height="768"></td>
+  </tr>
+</table>
+<h5><font face="Tahoma"><a href="#top">Back to Top</a></font></h5>
+<hr>
+
+<p align="center">
+<img border="0" src="images/ATC_Full.jpg" width="1541" height="654"></p>
+
+</body>
+
+</html>

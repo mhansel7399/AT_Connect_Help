@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AT Connect III - Configuration</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+    <body>
+
+        <div class="header">
+            <img src="images/Main1.jpg" alt="Header Image" class="header-image">
+            <div class="header-text">
+                AT_Connect III<br>
+                The ATASCII Terminal Client
+            </div>
+        </div>
+
+        <div class="nav">
+            <ul>
+                <li><a href="AT3_Help.htm" class="nav-item">What is AT Connect III</a></li>
+                <li><a href="features.html" class="nav-item">Features and Disclaimer</a></li>
+                <li><a href="started.html" class="nav-item">Getting Started</a></li>
+                <li><a href="configuration.html" class="nav-item">Configuration</a></li>
+                <li><a href="operation.html" class="nav-item">Operation</a></li>
+                <li><a href="status-window.html" class="nav-item">The Status Window</a></li>
+                <li><a href="bbseditor.html" class="nav-item">BBS Editor</a></li>
+                <li><a href="thebox.html" class="nav-item">The Box (Text Editor)</a></li>
+                <li><a href="scrollback.html" class="nav-item">Scrollback Controls</a></li>
+                <li><a href="quotingsys.html" class="nav-item">Message Quoting Systems</a></li>
+                <li><a href="autopause.html" class="nav-item">AutoPause System</a></li>
+                <li><a href="systemlog.html" class="nav-item">System Log</a></li>
+                <li><a href="timeonline.html" class="nav-item">Time Online Report</a></li>
+                <li><a href="detecturl.html" class="nav-item">Detect URLs</a></li>
+                <li><a href="ateditor.html" class="nav-item">The ATEditor</a></li>
+                <li><a href="notes.html" class="nav-item">Notes</a></li>
+                <li><a href="aboutchange.html" class="nav-item">About and Change Log</a></li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="text-with-image">
+                <h3><a name="config">Configuration</a></h3>
+                <figure class="content-image">
+                    <img src="images/cfg-settings.jpg" alt="image of configuration settings" title="Configuration Settings"> 
+                    <figcaption class="pic-text">Configuration Settings</figcaption>
+                </figure>
+                <figure class="content-image clear-right">
+                    <img src="images/cfg-color.jpg" alt="image of the Color Schemes tab in configuration" title="Color Schemes">
+                    <figcaption class="pic-text">Configuration Settings: Color Schemes</figcaption>
+                </figure>
+                <p>
+                    The configuration section is where you setup the program defaults
+                </p>
+                <h4>Color Schemes</h4>
+                <p>There are now eight different color schemes available in AT_Connect as of v3.20. The colors and names are self-explanatory as seen to the right here. Some of these may change in the future as I am still working on some new ones.</p>
+                <p><strong>A program restart is required (and forced) after a color scheme change.</strong></p>
+                <p><strong><u>NOTE:</u></strong> As of this version 3.20, there are still some very minor anomalies with the cursor colors as you will see when you use them. I am still working on fixing these.</p>
+                <p><u><strong>NOTE2:</strong></u> These colors are static and created during compilation of the program. There is no way to edit them or change them in any way at runtime.</p>
+                <h4>Settings</h4>
+                <p>Settings are as follows:</p>
+                <ul>
+                    <li><strong>BaudSim Value</strong> - Set the BaudSim baud rate here. A value between 0-9 can be used here... 0 is the fastest. A value of 9 looks to be approximately 300 Baud. BaudSim is enabled / disabled in each BBS record in the <a href="bbseditor.html#bbs">BBS Editor</a>.</li>
+                        <li><strong>Stay-Alive string</strong> - a string value 
+                        that is sent to the BBS every 60 seconds to keep it from logging you off 
+                        due to inactivity. Used when viewing large text files, messages or 
+                        cartoons in BaudSim mode. Characters that the BBS might understand 
+                        and react to (such as front slash (/) in the Express BBS message editors) are not recommended for this.</li>
+                        <li><strong>Keypress Delay</strong> - delays your 
+                        keystrokes so as not to send too many characters too quickly to the BBS 
+                        you are connected to. Default value = 65ms.</li>
+                        <li><strong>Atari Keyclick sound</strong> - causes your 
+                        keystrokes to send the famous Atari 'keyclick' sound. Sound must be 
+                        enabled on your PC.</li>
+                        <li><strong>Clear screen after CONNECT</strong> - 
+                        causes the terminal screen to clear (as in ? CHR$(125)) when you connect 
+                        to a BBS.</li>
+                        <li><strong>Clear Buffer after Remote disconnect</strong> 
+                        - causes AT_Connect to stop printing characters to the screen and clear the 
+                        incoming buffer when the BBS 
+                        disconnects you even if there are still characters left in the buffer.</li>
+                        <li><strong>ATASCII Buzzer character</strong> - causes 
+                        AT_Connect to beep when the buzzer character (253) is sent from the BBS. 
+                        Un-checking this flag will force AT_Connect to print the character to the 
+                        screen instead of beeping.</li>
+                        <li><strong>Enable TitleBar Messages</strong> - enables 
+                        the random display of the Titlebar messages on the main screen - an 
+                        original feature of AT_Telnet.</li>
+                        <li><strong>Enable RAW BBS List edits</strong> - This 
+                        flag enables the 'Edit RAW' and 'Fix List' buttons in the <a href="bbseditor.html#bbs">
+                        BBS Editor</a>. Otherwise, both of these buttons are invisible.</li>
+                        <li><strong>Pop-up Message on Disconnect</strong> - When the BBS 
+                        disconnects you or you disconnect yourself, an optional message + beep can 
+                        pop-up to potentially wake you up if your BBS session was a little too 
+                        boring...</li>
+                        <li><strong>Show BBS Editor</strong> - display the BBS 
+                        editor to the right of the main AT_Connect screen to place all info about 
+                        this BBS at your fingertips.</li>
+                        <li id="text-editor"><strong>Use Text Editor (The Box)</strong> - Enables or 
+                        disables the <a href="thebox.html">Text Editor</a> Window. If this 
+                        checkbox is unchecked, you will never know the Text Window exists...</li>
+                        <li><strong>Detect URLs</strong> - At_Connect can now 
+                        detect URLs coming across the data stream and put them in a 'Last 5' 
+                        window for easy clicking and loading with your favorite browser.</li>
+                        <li><strong>Auto Open ATEditor</strong> - Checking this 
+                        box will automatically open the ATEditor at runtime.</li>
+                        <li><strong>Enable Scrollback buffer</strong> - enable / disable the 2K scrollback buffer for viewing what went by too fast. The buffer size can also be set here.</li>
+                        <li><strong>Enable System Log File</strong> - When enabled 
+                        AT_Connect can keep a log of your activity in a file located in the System 
+                        Folder called 'AT3_Log.txt'.</li>
+                        <li><strong>Enable Online Timer</strong> - enables a timer which 
+                        starts incrementing as soon as you connect. This timer is totalized 
+                        and saved in the BBS Editor for  each BBS.</li>
+                        <li><strong>Auto-Open Session Status</strong> - opens the session Status form at startup.</li>
+                        <li><strong>'Scroll 2 Box' clears the Box</strong> - clears the box when this command is executed and this value is checked.</li>
+                        <li><strong>Enable Speed Check</strong> - enables monitoring the incoming character speeds in cps and calculated bps and can be viewed and toggled in 'Status' form.</li>
+                        <li><strong>Enable 'AutoNext' dialing</strong> - toggles the AutoNext function which allows immediate connection to the next BBS in the drop-down list by hitting the &lt;Enter&gt; key. It is a very fast way to surf the BBSes.</li>
+                        <li><strong>Beep on Connection</strong> - Beeps when connection to a BBS is established.</li>
+                </ul>
+                <h4>Connect and Disconnect Messages</h4>
+                <p>Make them anything you like!</p>
+                <ul>
+                    <li><strong>Connect</strong> - this message is displayed on the terminal screen when a connection to a BBS is established... like the old modem result codes and messages. The '&lt;cr&gt;' modifier can be used here to process a carriage return.</li>
+                    <li><strong>Disconnect</strong> - this message is displayed on the terminal screen when a local or remote disconnect takes place. Again '&lt;cr&gt;' can be used here. <strong> <br> NOTE:</strong> Originally, the "NO CARRIER" message was used here for nostalgic purposes even though in reality there is no modem and there is no carrier - All communication is done through Winsock. Again, make them anything you like. Sometimes, I use ON and OFF.<br></li>
+                    <li><strong>Titlebar</strong> - Place a user-defined titlebar message which can be the default message or part of the revolving marquee of messages. '&lt;cr&gt;' not used here for obvious reasons.</li>
+                </ul>
+                <h4><em>* CLASSIC MODE *</em></h4>
+                <ul>
+                    <li>Unchecking all seven of the boxes in this section will make AT_Connect look and operate like it did in the good old days...for the most part, none of the new major features in version 3 will be noticeably visible.</li>
+                    <li><strong>All ON / OFF button</strong> - this button will toggle all of the classic checkboxes for a quick way to change the mode between ATConnect and Classic At_Telnet.</li>
+                </ul>
+                <p>
+                    <strong>Recreate System Mojis</strong> button - This button will recreate the system Mojis (like &quot;chx1&quot;..2..3) in case they get deleted or messed up during editing.
+                </p>
+                <p><strong>Backup CFG File</strong> button - backs up the Configuration file</p>
+                <figure class="content-image">
+                    <img src="images/cfg-paths.jpg" alt="image of configuration paths" title="Configuration Paths">
+                    <figcaption class="pic-text">Configuration Paths</figcaption>
+                </figure>
+                <h4>Paths</h4>
+                <p>The following Paths (and 2 flags) are used by the system</p>
+                <ul>
+                    <li><strong>Capture File</strong> - this is the File that captured data from sessions will be saved to. It is an ASCII text file that gets translated by AT_Connect in the 'View Capture' function.</li>
+                    <li><strong>Screen Dump BMP filename</strong> - default filename for all bitmap screen dumps. AT_Connect prompts you to change the filename before any screen dump to BMP operation.</li>
+                    <li><strong>AT_Connect System Folder</strong> - Located in your documents folder, this is where ATC looks for its BBS List, Configuration file and other stuff. If you change this location, remember to move your system files from the old location to the new one.</li>
+                    <li><strong>Screen Dump sub-directory pathname</strong> - folder where BMP screen dump files will be placed.</li>
+                    <li><strong>Capture sub-directory pathname</strong> - folder where all captures will be placed.</li>
+                    <li><strong>'Moji Storage folder</strong> - folder where all 'mojis will be stored.</li>
+                    <li><strong>Web Browser Path</strong> - You may specify a path to your preferred web browser. If no path is specified, AT_Connect will use the system configured browser anytime a  web link is accessed.</li>
+                    <li><strong>Backup Folder</strong> - This folder is where your BBS and CFG backups are stored.</li>
+                </ul>
+                <h4>Flags</h4>
+                <ul>
+                    <li><strong>Clear screen before viewing capture file</strong> - Check this box to clear the main screen before viewing a capture file.</li>
+                    <li><strong>Use Date / Time for screen dump filename</strong> - checking this box will force AT_Connect to create a new filename based on the date / time for each BMP screen dump in the format: <strong>yyyymmdd-hhmmss.bmp</strong>.</li>
+                    <li><strong>Slow Display</strong> - When checked, a delay is added to the display speed for files displayed in the Capture menu.</li>
+                </ul>
+                <figure class="content-image">
+                    <img src="images/cfg-pw.jpg" alt="image of configuration password" title="Configuration Password">
+                    <figcaption class="pic-text">Configuration Password</figcaption>
+                </figure>
+                <h4>AT Connect Password</h4>
+                <ul>
+                    <li>The AT_Connect system password is used to keep AT_Connect Macros hidden in the BBS Editor from nosy viewers - things like passwords, user names etc. This password should be set up when AT_Connect is executed for the first time.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Copyright &copy; 2009-2026 - Cabell Clarke - All Rights Reserved &reg;</p>
+            <p>Revised: 10/18/2026</p>
+        </div>
+        <script src="scripts/script.js" type="text/javascript"></script>
+
+    </body>
+</html>
